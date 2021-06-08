@@ -1,0 +1,488 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1F6EA9B-4CF6-4FBA-A85E-2E8079968857}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPolicy2.Reports2</RootNamespace>
+    <AssemblyName>Reports2</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="ActiveReports.Chart, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.CodeDomSerializer, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.CodeDomSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Design3, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.Design3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.HtmlExport, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.HtmlExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Interop, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.ItemWizard.VS2003, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.ItemWizard.VS2003.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.RtfExport, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.RtfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.TextExport, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.TextExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.TiffExport, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.TiffExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.Viewer3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Web, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Web.Design, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.XlsExport, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports.XlsExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.1013.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ActiveReports3.dll</HintPath>
+    </Reference>
+    <Reference Include="ARVSPackage, Version=5.2.1331.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL" />
+    <Reference Include="Audit, Version=1.0.5612.31901, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Audit.dll</HintPath>
+    </Reference>
+    <Reference Include="Customer, Version=1.0.5612.31908, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="DBRequest, Version=1.0.3102.18836, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DBRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="DbRequestXmlCooker, Version=1.0.5612.31900, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DbRequestXmlCooker.dll</HintPath>
+    </Reference>
+    <Reference Include="Login, Version=1.0.5612.31907, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Login.dll</HintPath>
+    </Reference>
+    <Reference Include="LookupTables, Version=1.0.5612.31907, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LookupTables.dll</HintPath>
+    </Reference>
+    <Reference Include="Quotes, Version=1.0.5613.19479, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Quotes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskControl, Version=1.0.5613.19741, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TaskControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew.designer.cs">
+      <DependentUpon>PolizaNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew10.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew10.designer.cs">
+      <DependentUpon>PolizaNew10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew11.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew11.designer.cs">
+      <DependentUpon>PolizaNew11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew12.designer.cs">
+      <DependentUpon>PolizaNew12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew13.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew13.designer.cs">
+      <DependentUpon>PolizaNew13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew14.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew14.designer.cs">
+      <DependentUpon>PolizaNew14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew15.designer.cs">
+      <DependentUpon>PolizaNew15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew16.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew16.designer.cs">
+      <DependentUpon>PolizaNew16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew17.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew17.designer.cs">
+      <DependentUpon>PolizaNew17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew18.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew18.designer.cs">
+      <DependentUpon>PolizaNew18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew3.designer.cs">
+      <DependentUpon>PolizaNew3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew4.designer.cs">
+      <DependentUpon>PolizaNew4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew5.designer.cs">
+      <DependentUpon>PolizaNew5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew6.designer.cs">
+      <DependentUpon>PolizaNew6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew7.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew7.designer.cs">
+      <DependentUpon>PolizaNew7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew8.designer.cs">
+      <DependentUpon>PolizaNew8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew9.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PolizaNew9.designer.cs">
+      <DependentUpon>PolizaNew9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew.designer.cs">
+      <DependentUpon>PrimaryPolicyNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew10.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew10.designer.cs">
+      <DependentUpon>PrimaryPolicyNew10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew11.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew11.designer.cs">
+      <DependentUpon>PrimaryPolicyNew11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew12.designer.cs">
+      <DependentUpon>PrimaryPolicyNew12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew13.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew13.designer.cs">
+      <DependentUpon>PrimaryPolicyNew13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew14.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew14.designer.cs">
+      <DependentUpon>PrimaryPolicyNew14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew15.designer.cs">
+      <DependentUpon>PrimaryPolicyNew15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew3.designer.cs">
+      <DependentUpon>PrimaryPolicyNew3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew4.designer.cs">
+      <DependentUpon>PrimaryPolicyNew4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew5.designer.cs">
+      <DependentUpon>PrimaryPolicyNew5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew6.designer.cs">
+      <DependentUpon>PrimaryPolicyNew6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew7.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew7.designer.cs">
+      <DependentUpon>PrimaryPolicyNew7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew8.designer.cs">
+      <DependentUpon>PrimaryPolicyNew8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew9.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRMdic\PrimaryPolicyNew9.designer.cs">
+      <DependentUpon>PrimaryPolicyNew9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PRMdic\PolizaNew.resx">
+      <DependentUpon>PolizaNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew10.resx">
+      <DependentUpon>PolizaNew10.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew11.resx">
+      <DependentUpon>PolizaNew11.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew12.resx">
+      <DependentUpon>PolizaNew12.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew13.resx">
+      <DependentUpon>PolizaNew13.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew14.resx">
+      <DependentUpon>PolizaNew14.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew15.resx">
+      <DependentUpon>PolizaNew15.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew16.resx">
+      <DependentUpon>PolizaNew16.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew17.resx">
+      <DependentUpon>PolizaNew17.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew18.resx">
+      <DependentUpon>PolizaNew18.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew3.resx">
+      <DependentUpon>PolizaNew3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew4.resx">
+      <DependentUpon>PolizaNew4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew5.resx">
+      <DependentUpon>PolizaNew5.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew6.resx">
+      <DependentUpon>PolizaNew6.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew7.resx">
+      <DependentUpon>PolizaNew7.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew8.resx">
+      <DependentUpon>PolizaNew8.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PolizaNew9.resx">
+      <DependentUpon>PolizaNew9.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew.resx">
+      <DependentUpon>PrimaryPolicyNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew10.resx">
+      <DependentUpon>PrimaryPolicyNew10.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew11.resx">
+      <DependentUpon>PrimaryPolicyNew11.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew12.resx">
+      <DependentUpon>PrimaryPolicyNew12.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew13.resx">
+      <DependentUpon>PrimaryPolicyNew13.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew14.resx">
+      <DependentUpon>PrimaryPolicyNew14.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew15.resx">
+      <DependentUpon>PrimaryPolicyNew15.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew3.resx">
+      <DependentUpon>PrimaryPolicyNew3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew4.resx">
+      <DependentUpon>PrimaryPolicyNew4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew5.resx">
+      <DependentUpon>PrimaryPolicyNew5.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew6.resx">
+      <DependentUpon>PrimaryPolicyNew6.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew7.resx">
+      <DependentUpon>PrimaryPolicyNew7.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew8.resx">
+      <DependentUpon>PrimaryPolicyNew8.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRMdic\PrimaryPolicyNew9.resx">
+      <DependentUpon>PrimaryPolicyNew9.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

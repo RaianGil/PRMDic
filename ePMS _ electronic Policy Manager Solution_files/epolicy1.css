@@ -1,0 +1,636 @@
+.passwd {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #7f2100}
+.newsHead { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #7f2100 ; text-decoration: underline}
+.news { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #004f7f; text-align: left}
+.paragph { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: 7f2100; text-align: justify ; text-decoration: none}
+.tableHeads { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: 004f7f; text-align: justify ; text-decoration: underline}
+.tableBody { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: 004f7f; text-align: justify ; text-decoration: none}
+.menuOptions {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: D9E6EE; text-decoration: none}
+:HOVER.menuOptions {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: 023453; text-decoration: none}
+.selectedMenuOption {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: 023453; text-decoration: none}
+.menuOptionsHead { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #003366; text-decoration: none }
+.text {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none}
+.headForm1
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #3f7b9f;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+
+	text-decoration: none;
+}
+.headLabel
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #3f7b9f;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #3f7b9f;
+	text-decoration: none;
+}
+	
+.HeadField1 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none }
+.ReadOnlyField { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; background-color:#e0e0e0; display:block; visibility:visible;  text-decoration: none }
+.headForm2 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #ffffff; text-decoration: none }
+.headForm3 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #004f7f; text-decoration: none }
+.headForm4 { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal; color: #004f7f; text-decoration: none }
+.numbers { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #ffffff; text-decoration: none }
+.head1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none; color: #3f7b9f}
+.headSAMS
+{
+	font-weight: bold;
+	font-size: 24px;
+	color: #3f7b9f;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+.dtNormal
+{
+	font-size: smaller;
+	color: #003399;
+	font-family: Tahoma;
+	background-color: white;
+}
+.dtSelected
+{
+	font-weight: bold;
+	font-size: smaller;
+	color: #3300ff;
+	font-family: Tahoma;
+	background-color: #0099cc;
+}
+.dtFooter
+{
+	font-size: smaller;
+	color: #003399;
+	font-family: Tahoma;
+	background-color: #99cccc;
+}
+.dtHeader
+{
+	font-weight: bold;
+	font-size: smaller;
+	color: #ccccff;
+	font-family: Tahoma;
+	background-color: #003399;
+}
+
+.textfield
+{
+	font-size: smaller;
+	color: #000000;
+	font-family: Tahoma;
+}
+
+
+.textfieldRead
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	font-size: smaller;
+	border-left: 1px solid;
+	color: #000000;
+	border-bottom: 1px solid;
+	font-family: Tahoma;
+}
+
+.panel
+{
+	border-right: #8080FF thin solid;
+	border-top: #8080FF thin solid;
+	border-left: #8080FF thin solid;
+	border-bottom: #8080FF thin solid;
+	background-color: white;
+}
+
+.labelfieldpanel
+{
+	border-right: #3399cc thin solid;
+	border-top: #3399cc thin solid;
+	font-size: smaller;
+	border-left: #3399cc thin solid;
+	color: #000000;
+	border-bottom: #3399cc thin solid;
+	font-family: Tahoma;
+	background-color: white;
+}
+
+.labelfield
+{
+	font-size: smaller;
+	color: #000000;
+	font-family: Tahoma;
+}
+.labelmessage
+{
+	font-weight: bold;
+	font-size: smaller;
+	color: red;
+	font-family: Tahoma;
+}
+.ButtonCmd
+{
+	font-size: smaller;
+	color: black;
+	font-family: Tahoma;
+}
+/* Menu */
+div.hideSkiplink
+{
+    background-color: #ba354e;
+    width:100%;
+    height:42px;
+}
+
+div.menu
+{
+    padding: 8px 0px 4px 8px;
+    font-family: Tahoma;
+    font-size: 14px;
+     width:100%;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: #ba354e;
+    background-color: #ba354e;
+    color: #E2E2E2;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space:nowrap;
+}
+
+div.menu ul li a:hover
+{
+    font-weight:300;
+    background-color:#b51d3a;
+    color: White;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{    
+    background-color:  #b51d3a; /*#036893*/;
+    color: White;
+    text-decoration: none;
+}
+.watermarkRequired
+{
+ color:Gray;
+ background:#FFF080;
+ font-style:italic;   
+}
+.watermarkNotRequired
+{
+ background:#FAFAFA;
+ font-style:italic;
+ color:Gray;   
+}
+
+/* CUSTOM */
+.menu2{
+ border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: #064662;
+    background-color:#036893;
+    color: #E2E2E2;
+    text-decoration: none;
+}
+
+.loginTable
+{
+    margin-left:auto;
+  margin-right: auto;
+    height: 305px;
+}
+
+.searchImage
+{
+ width: 100px;
+ height: auto;
+ min-width: 80px;
+ max-width: 120px; 
+ margin: 20px;    
+}
+
+.totalsAuto
+{
+    background: #F2F2F2;
+    text-align:center;
+    
+}
+
+.imgEPMS
+{
+   width :84%;   
+}
+
+.totalsAutoLeft
+{
+    background: #F2F2F2;
+    text-align:left;
+}
+
+.divider
+{
+     background: #fcbf1f;
+     color:White;    
+}
+.divider2
+{
+ background:Silver;
+ color:White; 
+}
+.lineDivider
+{
+ background: #FAFAFA;   
+}
+.mediumTB
+{
+ width:60%;   
+ min-width: 55%;
+}
+.smallTB
+{
+ min-width:13%;
+}
+.largeTB
+{
+ width:100%;  
+ min-width: 40%; 
+ max-width: 70%;
+    margin-bottom: 0px;
+}
+.midSmallTB
+{
+ width: 45%;
+ min-width: 40%;   
+}
+.totalTile
+{
+ background-color:#068FC9;
+ color:White;   
+}
+.tdTotal1
+{
+    background-color: #E8E8E8;
+    font-weight: bold; 
+    color: Gray;
+    margin-left: 20px; 
+    margin-right: 20px;
+}
+.tdTotal2
+{
+    background-color: #EDEDED;
+    font-weight: bold; 
+    color: Gray;
+}
+.tdTotalTitle
+{
+    background-color: #D1D1D1;
+}
+
+.dividers
+{
+    background-color: #A3D2D8;
+    font-size: 14px; 
+    color: #999999;
+    font-weight: bold; 
+    font-family: Tahoma;
+}
+.tableMain
+{
+  background: white;
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px;    
+}
+.miniTables
+{
+  background: white;
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px; 
+   margin-left:auto;
+  margin-right: auto;
+  
+}
+.tableEndoso
+{
+    background: #E4C5FC;
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px;
+}
+.tableEndosoHeader
+{
+    background: #FFE0A6;
+}
+.tableEndosoLine1
+{
+ background: #FFE9BF;   
+}
+.tableEndosoLine2
+{
+    background: #FFFBF2;
+}
+
+
+.dataGridMain
+{
+  background-color: White; 
+  width:90%;
+  max-width: 90%;  
+  height:90%;  
+  font-size: 13.5px;
+  margin-left:auto;
+  margin-right: auto;   
+}
+.mainDiv
+{
+  background-color: White; 
+  height:90%; 
+  width: 100%; 
+  min-height:90%; 
+  font-size: 13.5px;
+  margin-left:auto;
+  margin-right: auto;  
+}
+
+body
+{
+    color: #454545;
+    font-size: 12px;
+    height: 100%; 
+    width: 100%;
+    background-color: White;
+}
+.tdLabels
+{
+    right: 0px; 
+    text-align: right;      
+}
+.lines1
+{
+ background: #F4F4F4;  
+ text-align: right;
+}
+.linesWithTB
+{
+ background: #F4F4F4;   
+}
+.middleFull
+{
+ margin-left:auto;
+  margin-right: auto;      
+}
+.imageTable
+{
+  margin-left:auto;
+  margin-right: auto;
+}
+.loginTB
+{
+ font-size: 18px;
+ font-family:Tahoma;   
+ width: 100%;   
+}
+ .imageLogin
+{
+  width: 91%;
+  padding-left: 20%;
+}
+
+.td106
+{
+ width: 10.6%;   
+}
+.td22
+{
+ width: 22%;   
+}
+.td16
+{
+ width: 16.6%;    
+}
+.td33
+{
+    width: 33%;
+}
+.td15
+{
+}
+.tdTotal15
+{
+    width: 15.5%;
+     background-color: #E8E8E8;
+}
+.td45
+{
+    width: 45%;
+}
+
+.td45Right
+{
+    width: 45%;
+    text-align: left;
+}
+
+
+ @media only screen and (min-width:1141px){
+ .tableMain      
+ {
+  background-color: White; 
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px;
+  }
+  
+
+  
+ } 
+  
+   @media only screen and (max-width:1140px) and (min-width: 721px){
+ .tableMain      
+ {
+  background-color: White; 
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px;
+
+  }   
+
+   .imageLogin
+{
+  width: 80%;
+}
+ }
+ 
+    @media only screen and (min-width:540px) and (max-width: 720px){
+ .tableMain      
+ {
+  background-color: White; 
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px;
+  margin-left:auto;
+  margin-right: auto;
+  }   
+  
+  .imageLogin
+{
+  width: 70%;
+  padding-left:30%;
+}
+  
+  .mediumTB
+{
+ font-size: 13px;
+ font-family:Tahoma;
+ width:80%;   
+ min-width: 85%;
+}
+.smallTB
+{
+ font-size: 13px;
+ font-family:Tahoma;   
+ width:45%;   
+ min-width:43%;
+}
+.largeTB
+{
+ font-size: 13px;
+ font-family:Tahoma;
+ width:100%;  
+ min-width: 100%; 
+ max-width: 100%;
+}
+.midSmallTB
+{
+ font-size: 13px;
+ font-family:Tahoma;    
+ width: 45%;
+ min-width: 40%;   
+}
+.dividers
+{
+    background-color: #ffe189;
+    font-size: 11px; 
+    color: #999999;
+    font-weight: bold; 
+    font-family: Sans-Serif;
+}
+.tdTotalTitle
+{
+    background-color: #E8E8E8;
+    font-weight: bold; 
+    color: Gray;
+}
+.tdTotal1
+{
+    font-size: 9px;
+}
+
+ }
+ 
+  @media only screen and (max-width:539px){
+  .imageLogin
+{
+   width: 50%;
+   padding-left:35%;
+}
+
+.loginTable
+{
+  margin-left: auto;
+  margin-right: auto; 
+}
+.loginTB
+{
+ width: 90%;   
+}
+
+
+ }
+ 
+ 
+ /* GRIDVIEW */
+/* the style for the table headers */
+.gridview th
+{
+    font-family:Tahoma;
+    font-size: 12px;
+    color: white;
+    border: 1px solid #999999;
+    padding: 3px;
+    text-align: center;
+    background-color: #004C97;
+    column-width:95px;
+    height:30px;
+}
+/* the style for the normal table cells */
+.gridview td
+{
+    font-family:Tahoma;
+    padding: 8px;
+    border: 1px solid black;
+    font-size: 12px;
+    height:auto;
+    
+}
+/*Style for when cursor is on the cells*/
+.gridview td:hover
+{
+    background: #356094;
+    border: 1px solid rgba(81, 203, 238, 1);
+    text-decoration: none;
+    cursor:pointer;
+    color:white;
+    }
+    
+
+.myAwesomeElement {
+    border: 1px solid #999;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    behavior: url(js/PIE.php);
+}
+.middleMain 
+{
+     height: 100%;
+     width: 100%;  
+     margin-left:auto;
+     margin-right: auto;  
+     background: white;
+ 
+}
+
+.ButtonTextMenu-12
+{
+    color:#ba354e;
+    font-size: 12pt;
+    font-family:Tahoma;
+    text-align: center;
+    background-color:#EB4110;
+    height:35px;
+    width:150px;
+    border-width: thin;
+    border: solid;
+    border-color: #EB4110; 
+    border-top-left-radius: 20;
+    border-top-right-radius: 20;
+}

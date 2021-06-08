@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <rd:ReportID>67329143-b60a-432a-bc84-443be6e2a8c6</rd:ReportID>
+  <Code />
+  <Width>8.5in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox2">
+        <Top>0.625in</Top>
+        <Width>7.625in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.4375in</Left>
+        <Height>4in</Height>
+        <Value>Aspen American Insurance Company
+
+
+Attached to Policy # ____________
+
+Issued on ______________________
+
+CONTINUOUS RENEWAL ENDORSEMENT
+
+
+THIS ENDORSEMENT CHANGES THE POLICY - PLEASE READ IT CAREFULLY.
+
+
+In consideration of the premium charged, it is hereby understood and agreed that the policy to which this endorsement is attached, is hereby amended as follows:
+
+In consideration of the Insured’s payment of the required future renewal premiums and subject to the rules and rates then in force, this policy shall be automatically renewed for successive one year periods until cancelled pursuant to its cancellation clause.
+
+
+
+ALL OTHER TERMS AND CONDITIONS REMAIN UNCHANGED.s policy relating thereto.</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>4.75in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Width>8.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.1875in</Left>
+        <Height>0.25in</Height>
+        <Value>ASPCX004 0615                      2015 © Aspen Insurance U.S. Services Inc. All rights reserved.                             Page 1 of 3</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.5in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+</Report>

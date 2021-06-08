@@ -1,0 +1,176 @@
+using System;
+using DataDynamics.ActiveReports;
+using DataDynamics.ActiveReports.Document;
+
+namespace EPolicy.Reports.AutoGuard
+{
+	public class PremiumWrittenbyAgent : ActiveReport
+	{
+		public PremiumWrittenbyAgent()
+		{
+			InitializeReport();
+		}
+
+		#region ActiveReports Designer generated code
+		private ReportHeader ReportHeader = null;
+		private PageHeader PageHeader = null;
+		private Label lblCriterias = null;
+		private Label Label80 = null;
+		private TextBox TextBox17 = null;
+		private Label lblDate = null;
+		private Label lblTime = null;
+		private Shape Shape3 = null;
+		private Label Label107 = null;
+		private Label Label108 = null;
+		private Label Label109 = null;
+		private Label Label115 = null;
+		private Label Label116 = null;
+		private Label Label118 = null;
+		private Label Label120 = null;
+		private Label Label122 = null;
+		private Label Label124 = null;
+		private Label Label125 = null;
+		private Label Label128 = null;
+		private Label Label113 = null;
+		private Label Label129 = null;
+		private Label Label170 = null;
+		private Label Label75 = null;
+		private Label Label77 = null;
+		private Label lblComissions = null;
+		private Label lblComissionPercent = null;
+		private GroupHeader GroupHeader2 = null;
+		private Label lblAgent = null;
+		private Label lblAgentCode = null;
+		private Label lblAgentName = null;
+		private GroupHeader GroupHeader1 = null;
+		private Label Label131 = null;
+		private Label Label132 = null;
+		private Label Label130 = null;
+		private Detail Detail = null;
+		private TextBox txtTaskControlID = null;
+		private TextBox TxtRegCode = null;
+		private TextBox txtCustomerNo = null;
+		private TextBox txtEntryDate = null;
+		private TextBox txtEffectiveDate = null;
+		private TextBox txtTerm = null;
+		private TextBox txtMake = null;
+		private TextBox txtModel = null;
+		private TextBox txtYear = null;
+		private TextBox txtVin = null;
+		private TextBox txtTotalPremium = null;
+		private TextBox TextBox20 = null;
+		private TextBox TextBox38 = null;
+		private TextBox TextBox39 = null;
+		private TextBox TextBox22 = null;
+		private TextBox TextBox75 = null;
+		private TextBox TextBox61 = null;
+		private TextBox txtComission = null;
+		private TextBox txtComissionPercent = null;
+		private GroupFooter GroupFooter1 = null;
+		private Label Label133 = null;
+		private Label Label134 = null;
+		private TextBox TextBox24 = null;
+		private TextBox TextBox25 = null;
+		private Label Label164 = null;
+		private Label Label165 = null;
+		private Label Label166 = null;
+		private TextBox TextBox70 = null;
+		private TextBox TextBox74 = null;
+		private TextBox TextBox76 = null;
+		private GroupFooter GroupFooter2 = null;
+		private PageFooter PageFooter = null;
+		private ReportFooter ReportFooter = null;
+		private Label Label127 = null;
+		private TextBox TextBox18 = null;
+		private TextBox TextBox21 = null;
+		private Label Label167 = null;
+		private Label Label168 = null;
+		private Label Label169 = null;
+		private TextBox TextBox37 = null;
+		private TextBox TextBox68 = null;
+		private TextBox TextBox77 = null;
+		public void InitializeReport()
+		{
+			this.LoadLayout(this.GetType(), "EPolicy.Reports.AutoGuard.PremiumWrittenbyAgent.rpx");
+			this.ReportHeader = ((DataDynamics.ActiveReports.ReportHeader)(this.Sections["ReportHeader"]));
+			this.PageHeader = ((DataDynamics.ActiveReports.PageHeader)(this.Sections["PageHeader"]));
+			this.GroupHeader2 = ((DataDynamics.ActiveReports.GroupHeader)(this.Sections["GroupHeader2"]));
+			this.GroupHeader1 = ((DataDynamics.ActiveReports.GroupHeader)(this.Sections["GroupHeader1"]));
+			this.Detail = ((DataDynamics.ActiveReports.Detail)(this.Sections["Detail"]));
+			this.GroupFooter1 = ((DataDynamics.ActiveReports.GroupFooter)(this.Sections["GroupFooter1"]));
+			this.GroupFooter2 = ((DataDynamics.ActiveReports.GroupFooter)(this.Sections["GroupFooter2"]));
+			this.PageFooter = ((DataDynamics.ActiveReports.PageFooter)(this.Sections["PageFooter"]));
+			this.ReportFooter = ((DataDynamics.ActiveReports.ReportFooter)(this.Sections["ReportFooter"]));
+			this.lblCriterias = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[0]));
+			this.Label80 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[1]));
+			this.TextBox17 = ((DataDynamics.ActiveReports.TextBox)(this.PageHeader.Controls[2]));
+			this.lblDate = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[3]));
+			this.lblTime = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[4]));
+			this.Shape3 = ((DataDynamics.ActiveReports.Shape)(this.PageHeader.Controls[5]));
+			this.Label107 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[6]));
+			this.Label108 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[7]));
+			this.Label109 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[8]));
+			this.Label115 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[9]));
+			this.Label116 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[10]));
+			this.Label118 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[11]));
+			this.Label120 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[12]));
+			this.Label122 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[13]));
+			this.Label124 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[14]));
+			this.Label125 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[15]));
+			this.Label128 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[16]));
+			this.Label113 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[17]));
+			this.Label129 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[18]));
+			this.Label170 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[19]));
+			this.Label75 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[20]));
+			this.Label77 = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[21]));
+			this.lblComissions = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[22]));
+			this.lblComissionPercent = ((DataDynamics.ActiveReports.Label)(this.PageHeader.Controls[23]));
+			this.lblAgent = ((DataDynamics.ActiveReports.Label)(this.GroupHeader2.Controls[0]));
+			this.lblAgentCode = ((DataDynamics.ActiveReports.Label)(this.GroupHeader2.Controls[1]));
+			this.lblAgentName = ((DataDynamics.ActiveReports.Label)(this.GroupHeader2.Controls[2]));
+			this.Label131 = ((DataDynamics.ActiveReports.Label)(this.GroupHeader1.Controls[0]));
+			this.Label132 = ((DataDynamics.ActiveReports.Label)(this.GroupHeader1.Controls[1]));
+			this.Label130 = ((DataDynamics.ActiveReports.Label)(this.GroupHeader1.Controls[2]));
+			this.txtTaskControlID = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[0]));
+			this.TxtRegCode = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[1]));
+			this.txtCustomerNo = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[2]));
+			this.txtEntryDate = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[3]));
+			this.txtEffectiveDate = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[4]));
+			this.txtTerm = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[5]));
+			this.txtMake = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[6]));
+			this.txtModel = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[7]));
+			this.txtYear = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[8]));
+			this.txtVin = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[9]));
+			this.txtTotalPremium = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[10]));
+			this.TextBox20 = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[11]));
+			this.TextBox38 = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[12]));
+			this.TextBox39 = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[13]));
+			this.TextBox22 = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[14]));
+			this.TextBox75 = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[15]));
+			this.TextBox61 = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[16]));
+			this.txtComission = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[17]));
+			this.txtComissionPercent = ((DataDynamics.ActiveReports.TextBox)(this.Detail.Controls[18]));
+			this.Label133 = ((DataDynamics.ActiveReports.Label)(this.GroupFooter1.Controls[0]));
+			this.Label134 = ((DataDynamics.ActiveReports.Label)(this.GroupFooter1.Controls[1]));
+			this.TextBox24 = ((DataDynamics.ActiveReports.TextBox)(this.GroupFooter1.Controls[2]));
+			this.TextBox25 = ((DataDynamics.ActiveReports.TextBox)(this.GroupFooter1.Controls[3]));
+			this.Label164 = ((DataDynamics.ActiveReports.Label)(this.GroupFooter1.Controls[4]));
+			this.Label165 = ((DataDynamics.ActiveReports.Label)(this.GroupFooter1.Controls[5]));
+			this.Label166 = ((DataDynamics.ActiveReports.Label)(this.GroupFooter1.Controls[6]));
+			this.TextBox70 = ((DataDynamics.ActiveReports.TextBox)(this.GroupFooter1.Controls[7]));
+			this.TextBox74 = ((DataDynamics.ActiveReports.TextBox)(this.GroupFooter1.Controls[8]));
+			this.TextBox76 = ((DataDynamics.ActiveReports.TextBox)(this.GroupFooter1.Controls[9]));
+			this.Label127 = ((DataDynamics.ActiveReports.Label)(this.ReportFooter.Controls[0]));
+			this.TextBox18 = ((DataDynamics.ActiveReports.TextBox)(this.ReportFooter.Controls[1]));
+			this.TextBox21 = ((DataDynamics.ActiveReports.TextBox)(this.ReportFooter.Controls[2]));
+			this.Label167 = ((DataDynamics.ActiveReports.Label)(this.ReportFooter.Controls[3]));
+			this.Label168 = ((DataDynamics.ActiveReports.Label)(this.ReportFooter.Controls[4]));
+			this.Label169 = ((DataDynamics.ActiveReports.Label)(this.ReportFooter.Controls[5]));
+			this.TextBox37 = ((DataDynamics.ActiveReports.TextBox)(this.ReportFooter.Controls[6]));
+			this.TextBox68 = ((DataDynamics.ActiveReports.TextBox)(this.ReportFooter.Controls[7]));
+			this.TextBox77 = ((DataDynamics.ActiveReports.TextBox)(this.ReportFooter.Controls[8]));
+		}
+
+		#endregion
+	}
+}

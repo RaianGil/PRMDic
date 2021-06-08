@@ -1,0 +1,203 @@
+<%@ Page language="c#" Inherits="EPolicy.ViewPayment" CodeFile="ViewPayment.aspx.cs" %>
+<%@ Register TagPrefix="MaskedInput" Namespace="MaskedInput" Assembly="MaskedInput" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>ePMS | electronic Policy Manager Solution</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<LINK href="Epolicy.css" type="text/css" rel="stylesheet">
+	</HEAD>
+	<body bottomMargin="0" leftMargin="0" background="Images2/SQUARE.GIF"
+		topMargin="19" rightMargin="0">
+		<form method="post" runat="server">
+			<TABLE id="Table8" style="Z-INDEX: 113; LEFT: 4px; WIDTH: 914px; POSITION: static; TOP: 4px; HEIGHT: 506px"
+				cellSpacing="0" cellPadding="0" width="914" align="center" bgColor="white" dataPageSize="25"
+				border="0">
+				<TR>
+					<TD style="WIDTH: 764px; HEIGHT: 1px" colSpan="3">
+						<P>
+							<asp:placeholder id="Placeholder1" runat="server"></asp:placeholder></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD style="FONT-SIZE: 10pt; WIDTH: 5px; POSITION: static; HEIGHT: 395px" align="right"
+						colSpan="1" rowSpan="5" vAlign="top">
+						<P align="center">
+							<asp:placeholder id="phTopBanner1" runat="server"></asp:placeholder></P>
+					</TD>
+					<TD style="FONT-SIZE: 0pt; WIDTH: 86px; HEIGHT: 184px" align="center">
+						<P align="center">
+							<TABLE id="Table9" style="WIDTH: 811px; HEIGHT: 490px" cellSpacing="0" cellPadding="0"
+								width="811" bgColor="white" border="0">
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 809px; HEIGHT: 3px" align="center"></TD>
+									<TD style="FONT-SIZE: 0pt; HEIGHT: 3px" align="right" colSpan="3"></TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 809px; HEIGHT: 3px" align="left">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+										<TABLE id="Table10" style="WIDTH: 808px; HEIGHT: 12px" cellSpacing="0" cellPadding="0"
+											width="808" border="0">
+											<TR>
+												<TD align="left"> 
+													<asp:Label id="Label6" runat="server" Font-Names="Tahoma" CssClass="headForm1 " Width="137px"
+														Height="16px" Font-Bold="True" ForeColor="Black" Font-Size="11pt">View Payments:</asp:Label>
+													<asp:label id="LblTotalCases" Font-Names="Tahoma" Height="9px" ForeColor="Black" CSSCLASS="headform3"
+														RUNAT="server" WIDTH="148px" Font-Size="9pt">Total Cases:</asp:label>
+													<asp:label id="LblCustomerName" Font-Names="Tahoma" Height="9px" ForeColor="Black" CSSCLASS="headform3"
+														RUNAT="server" WIDTH="270px" Font-Size="9pt">Policy No:</asp:label></TD>
+												<TD></TD>
+												<TD align="right">
+													<asp:button id="btnApply" tabIndex="41" runat="server" Font-Names="Tahoma" Width="96px" Height="23px"
+														Text="Apply Payment" ForeColor="White" BackColor="#400000" BorderColor="#400000" BorderWidth="0px"
+														Font-Size="9pt" onclick="btnApply_Click"></asp:button> 
+                                                    <asp:Button ID="BtnExit" runat="server" BackColor="#400000" BorderColor="#400000"
+                                                        BorderWidth="0px" Font-Names="Tahoma" Font-Size="9pt" ForeColor="White" Height="23px"
+                                                        OnClick="BtnExit_Click" TabIndex="41" Text="Exit" Width="44px" /> 
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; HEIGHT: 5px; width: 809px;">
+										<TABLE id="Table11" style="WIDTH: 808px" borderColor="#c00000" height="1" cellSpacing="0"
+											borderColorDark="#c00000" cellPadding="0" width="808" bgColor="#c00000" borderColorLight="#c00000"
+											border="0">
+											<TR>
+												<TD background="Images2/Barra3.jpg"></TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD style="WIDTH: 809px; HEIGHT: 49px" vAlign="middle" align="center">                                                                                                                                          
+										<TABLE id="Table6" style="WIDTH: 806px; HEIGHT: 32px" cellSpacing="0" cellPadding="0" width="806"
+											border="0">
+											<TR>
+												<TD style="FONT-SIZE: 1pt" align="center">
+													<TABLE id="Table3" style="WIDTH: 188px; HEIGHT: 58px" cellSpacing="0" cellPadding="0" width="188"
+														border="0">
+														<TR>
+															<TD>
+																<asp:Label id="Label1" runat="server" Font-Names="Tahoma" CssClass="headfield1" Width="81px"
+																	Height="18px" Font-Size="9pt">Total Premium</asp:Label></TD>
+															<TD>
+																<asp:TextBox id="TxtTotalPremium" runat="server" Height="19px" Width="103px" CssClass="headfield1"
+																	Font-Names="Tahoma" Font-Size="9pt"></asp:TextBox></TD>
+														</TR>
+														<TR>
+															<TD>
+																<asp:Label id="Label2" runat="server" Font-Names="Tahoma" CssClass="headfield1" Width="55px"
+																	Height="18px" Font-Size="9pt">Total Paid</asp:Label></TD>
+															<TD>
+																<asp:TextBox id="TxtTotalPaid" runat="server" Font-Names="Tahoma" CssClass="headfield1" Width="103px"
+																	Height="19px" Font-Size="9pt"></asp:TextBox></TD>
+														</TR>
+														<TR>
+															<TD>
+																<asp:Label id="Label3" runat="server" Font-Names="Tahoma" CssClass="headfield1" Width="43px"
+																	Height="18px" Font-Size="9pt">Balance</asp:Label></TD>
+															<TD>
+																<asp:TextBox id="TxtBalance" runat="server" Font-Names="Tahoma" CssClass="headfield1" Width="103px"
+																	Height="19px" Font-Size="9pt"></asp:TextBox></TD>
+														</TR>
+														<TR>
+															<TD style="HEIGHT: 10px"></TD>
+															<TD style="HEIGHT: 10px"></TD>
+														</TR>
+													</TABLE>
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 10pt; WIDTH: 809px; HEIGHT: 3px" align="left" colSpan="1">
+										<asp:label id="Label5" Font-Names="Tahoma" Height="9px" ForeColor="Black" CSSCLASS="headform3"
+											RUNAT="server" WIDTH="223px">Total Cases:</asp:label>                     </TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 809px; HEIGHT: 3px">
+										<TABLE id="Table2" style="WIDTH: 808px" borderColor="#c00000" height="1" cellSpacing="0"
+											borderColorDark="#c00000" cellPadding="0" width="808" bgColor="#c00000" borderColorLight="#c00000"
+											border="0">
+											<TR>
+												<TD background="Images2/Barra3.jpg"></TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 809px; HEIGHT: 3px" align="center">
+										<asp:Label id="LblError" runat="server" Font-Names="Tahoma" Width="795px" ForeColor="Red" Visible="False"
+											Font-Size="11pt">Label</asp:Label></TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 809px; HEIGHT: 25px" align="center">
+										<P align="center">
+											<asp:datagrid id="searchIndividual" Height="260px" RUNAT="server" ITEMSTYLE-CSSCLASS="HeadForm3"
+												HEADERSTYLE-BACKCOLOR="#5C8BAE" HEADERSTYLE-CSSCLASS="HeadForm2" ALTERNATINGITEMSTYLE-BACKCOLOR="#FEFBF6"
+												ALTERNATINGITEMSTYLE-CSSCLASS="HeadForm3" CELLPADDING="0" FONT-NAMES="Arial" FONT-SIZE="9pt"
+												ALLOWPAGING="True" AUTOGENERATECOLUMNS="False" BACKCOLOR="White" HEADERSTYLE-HORIZONTALALIGN="Center"
+												ITEMSTYLE-HORIZONTALALIGN="center" WIDTH="795px" BORDERSTYLE="Solid" BORDERWIDTH="1px" BORDERCOLOR="#400000" OnItemCommand="searchIndividual_ItemCommand1">
+												<FooterStyle BackColor="Navy"></FooterStyle>
+												<AlternatingItemStyle CssClass="HeadForm3" BackColor="#FEFBF6"></AlternatingItemStyle>
+												<ItemStyle HorizontalAlign="Center" CssClass="HeadForm3"></ItemStyle>
+												<HeaderStyle Font-Names="tahoma" HorizontalAlign="Center" Height="10px" ForeColor="White" CssClass="HeadForm2"
+													BackColor="#400000" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></HeaderStyle>
+												<Columns>
+													<asp:BoundColumn Visible="False" DataField="PartialPaymentID" HeaderText="PartialPaymentID">
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Left"></ItemStyle>
+													</asp:BoundColumn>
+													<asp:BoundColumn DataField="CheckNumber" HeaderText="Check No.">
+														<HeaderStyle HorizontalAlign="Center"></HeaderStyle>
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Center"></ItemStyle>
+													</asp:BoundColumn>
+													<asp:BoundColumn Visible="False" DataField="PaymentReference" HeaderText="Payment Reference">
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Center"></ItemStyle>
+													</asp:BoundColumn>
+													<asp:BoundColumn DataField="TransactionDate" HeaderText="Entry Date">
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Center"></ItemStyle>
+													</asp:BoundColumn>
+													<asp:BoundColumn DataField="PaymentDate" HeaderText="Payment Date">
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Center"></ItemStyle>
+													</asp:BoundColumn>
+													<asp:BoundColumn DataField="CreditDebitDesc" HeaderText="Credit/Debit">
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Center"></ItemStyle>
+													</asp:BoundColumn>
+                                                    <asp:BoundColumn DataField="DepositDate" HeaderText="Deposit Date"></asp:BoundColumn>
+                                                    <asp:BoundColumn DataField="Name" HeaderText="Name"></asp:BoundColumn>
+													<asp:BoundColumn DataField="TransactionAmount" HeaderText="Transaction Amount" DataFormatString="{0:c}">
+														<ItemStyle Font-Names="Tahoma" HorizontalAlign="Center"></ItemStyle>
+													</asp:BoundColumn>
+													<asp:ButtonColumn ButtonType="PushButton"
+														CommandName="Select" HeaderText="Edit">
+														<ItemStyle Font-Names="tahoma"></ItemStyle>
+													</asp:ButtonColumn>
+													<asp:ButtonColumn ButtonType="PushButton" HeaderText="Delete" CommandName="Delete"></asp:ButtonColumn>
+												</Columns>
+												<PagerStyle Font-Names="Tahoma" HorizontalAlign="Left" BackColor="White" PageButtonCount="20"
+													CssClass="Numbers" Mode="NumericPages"></PagerStyle>
+											</asp:datagrid></P>
+									</TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 809px">
+										<P> </P>
+										<P align="center"> </P>
+									</TD>
+								</TR>
+							</TABLE>
+						</P>
+						<P> </P>
+					</TD>
+				</TR>
+			</TABLE>
+			<maskedinput:maskedtextheader id="MaskedTextHeader1" RUNAT="server"></maskedinput:maskedtextheader>
+			<asp:literal id="litPopUp" RUNAT="server" VISIBLE="False"></asp:literal>
+		</form>
+	</body>
+</HTML>

@@ -1,0 +1,727 @@
+﻿This report shows the steps taken to convert your Web application from ASP.NET 1.1 to ASP.NET 2.0. 
+There may be some unresolved conversion issues you will need to manually fix. 
+For more information, please refer to http://go.microsoft.com/fwlink/?LinkId=46995 or search for the help topic "Converting from Visual Studio .NET 2002 or 2003".
+Conversion Started on project file Optima.csproj at June 19 2008, 10:16:49.
+
+=========================ERRORS===================
+ERROR: The following files were not migrated because they were not found in the project file or the associated 'BuildAction' is set to 'None'.
+You may need to exclude these files from the project after the conversion process in order to compile your web site: 
+File List == groupqueriespolicies.aspx.cs,groupqueriespolicies.aspx.
+
+=========================WARNINGS=================
+Warning: 'Referencepath' settings have not been converted.
+
+=========================COMMENTS=================
+Web.Config: Added 'xhtmlConformance' attribute.
+Web.Config: added a reference for assembly ActiveReports.Design.
+Web.Config: added a reference for assembly ActiveReports.XlsExport.
+Web.Config: added a reference for assembly ActiveReports.
+Web.Config: added a reference for assembly ActiveReports.HtmlExport.
+Web.Config: added a reference for assembly ActiveReports.Interop.
+Web.Config: added a reference for assembly ActiveReports.PdfExport.
+Web.Config: added a reference for assembly ActiveReports.RtfExport.
+Web.Config: added a reference for assembly ActiveReports.TiffExport.
+Web.Config: added a reference for assembly ActiveReports.TextExport.
+Web.Config: added a reference for assembly ActiveReports.Viewer.
+Web.Config: added a reference for assembly ActiveReports.Web.
+Web.Config: added a reference for assembly ActiveReports.Web.Design.
+Removed attribute AutoEventWireup from file ActiveXViewer.aspx.
+Removed attribute Codebehind from file ActiveXViewer.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ActiveXViewer.aspx.cs (Line 27).
+Warning: Access level of 'rblReports_SelectedIndexChanged' changed to 'protected' in file ActiveXViewer.aspx.cs (Line 247).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ActiveXViewer.aspx.cs (Line 252).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file ActiveXViewer.aspx.cs (Line 259).
+Warning: Access level of 'btnEMail_Click' changed to 'protected' in file ActiveXViewer.aspx.cs (Line 277).
+Removed attribute AutoEventWireup from file Agency.aspx.
+Removed attribute Codebehind from file Agency.aspx.
+Removed the id attribute from the <form> tag in file Agency.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Agency.aspx.cs (Line 41).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Agency.aspx.cs (Line 272).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Agency.aspx.cs (Line 328).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Agency.aspx.cs (Line 340).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Agency.aspx.cs (Line 348).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Agency.aspx.cs (Line 353).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Agency.aspx.cs (Line 362).
+Warning: Access level of 'btnCommission_Click' changed to 'protected' in file Agency.aspx.cs (Line 380).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Agency.aspx.cs (Line 387).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file Agency.aspx.cs (Line 398).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Agency.aspx.cs (Line 462).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Agency.aspx.cs (Line 467).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Agency.aspx.cs (Line 490).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Agency.aspx.cs (Line 495).
+Warning: Access level of 'btnCommission_Click' changed to 'protected' in file Agency.aspx.cs (Line 503).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Agency.aspx.cs (Line 510).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Agency.aspx.cs (Line 529).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Agency.aspx.cs (Line 539).
+Removed attribute AutoEventWireup from file Agent.aspx.
+Removed attribute Codebehind from file Agent.aspx.
+Removed the id attribute from the <form> tag in file Agent.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Agent.aspx.cs (Line 39).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Agent.aspx.cs (Line 278).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file Agent.aspx.cs (Line 361).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Agent.aspx.cs (Line 378).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Agent.aspx.cs (Line 383).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Agent.aspx.cs (Line 406).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Agent.aspx.cs (Line 411).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Agent.aspx.cs (Line 419).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Agent.aspx.cs (Line 437).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Agent.aspx.cs (Line 442).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Agent.aspx.cs (Line 451).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Agent.aspx.cs (Line 502).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Agent.aspx.cs (Line 510).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Agent.aspx.cs (Line 522).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file Agent.aspx.cs (Line 532).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Agent.aspx.cs (Line 548).
+Warning: Access level of 'btnCommission_Click' changed to 'protected' in file Agent.aspx.cs (Line 558).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Agent.aspx.cs (Line 564).
+Removed attribute AutoEventWireup from file AutoGap.aspx.
+Removed attribute Codebehind from file AutoGap.aspx.
+Removed the id attribute from the <form> tag in file AutoGap.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file AutoGap.aspx.cs (Line 130).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 207).
+Warning: Access level of 'ddlVehicleMake_SelectedIndexChanged' changed to 'protected' in file AutoGap.aspx.cs (Line 338).
+Warning: Access level of 'RadioButton2_CheckedChanged' changed to 'protected' in file AutoGap.aspx.cs (Line 343).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 464).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 588).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 598).
+Warning: Access level of 'btnPrintPolicy_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 616).
+Warning: Access level of 'btnPayments_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 627).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 633).
+Warning: Access level of 'rdoToFinance_CheckedChanged' changed to 'protected' in file AutoGap.aspx.cs (Line 643).
+Warning: Access level of 'ddlBank_SelectedIndexChanged' changed to 'protected' in file AutoGap.aspx.cs (Line 648).
+Warning: Access level of 'txtEmail_TextChanged' changed to 'protected' in file AutoGap.aspx.cs (Line 653).
+Warning: Access level of 'btnCancellation_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 658).
+Warning: Access level of 'btnReinstatement_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 664).
+Warning: Access level of 'btnComissions_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 730).
+Warning: Access level of 'btnDelete_Click' changed to 'protected' in file AutoGap.aspx.cs (Line 736).
+Removed attribute AutoEventWireup from file Bank.aspx.
+Removed attribute Codebehind from file Bank.aspx.
+Removed the id attribute from the <form> tag in file Bank.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Bank.aspx.cs (Line 42).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Bank.aspx.cs (Line 413).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file Bank.aspx.cs (Line 499).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Bank.aspx.cs (Line 515).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Bank.aspx.cs (Line 520).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Bank.aspx.cs (Line 529).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Bank.aspx.cs (Line 581).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Bank.aspx.cs (Line 589).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Bank.aspx.cs (Line 604).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Bank.aspx.cs (Line 622).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Bank.aspx.cs (Line 633).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Bank.aspx.cs (Line 639).
+Warning: Access level of 'BtnBegin_Click' changed to 'protected' in file Bank.aspx.cs (Line 648).
+Warning: Access level of 'BtnPrevious_Click' changed to 'protected' in file Bank.aspx.cs (Line 656).
+Warning: Access level of 'BtnNext_Click' changed to 'protected' in file Bank.aspx.cs (Line 664).
+Warning: Access level of 'BtnEnd_Click' changed to 'protected' in file Bank.aspx.cs (Line 672).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Bank.aspx.cs (Line 694).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Bank.aspx.cs (Line 699).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Bank.aspx.cs (Line 707).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Bank.aspx.cs (Line 726).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file Bank.aspx.cs (Line 736).
+Removed attribute AutoEventWireup from file CancellationPolicy.aspx.
+Removed attribute Codebehind from file CancellationPolicy.aspx.
+Removed the id attribute from the <form> tag in file CancellationPolicy.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 74).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 260).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 266).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 304).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 331).
+Warning: Access level of 'BtnCalculate_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 407).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 412).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 426).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 433).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 460).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 508).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 574).
+Warning: Access level of 'BtnCalculate_Click' changed to 'protected' in file CancellationPolicy.aspx.cs (Line 597).
+Removed attribute AutoEventWireup from file ChangePassword.aspx.
+Removed attribute Codebehind from file ChangePassword.aspx.
+Removed the id attribute from the <form> tag in file ChangePassword.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ChangePassword.aspx.cs (Line 23).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file ChangePassword.aspx.cs (Line 67).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ChangePassword.aspx.cs (Line 105).
+Removed attribute AutoEventWireup from file ClientBusiness.aspx.
+Removed attribute Codebehind from file ClientBusiness.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ClientBusiness.aspx.cs (Line 97).
+Warning: Access level of 'chkSameAddr_CheckedChanged' changed to 'protected' in file ClientBusiness.aspx.cs (Line 534).
+Warning: Access level of 'BtnViewTask_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 645).
+Warning: Access level of 'btnNew_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 650).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 661).
+Warning: Access level of 'btnProfile_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 671).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 685).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 695).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 744).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 764).
+Warning: Access level of 'BtnViewTask_Click' changed to 'protected' in file ClientBusiness.aspx.cs (Line 771).
+Removed attribute AutoEventWireup from file ClientIndividual.aspx.
+Removed attribute Codebehind from file ClientIndividual.aspx.
+Removed the id attribute from the <form> tag in file ClientIndividual.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ClientIndividual.aspx.cs (Line 125).
+Warning: Access level of 'ddlOccupation_SelectedIndexChanged' changed to 'protected' in file ClientIndividual.aspx.cs (Line 408).
+Warning: Access level of 'chkSameAddr_CheckedChanged' changed to 'protected' in file ClientIndividual.aspx.cs (Line 577).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 707).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 745).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 755).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 820).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 840).
+Warning: Access level of 'btnNew_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 847).
+Warning: Access level of 'TxtFirstName_TextChanged' changed to 'protected' in file ClientIndividual.aspx.cs (Line 858).
+Warning: Access level of 'btnProfile_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 863).
+Warning: Access level of 'BtnViewTask_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 877).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ClientIndividual.aspx.cs (Line 985).
+Removed attribute AutoEventWireup from file ClientReport.aspx.
+Removed attribute Codebehind from file ClientReport.aspx.
+Removed the id attribute from the <form> tag in file ClientReport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ClientReport.aspx.cs (Line 23).
+Warning: Access level of 'rblReportList_SelectedIndexChanged' changed to 'protected' in file ClientReport.aspx.cs (Line 72).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file ClientReport.aspx.cs (Line 331).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ClientReport.aspx.cs (Line 371).
+Removed attribute AutoEventWireup from file ClientTasks.aspx.
+Removed attribute Codebehind from file ClientTasks.aspx.
+Removed the id attribute from the <form> tag in file ClientTasks.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ClientTasks.aspx.cs (Line 23).
+Warning: Access level of 'btnClose_Click' changed to 'protected' in file ClientTasks.aspx.cs (Line 195).
+Removed attribute AutoEventWireup from file CommissionAgency.aspx.
+Removed attribute Codebehind from file CommissionAgency.aspx.
+Removed the id attribute from the <form> tag in file CommissionAgency.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file CommissionAgency.aspx.cs (Line 52).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 419).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 472).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 494).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 499).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 524).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 529).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 543).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 558).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 568).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 573).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 628).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 637).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 653).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file CommissionAgency.aspx.cs (Line 690).
+Removed attribute AutoEventWireup from file CommissionAgent.aspx.
+Removed attribute Codebehind from file CommissionAgent.aspx.
+Removed the id attribute from the <form> tag in file CommissionAgent.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file CommissionAgent.aspx.cs (Line 48).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 401).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 454).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 472).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 478).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 501).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 506).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 517).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 527).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 542).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 547).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 600).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 609).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 625).
+Warning: Access level of 'RdbCommissionAmount_CheckedChanged' changed to 'protected' in file CommissionAgent.aspx.cs (Line 635).
+Warning: Access level of 'RdbRate_CheckedChanged' changed to 'protected' in file CommissionAgent.aspx.cs (Line 644).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file CommissionAgent.aspx.cs (Line 678).
+Removed attribute AutoEventWireup from file CommissionReport.aspx.
+Removed attribute Codebehind from file CommissionReport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file CommissionReport.aspx.cs (Line 24).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file CommissionReport.aspx.cs (Line 94).
+'Reference' tag with reference to '~/CommissionAgent.aspx' added to file CommissionReport.aspx.
+Removed attribute AutoEventWireup from file CompanyDealer.aspx.
+Removed attribute Codebehind from file CompanyDealer.aspx.
+Removed the id attribute from the <form> tag in file CompanyDealer.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file CompanyDealer.aspx.cs (Line 45).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 452).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 547).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 563).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 568).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 577).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 631).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 639).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 645).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 661).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 672).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 678).
+Warning: Access level of 'BtnBegin_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 687).
+Warning: Access level of 'BtnPrevious_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 695).
+Warning: Access level of 'BtnNext_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 703).
+Warning: Access level of 'BtnEnd_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 711).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 733).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 738).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 746).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 763).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file CompanyDealer.aspx.cs (Line 773).
+Removed attribute AutoEventWireup from file Default.aspx.
+Removed attribute Codebehind from file Default.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Default.aspx.cs (Line 29).
+Warning: Access level of 'BtnLogIn_Click' changed to 'protected' in file Default.aspx.cs (Line 152).
+Warning: Access level of 'BtnSalir_Click' changed to 'protected' in file Default.aspx.cs (Line 266).
+Removed attribute AutoEventWireup from file ExpressAutoQuote.aspx.
+Removed attribute Codebehind from file ExpressAutoQuote.aspx.
+Removed the id attribute from the <form> tag in file ExpressAutoQuote.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 167).
+Warning: Access level of 'HplAdd_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 1056).
+Warning: Access level of 'Linkbutton1_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 1125).
+Warning: Access level of 'ddlInsuranceCompany_SelectedIndexChanged' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2247).
+Warning: Access level of 'ddlMake_SelectedIndexChanged' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2330).
+Warning: Access level of 'TxtInsCode_TextChanged' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2699).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2754).
+Warning: Access level of 'btnSave_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2772).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2790).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2809).
+Warning: Access level of 'btnVehicles_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2816).
+Warning: Access level of 'btnDrivers_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2835).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2845).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2871).
+Warning: Access level of 'btnViewCvr_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2882).
+Warning: Access level of 'cmdConvertToPolicy_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 2905).
+Warning: Access level of 'BtnChangeToCustomer_Click' changed to 'protected' in file ExpressAutoQuote.aspx.cs (Line 3268).
+Removed attribute AutoEventWireup from file FollowUp.aspx.
+Removed attribute Codebehind from file FollowUp.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file FollowUp.aspx.cs (Line 26).
+Warning: Access level of 'btnEnviar_Click' changed to 'protected' in file FollowUp.aspx.cs (Line 170).
+Warning: Access level of 'btnSalir_Click' changed to 'protected' in file FollowUp.aspx.cs (Line 202).
+Removed attribute Codebehind from file Global.asax.
+Removed attribute AutoEventWireup from file GroupAndPermissions.aspx.
+Removed attribute Codebehind from file GroupAndPermissions.aspx.
+Removed the id attribute from the <form> tag in file GroupAndPermissions.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 62).
+Warning: Access level of 'ddlAuthenticatedGroup_SelectedIndexChanged' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 85).
+Warning: Access level of 'cmdSelect_Click' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 100).
+Warning: Access level of 'cmdRemove_Click' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 113).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 173).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 178).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 197).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file GroupAndPermissions.aspx.cs (Line 203).
+Removed attribute AutoEventWireup from file IncentiveReport.aspx.
+Removed attribute Codebehind from file IncentiveReport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file IncentiveReport.aspx.cs (Line 24).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file IncentiveReport.aspx.cs (Line 94).
+Removed attribute AutoEventWireup from file IncentiveSupplier.aspx.
+Removed attribute Codebehind from file IncentiveSupplier.aspx.
+Removed the id attribute from the <form> tag in file IncentiveSupplier.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 44).
+Warning: Access level of 'RdbIncentiveAmount_CheckedChanged' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 451).
+Warning: Access level of 'RdbRate_CheckedChanged' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 460).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 495).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 500).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 508).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 559).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 564).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 579).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file IncentiveSupplier.aspx.cs (Line 589).
+Removed attribute AutoEventWireup from file InsuranceCompany.aspx.
+Removed attribute Codebehind from file InsuranceCompany.aspx.
+Removed the id attribute from the <form> tag in file InsuranceCompany.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 45).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 458).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 549).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 565).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 577).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 582).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 591).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 643).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 651).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 669).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 680).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 686).
+Warning: Access level of 'BtnBegin_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 695).
+Warning: Access level of 'BtnPrevious_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 703).
+Warning: Access level of 'BtnNext_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 711).
+Warning: Access level of 'BtnEnd_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 719).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 741).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 746).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 754).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 772).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file InsuranceCompany.aspx.cs (Line 782).
+Removed attribute TargetSchema from file LeftMenu.ascx.
+Removed attribute Codebehind from file LeftMenu.ascx.
+Removed attribute AutoEventWireup from file LeftMenu.ascx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file LeftMenu.ascx.cs (Line 16).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 191).
+Warning: Access level of 'Button3_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 197).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 203).
+Warning: Access level of 'Button5_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 209).
+Warning: Access level of 'Button6_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 215).
+Warning: Access level of 'Button7_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 221).
+Warning: Access level of 'Button12_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 227).
+Warning: Access level of 'Button4_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 233).
+Warning: Access level of 'Button9_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 242).
+Warning: Access level of 'Button10_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 248).
+Warning: Access level of 'Button11_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 253).
+Warning: Access level of 'Button8_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 264).
+Warning: Access level of 'btnQueriesGroupLeftMenu_Click' changed to 'protected' in file LeftMenu.ascx.cs (Line 270).
+Removed attribute TargetSchema from file LeftReportMenu.ascx.
+Removed attribute Codebehind from file LeftReportMenu.ascx.
+Removed attribute AutoEventWireup from file LeftReportMenu.ascx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 16).
+Warning: Access level of 'Button8_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 113).
+Warning: Access level of 'Button3_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 119).
+Warning: Access level of 'Button10_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 125).
+Warning: Access level of 'Button11_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 131).
+Warning: Access level of 'Button12_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 137).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 143).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 149).
+Warning: Access level of 'btnPoliciesReports_Click' changed to 'protected' in file LeftReportMenu.ascx.cs (Line 155).
+Removed attribute AutoEventWireup from file LookupTableMaintenance.aspx.
+Removed attribute Codebehind from file LookupTableMaintenance.aspx.
+Removed the id attribute from the <form> tag in file LookupTableMaintenance.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file LookupTableMaintenance.aspx.cs (Line 27).
+Warning: Access level of 'btnLookupTableMetadata_Click' changed to 'protected' in file LookupTableMaintenance.aspx.cs (Line 244).
+Removed attribute AutoEventWireup from file LookupTableMetadata.aspx.
+Removed attribute Codebehind from file LookupTableMetadata.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 35).
+Warning: Access level of 'ddlTableNames_SelectedIndexChanged' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 427).
+Warning: Access level of 'chkIsValuePair_CheckedChanged' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 433).
+Warning: Access level of 'btnAddTableToMetadataStore_Click' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 438).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 461).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 470).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 511).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 519).
+Warning: Access level of 'cmdExit_Click' changed to 'protected' in file LookupTableMetadata.aspx.cs (Line 525).
+Removed attribute AutoEventWireup from file MainMenu.aspx.
+Removed attribute Codebehind from file MainMenu.aspx.
+Removed the id attribute from the <form> tag in file MainMenu.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file MainMenu.aspx.cs (Line 20).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 127).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 133).
+Warning: Access level of 'BtnLogIn_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 144).
+Warning: Access level of 'Button5_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 155).
+Warning: Access level of 'BtnSalir_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 176).
+Warning: Access level of 'Button4_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 182).
+Warning: Access level of 'btnAutoGap_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 193).
+Warning: Access level of 'btnVSC_Click' changed to 'protected' in file MainMenu.aspx.cs (Line 206).
+Removed attribute AutoEventWireup from file NewTrans.aspx.
+Removed attribute Codebehind from file NewTrans.aspx.
+Removed the id attribute from the <form> tag in file NewTrans.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file NewTrans.aspx.cs (Line 61).
+Warning: Access level of 'ddlTaskControlType_SelectedIndexChanged' changed to 'protected' in file NewTrans.aspx.cs (Line 77).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file NewTrans.aspx.cs (Line 82).
+Removed attribute AutoEventWireup from file PaymentCertificationLetter.aspx.
+Removed attribute Codebehind from file PaymentCertificationLetter.aspx.
+Removed the id attribute from the <form> tag in file PaymentCertificationLetter.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 24).
+Warning: Access level of 'BtnGo_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 467).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 538).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 549).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 584).
+Warning: Access level of 'btnDelete_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 612).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 642).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 652).
+Warning: Access level of 'btnClose_Click' changed to 'protected' in file PaymentCertificationLetter.aspx.cs (Line 665).
+Removed attribute AutoEventWireup from file Payments.aspx.
+Removed attribute Codebehind from file Payments.aspx.
+Removed the id attribute from the <form> tag in file Payments.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Payments.aspx.cs (Line 93).
+Warning: Access level of 'BtnGo2_Click' changed to 'protected' in file Payments.aspx.cs (Line 639).
+Warning: Access level of 'BtnGo_Click' changed to 'protected' in file Payments.aspx.cs (Line 697).
+Warning: Access level of 'ChkSRO_CheckedChanged' changed to 'protected' in file Payments.aspx.cs (Line 770).
+Warning: Access level of 'txtCertificate_TextChanged' changed to 'protected' in file Payments.aspx.cs (Line 799).
+Warning: Access level of 'ddlPolicyClass_SelectedIndexChanged' changed to 'protected' in file Payments.aspx.cs (Line 810).
+Warning: Access level of 'TxtSuffix_TextChanged' changed to 'protected' in file Payments.aspx.cs (Line 937).
+Warning: Access level of 'Button3_Click' changed to 'protected' in file Payments.aspx.cs (Line 942).
+Warning: Access level of 'BtnDele_Click' changed to 'protected' in file Payments.aspx.cs (Line 952).
+Warning: Access level of 'btnReceip_Click' changed to 'protected' in file Payments.aspx.cs (Line 982).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file Payments.aspx.cs (Line 996).
+Warning: Access level of 'Button5_Click' changed to 'protected' in file Payments.aspx.cs (Line 1003).
+Warning: Access level of 'Button6_Click' changed to 'protected' in file Payments.aspx.cs (Line 1021).
+Warning: Access level of 'Button4_Click' changed to 'protected' in file Payments.aspx.cs (Line 1056).
+Warning: Access level of 'BtnNewPayment_Click' changed to 'protected' in file Payments.aspx.cs (Line 1099).
+Removed attribute AutoEventWireup from file PaymentsReport.aspx.
+Removed attribute Codebehind from file PaymentsReport.aspx.
+Removed the id attribute from the <form> tag in file PaymentsReport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file PaymentsReport.aspx.cs (Line 26).
+Warning: Access level of 'rblProspectsReports_SelectedIndexChanged' changed to 'protected' in file PaymentsReport.aspx.cs (Line 288).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file PaymentsReport.aspx.cs (Line 445).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file PaymentsReport.aspx.cs (Line 486).
+Removed attribute AutoEventWireup from file Policies.aspx.
+Removed attribute Codebehind from file Policies.aspx.
+Removed the id attribute from the <form> tag in file Policies.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Policies.aspx.cs (Line 22).
+'Reference' tag with reference to '~/SearchPolicies.aspx' added to file Policies.aspx.
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Policies.aspx.cs (Line 846).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file Policies.aspx.cs (Line 1076).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file Policies.aspx.cs (Line 1084).
+Warning: Access level of 'btnPrintPolicy_Click' changed to 'protected' in file Policies.aspx.cs (Line 1117).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Policies.aspx.cs (Line 1131).
+Warning: Access level of 'btnDelete_Click' changed to 'protected' in file Policies.aspx.cs (Line 1143).
+Warning: Access level of 'btnReinstatement_Click' changed to 'protected' in file Policies.aspx.cs (Line 1168).
+Warning: Access level of 'btnCancellation_Click' changed to 'protected' in file Policies.aspx.cs (Line 1244).
+Warning: Access level of 'btnPayments_Click' changed to 'protected' in file Policies.aspx.cs (Line 1251).
+Warning: Access level of 'btnComissions_Click' changed to 'protected' in file Policies.aspx.cs (Line 1258).
+Warning: Access level of 'btnHistory_Click' changed to 'protected' in file Policies.aspx.cs (Line 1265).
+Warning: Access level of 'cmdSelect_Click' changed to 'protected' in file Policies.aspx.cs (Line 1278).
+Warning: Access level of 'cmdRemove_Click' changed to 'protected' in file Policies.aspx.cs (Line 1324).
+Warning: Access level of 'ddlPolicyClass_SelectedIndexChanged' changed to 'protected' in file Policies.aspx.cs (Line 1549).
+Warning: Access level of 'ddlSelectedAgent_SelectedIndexChanged' changed to 'protected' in file Policies.aspx.cs (Line 1763).
+Warning: Access level of 'ddlVehicleMake_SelectedIndexChanged' changed to 'protected' in file Policies.aspx.cs (Line 1768).
+Warning: Access level of 'ddlCovers_SelectedIndexChanged' changed to 'protected' in file Policies.aspx.cs (Line 1773).
+Warning: Access level of 'btnAdd_Click' changed to 'protected' in file Policies.aspx.cs (Line 1790).
+Warning: Access level of 'ddlLimits_SelectedIndexChanged' changed to 'protected' in file Policies.aspx.cs (Line 1931).
+Warning: Access level of 'btnIncentives_Click' changed to 'protected' in file Policies.aspx.cs (Line 1941).
+Warning: Access level of 'btnNew_Click' changed to 'protected' in file Policies.aspx.cs (Line 1948).
+Warning: Access level of 'btnAdd2_Click' changed to 'protected' in file Policies.aspx.cs (Line 2005).
+Warning: Access level of 'rdbLoan_CheckedChanged' changed to 'protected' in file Policies.aspx.cs (Line 2016).
+Warning: Access level of 'rdbLeasing_CheckedChanged' changed to 'protected' in file Policies.aspx.cs (Line 2030).
+Removed attribute AutoEventWireup from file PoliciesReports.aspx.
+Removed attribute Codebehind from file PoliciesReports.aspx.
+Removed the id attribute from the <form> tag in file PoliciesReports.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file PoliciesReports.aspx.cs (Line 33).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file PoliciesReports.aspx.cs (Line 134).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file PoliciesReports.aspx.cs (Line 182).
+Warning: Access level of 'rblAutoGuardReports_SelectedIndexChanged' changed to 'protected' in file PoliciesReports.aspx.cs (Line 724).
+Warning: Access level of 'rblPremWrittenOrder_SelectedIndexChanged' changed to 'protected' in file PoliciesReports.aspx.cs (Line 987).
+Warning: Access level of 'rblCertificatePaidOrder_SelectedIndexChanged' changed to 'protected' in file PoliciesReports.aspx.cs (Line 1019).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file PoliciesReports.aspx.cs (Line 1057).
+Removed attribute AutoEventWireup from file PolicyReport.aspx.
+Removed attribute Codebehind from file PolicyReport.aspx.
+Removed the id attribute from the <form> tag in file PolicyReport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file PolicyReport.aspx.cs (Line 31).
+Warning: Access level of 'rblPolicyReports_SelectedIndexChanged' changed to 'protected' in file PolicyReport.aspx.cs (Line 285).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file PolicyReport.aspx.cs (Line 344).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file PolicyReport.aspx.cs (Line 370).
+Removed attribute AutoEventWireup from file PrintPolicy.aspx.
+Removed attribute Codebehind from file PrintPolicy.aspx.
+Removed the id attribute from the <form> tag in file PrintPolicy.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file PrintPolicy.aspx.cs (Line 56).
+Warning: Access level of 'PrintPolicies_Click' changed to 'protected' in file PrintPolicy.aspx.cs (Line 155).
+Warning: Access level of 'BtnBack_Click' changed to 'protected' in file PrintPolicy.aspx.cs (Line 233).
+Removed attribute AutoEventWireup from file ProspectBusiness.aspx.
+Removed attribute Codebehind from file ProspectBusiness.aspx.
+Removed the id attribute from the <form> tag in file ProspectBusiness.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 43).
+Warning: Access level of 'cmdConvertToCustomer_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 493).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 518).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 528).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 536).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 542).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 611).
+Warning: Access level of 'btnNew_Click' changed to 'protected' in file ProspectBusiness.aspx.cs (Line 707).
+Removed attribute AutoEventWireup from file ProspectIndividual.aspx.
+Removed attribute Codebehind from file ProspectIndividual.aspx.
+Removed the id attribute from the <form> tag in file ProspectIndividual.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 33).
+Warning: Access level of 'cmdConvertToCustomer_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 410).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 431).
+Warning: Access level of 'cmdExit_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 441).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 449).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 566).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 574).
+Warning: Access level of 'btnNew_Click' changed to 'protected' in file ProspectIndividual.aspx.cs (Line 730).
+Removed attribute AutoEventWireup from file ProspectReport.aspx.
+Removed attribute Codebehind from file ProspectReport.aspx.
+Removed the id attribute from the <form> tag in file ProspectReport.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ProspectReport.aspx.cs (Line 21).
+Warning: Access level of 'Button2_Click' changed to 'protected' in file ProspectReport.aspx.cs (Line 219).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ProspectReport.aspx.cs (Line 267).
+Removed attribute AutoEventWireup from file QueriesGroupReports.aspx.
+Removed attribute Codebehind from file QueriesGroupReports.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file QueriesGroupReports.aspx.cs (Line 32).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file QueriesGroupReports.aspx.cs (Line 94).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file QueriesGroupReports.aspx.cs (Line 117).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file QueriesGroupReports.aspx.cs (Line 213).
+Removed attribute AutoEventWireup from file QuoteAuto.aspx.
+Removed attribute Codebehind from file QuoteAuto.aspx.
+Removed the id attribute from the <form> tag in file QuoteAuto.aspx.
+'Reference' tag with reference to '~/ProspectBusiness.aspx' added to file QuoteAuto.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file QuoteAuto.aspx.cs (Line 34).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 1937).
+Warning: Access level of 'btnSave_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 1949).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2028).
+Warning: Access level of 'btnCalculate_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2045).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2055).
+Warning: Access level of 'BtnDrivers_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2082).
+Warning: Access level of 'btnIncentive_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2089).
+Warning: Access level of 'btnPayCertLetter_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2099).
+Warning: Access level of 'btnPayments_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2139).
+Warning: Access level of 'btnVehicles_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2149).
+Warning: Access level of 'btnPrintPolicy_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2156).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file QuoteAuto.aspx.cs (Line 2167).
+Removed attribute AutoEventWireup from file QuoteAutoBreakdown.aspx.
+Removed attribute Codebehind from file QuoteAutoBreakdown.aspx.
+Removed the id attribute from the <form> tag in file QuoteAutoBreakdown.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file QuoteAutoBreakdown.aspx.cs (Line 38).
+Warning: Access level of 'btnDrivers_Click' changed to 'protected' in file QuoteAutoBreakdown.aspx.cs (Line 625).
+Warning: Access level of 'btnBack_Click' changed to 'protected' in file QuoteAutoBreakdown.aspx.cs (Line 630).
+Warning: Access level of 'BtnPrint_Click' changed to 'protected' in file QuoteAutoBreakdown.aspx.cs (Line 636).
+Removed attribute AutoEventWireup from file QuoteAutoDrivers.aspx.
+Removed attribute Codebehind from file QuoteAutoDrivers.aspx.
+Removed the id attribute from the <form> tag in file QuoteAutoDrivers.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file QuoteAutoDrivers.aspx.cs (Line 32).
+Removed attribute AutoEventWireup from file QuoteAutoVehicles.aspx.
+Removed attribute Codebehind from file QuoteAutoVehicles.aspx.
+Removed the id attribute from the <form> tag in file QuoteAutoVehicles.aspx.
+Warning: A module definition 'BasePolicySubType' has been found in code-behind file 'QuoteAutoVehicles.aspx.cs'. New file 'QuoteAutoVehicles_aspx_cs_BasePolicySubType.cs' has been created for this module and moved to the 'App_Code\Migrated' folder.    QuoteAutoVehicles.aspx.cs (Line 21)
+Warning: Access level of 'Page_Load' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 30).
+Warning: Access level of 'ddlMake_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 1420).
+Warning: Access level of 'ddlCSL_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 1466).
+Warning: Access level of 'ddlPD_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 1482).
+Warning: Access level of 'ddlBI_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 1495).
+Warning: Access level of 'ddlHomeCity_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 2154).
+Warning: Access level of 'ddlWorkCity_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 2208).
+Warning: Access level of 'HplAdd_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3385).
+Warning: Access level of 'ddlYear_SelectedIndexChanged' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3511).
+Warning: Access level of 'btnAssignDrv_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3527).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3606).
+Warning: Access level of 'btnSave_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3618).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3626).
+Warning: Access level of 'btnAddVhcl_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3632).
+Warning: Access level of 'btnViewCvr_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3638).
+Warning: Access level of 'btnDrivers_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3661).
+Warning: Access level of 'btnBack_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3667).
+Warning: Access level of 'btnNext_Click' changed to 'protected' in file QuoteAutoVehicles.aspx.cs (Line 3685).
+Removed attribute AutoEventWireup from file Search.aspx.
+Removed attribute Codebehind from file Search.aspx.
+Removed the id attribute from the <form> tag in file Search.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Search.aspx.cs (Line 22).
+Warning: Access level of 'RdbIndividual_CheckedChanged' changed to 'protected' in file Search.aspx.cs (Line 116).
+Warning: Access level of 'RdbBusiness_CheckedChanged' changed to 'protected' in file Search.aspx.cs (Line 143).
+Warning: Access level of 'ddlTaskControlType_SelectedIndexChanged' changed to 'protected' in file Search.aspx.cs (Line 422).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Search.aspx.cs (Line 455).
+Warning: Access level of 'btnClear_Click' changed to 'protected' in file Search.aspx.cs (Line 516).
+Removed attribute AutoEventWireup from file SearchAuditItems.aspx.
+Removed attribute Codebehind from file SearchAuditItems.aspx.
+Removed the id attribute from the <form> tag in file SearchAuditItems.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file SearchAuditItems.aspx.cs (Line 51).
+Warning: Access level of 'btnBack_Click' changed to 'protected' in file SearchAuditItems.aspx.cs (Line 1306).
+Warning: Access level of 'grdAuditItems_SelectedIndexChanged' changed to 'protected' in file SearchAuditItems.aspx.cs (Line 1391).
+Removed attribute AutoEventWireup from file SearchClient.aspx.
+Removed attribute Codebehind from file SearchClient.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file SearchClient.aspx.cs (Line 54).
+Warning: Access level of 'RdbBusiness_CheckedChanged' changed to 'protected' in file SearchClient.aspx.cs (Line 72).
+Warning: Access level of 'RdbIndividual_CheckedChanged' changed to 'protected' in file SearchClient.aspx.cs (Line 83).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file SearchClient.aspx.cs (Line 273).
+Warning: Access level of 'btnClear_Click' changed to 'protected' in file SearchClient.aspx.cs (Line 341).
+Removed attribute AutoEventWireup from file SearchLookupTableDescriptions.aspx.
+Removed attribute Codebehind from file SearchLookupTableDescriptions.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file SearchLookupTableDescriptions.aspx.cs (Line 77).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file SearchLookupTableDescriptions.aspx.cs (Line 284).
+Warning: Access level of 'btnClear_Click' changed to 'protected' in file SearchLookupTableDescriptions.aspx.cs (Line 306).
+Warning: Access level of 'ddlLookupTables_SelectedIndexChanged' changed to 'protected' in file SearchLookupTableDescriptions.aspx.cs (Line 352).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file SearchLookupTableDescriptions.aspx.cs (Line 522).
+Warning: Access level of 'btnExit_Click' changed to 'protected' in file SearchLookupTableDescriptions.aspx.cs (Line 550).
+Removed attribute AutoEventWireup from file SearchPolicies.aspx.
+Removed attribute Codebehind from file SearchPolicies.aspx.
+Removed the id attribute from the <form> tag in file SearchPolicies.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file SearchPolicies.aspx.cs (Line 62).
+Warning: Access level of 'ddlPolicyClass_SelectedIndexChanged' changed to 'protected' in file SearchPolicies.aspx.cs (Line 250).
+Warning: Access level of 'Imagebutton2_Click' changed to 'protected' in file SearchPolicies.aspx.cs (Line 340).
+Warning: Access level of 'Imagebutton1_Click' changed to 'protected' in file SearchPolicies.aspx.cs (Line 470).
+Removed attribute AutoEventWireup from file SearchProspect.aspx.
+Removed attribute Codebehind from file SearchProspect.aspx.
+Removed the id attribute from the <form> tag in file SearchProspect.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file SearchProspect.aspx.cs (Line 21).
+Warning: Access level of 'RdbIndividual_CheckedChanged' changed to 'protected' in file SearchProspect.aspx.cs (Line 73).
+Warning: Access level of 'RdbBusiness_CheckedChanged' changed to 'protected' in file SearchProspect.aspx.cs (Line 83).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file SearchProspect.aspx.cs (Line 256).
+Warning: Access level of 'btnClear_Click' changed to 'protected' in file SearchProspect.aspx.cs (Line 336).
+Removed attribute AutoEventWireup from file selectDate.aspx.
+Removed attribute Codebehind from file selectDate.aspx.
+Removed the id attribute from the <form> tag in file selectDate.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file selectDate.aspx.cs (Line 22).
+Warning: Access level of 'cboMonths_SelectedIndexChanged' changed to 'protected' in file selectDate.aspx.cs (Line 77).
+Warning: Access level of 'cboYears_SelectedIndexChanged' changed to 'protected' in file selectDate.aspx.cs (Line 84).
+Removed attribute AutoEventWireup from file Supplier.aspx.
+Removed attribute Codebehind from file Supplier.aspx.
+Removed the id attribute from the <form> tag in file Supplier.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file Supplier.aspx.cs (Line 42).
+Warning: Access level of 'BtnBegin_Click' changed to 'protected' in file Supplier.aspx.cs (Line 427).
+Warning: Access level of 'BtnPrevious_Click' changed to 'protected' in file Supplier.aspx.cs (Line 435).
+Warning: Access level of 'BtnNext_Click' changed to 'protected' in file Supplier.aspx.cs (Line 443).
+Warning: Access level of 'BtnEnd_Click' changed to 'protected' in file Supplier.aspx.cs (Line 451).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file Supplier.aspx.cs (Line 474).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file Supplier.aspx.cs (Line 490).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file Supplier.aspx.cs (Line 500).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file Supplier.aspx.cs (Line 516).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file Supplier.aspx.cs (Line 529).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file Supplier.aspx.cs (Line 537).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file Supplier.aspx.cs (Line 588).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file Supplier.aspx.cs (Line 597).
+Warning: Access level of 'btnIncentive_Click' changed to 'protected' in file Supplier.aspx.cs (Line 602).
+Removed attribute TargetSchema from file TopBanner.ascx.
+Removed attribute Codebehind from file TopBanner.ascx.
+Removed attribute AutoEventWireup from file TopBanner.ascx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file TopBanner.ascx.cs (Line 22).
+Removed attribute AutoEventWireup from file UserPropertiesGroup.aspx.
+Removed attribute Codebehind from file UserPropertiesGroup.aspx.
+Removed the id attribute from the <form> tag in file UserPropertiesGroup.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file UserPropertiesGroup.aspx.cs (Line 41).
+Warning: Access level of 'btnClose_Click' changed to 'protected' in file UserPropertiesGroup.aspx.cs (Line 101).
+Removed attribute AutoEventWireup from file UserPropertiesList.aspx.
+Removed attribute Codebehind from file UserPropertiesList.aspx.
+Removed the id attribute from the <form> tag in file UserPropertiesList.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file UserPropertiesList.aspx.cs (Line 22).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file UserPropertiesList.aspx.cs (Line 131).
+Removed attribute AutoEventWireup from file UsersProperties.aspx.
+Removed attribute Codebehind from file UsersProperties.aspx.
+Removed the id attribute from the <form> tag in file UsersProperties.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file UsersProperties.aspx.cs (Line 23).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file UsersProperties.aspx.cs (Line 359).
+Warning: Access level of 'btnCancel_Click' changed to 'protected' in file UsersProperties.aspx.cs (Line 369).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file UsersProperties.aspx.cs (Line 392).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file UsersProperties.aspx.cs (Line 399).
+Warning: Access level of 'btnAdd_Click' changed to 'protected' in file UsersProperties.aspx.cs (Line 546).
+Warning: Access level of 'btnAdd2_Click' changed to 'protected' in file UsersProperties.aspx.cs (Line 572).
+Warning: Access level of 'dgDealer_SelectedIndexChanged' changed to 'protected' in file UsersProperties.aspx.cs (Line 634).
+Removed attribute AutoEventWireup from file ValuePairLookupTableMaintenance.aspx.
+Removed attribute Codebehind from file ValuePairLookupTableMaintenance.aspx.
+Removed the id attribute from the <form> tag in file ValuePairLookupTableMaintenance.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 46).
+Warning: Access level of 'ddlLookupTables_SelectedIndexChanged' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 162).
+Warning: Access level of 'cmdExit_Click' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 431).
+Warning: Access level of 'cmdAdd_Click' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 436).
+Warning: Access level of 'cmdSave_Click' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 441).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 446).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 451).
+Warning: Access level of 'cmdExit_Click' changed to 'protected' in file ValuePairLookupTableMaintenance.aspx.cs (Line 477).
+Removed attribute AutoEventWireup from file VehicleModel.aspx.
+Removed attribute Codebehind from file VehicleModel.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file VehicleModel.aspx.cs (Line 38).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 402).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 478).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 494).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 499).
+Warning: Access level of 'BtnSave_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 508).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 560).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 568).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 574).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 590).
+Warning: Access level of 'cmdCancel_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 600).
+Warning: Access level of 'btnEdit_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 606).
+Warning: Access level of 'BtnBegin_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 615).
+Warning: Access level of 'BtnPrevious_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 623).
+Warning: Access level of 'BtnNext_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 631).
+Warning: Access level of 'BtnEnd_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 639).
+Warning: Access level of 'btnAddNew_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 661).
+Warning: Access level of 'btnSearch_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 666).
+Warning: Access level of 'btnPrint_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 674).
+Warning: Access level of 'ddlVehicleMake_SelectedIndexChanged' changed to 'protected' in file VehicleModel.aspx.cs (Line 690).
+Warning: Access level of 'btnAuditTrail_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 737).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file VehicleModel.aspx.cs (Line 747).
+Removed attribute AutoEventWireup from file VehicleServiceContractQuote.aspx.
+Removed attribute Codebehind from file VehicleServiceContractQuote.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file VehicleServiceContractQuote.aspx.cs (Line 20).
+Removed attribute AutoEventWireup from file ViewCommission.aspx.
+Removed attribute Codebehind from file ViewCommission.aspx.
+Removed the id attribute from the <form> tag in file ViewCommission.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ViewCommission.aspx.cs (Line 52).
+Warning: Access level of 'btnClose_Click' changed to 'protected' in file ViewCommission.aspx.cs (Line 198).
+Removed attribute AutoEventWireup from file ViewIncentive.aspx.
+Removed attribute Codebehind from file ViewIncentive.aspx.
+Removed the id attribute from the <form> tag in file ViewIncentive.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ViewIncentive.aspx.cs (Line 24).
+Warning: Access level of 'Button1_Click' changed to 'protected' in file ViewIncentive.aspx.cs (Line 187).
+Removed attribute AutoEventWireup from file ViewPayment.aspx.
+Removed attribute Codebehind from file ViewPayment.aspx.
+Removed the id attribute from the <form> tag in file ViewPayment.aspx.
+Warning: Access level of 'Page_Load' changed to 'protected' in file ViewPayment.aspx.cs (Line 55).
+Warning: Access level of 'BtnExit_Click' changed to 'protected' in file ViewPayment.aspx.cs (Line 203).
+Added folder App_Code\Migrated.
+Moved file Global.asax.cs to the App_Code\ directory.
+Moved file AssemblyInfo.cs to the App_Code\ directory.
+Added folder App_Code\Class.
+Moved file class\utilities.cs to the App_Code\Class\ directory.
+Moved file class\mail.cs to the App_Code\Class\ directory.
+Changed HTML validation schema for all projects to 'Internet Explorer 6.0'.
+Removed file Bin\Optima.dll.
+Removed file Bin\Optima.pdb.
+Removed file Optima.csproj.
+Removed file Optima.csproj.webinfo.
+Project Optima.csproj has been converted successfully at June 19 2008, 10:17:39.

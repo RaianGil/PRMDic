@@ -1,0 +1,141 @@
+USE [prmdicTestBK]
+GO
+/****** Object:  StoredProcedure [dbo].[GetPolicyByCriteria]    Script Date: 8/12/2015 2:26:16 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[GetPolicyByCriteria]
+@policyClass int,
+@policyType varchar(4),
+@policyNo varchar (11),
+@sufijo varchar(2),
+@certificate varchar (10),
+@loanNo varchar (15),
+@bank varchar(3),
+@VIN varchar(18),
+@UserID int
+AS
+IF @policyNo IS NULL SET @policyNo = ''
+IF @policyType IS NULL SET @policyType = ''
+IF @certificate IS NULL SET @certificate = ''
+IF @sufijo IS NULL SET @sufijo = ''
+IF @loanNo IS NULL SET @loanNo = ''
+IF @bank IS NULL or @bank = '000' SET @bank = ''
+IF @VIN IS NULL SET @VIN = ''
+SET @policyType = @policyType+'%'
+SET @policyNo = @policyNo+'%'
+SET @certificate = @certificate+'%'
+SET @loanNo  = @loanNo +'%'
+SET @sufijo = @sufijo +'%'
+SET @bank = @bank +'%'
+SET @VIN  =  '%' +@VIN 
+DECLARE @sqlString varchar(3000)
+DECLARE @whereClause varchar(200)
+--DECLARE @policyTable varchar(200)
+--SET @policyTable = 'CorporatePolicy'
+
+--IF @policyType = 'PE' OR @policyType = 'PP'
+--	begin
+--	set @policyTable = 'Policies'
+--	end
+--Para eliminar tabla temporera. --
+    
+IF EXISTS (Select * From tempdb.dbo.sysobjects Where ID = object_id(N'[tempdb].[dbo].[##fich]')) 
+   begin
+   drop table ##fich
+   end
+   
+SET CONCAT_NULL_YIELDS_NULL off
+--Se quito del query estos campos, si da error en otras llamadas hay que poner los campos especificos, P.*
+
+
+declare @var1 varchar(10)
+declare @var2 varchar(10)
+declare @var3 varchar(10)
+declare @var4 varchar(10)
+declare @var5 varchar(10)
+declare @var6 varchar(10)
+declare @var7 varchar(10)
+declare @var8 varchar(10)
+
+
+set @var1 ='Inforce'
+set @var2 ='Expired'
+set @var3 ='Cancelled'
+set @var4 ='P'
+set @var5 = 'U'
+set @var6 ='I/'
+set @var7 ='E/'
+set @var8 ='C/P'
+--,PS.Comments
+declare @comment varchar(100)
+set @comment=' '
+
+SET @sqlString =     'SELECT TC.TaskControlID,TC.TaskStatusID,TC.TaskControlTypeID,TC.CustomerNo, TC.PolicyClassID,TC.Bank,  rtrim(C.firstna)+'''+' '+'''+rtrim(C.lastna1)+'''+' '+'''+rtrim(C.lastna2) as customerName, PC.PolicyClassDesc, TC.CompanyDealer,
+TC.Agent,TC.AGENCY,P.PolicyType,P.PolicyNo,P.Certificate,P.Sufijo,P.LoanNo,convert(varchar(20),P.EffectiveDate,101) as EffectiveDate,P.ExpirationDate,P.TotalPremium,P.Charge,P.TaskcontrolID as TaskcontrolID1, P.Anniversary,
+CASE (Select Status from Policy where TaskcontrolId = TC.TaskControlID)
+WHEN '''+@var1+''' THEN '''+@var6+''' +(Select Case When PaidAmount >= (TotalPremium+Charge) then '''+@var4+''' else '''+@var5+'''end from Policy where TaskcontrolId = TC.TaskControlID and cancellationAmount =0)
+WHEN '''+@var2+''' THEN '''+@var7 +''' +(Select Case When PaidAmount >= (TotalPremium+Charge) then '''+@var4+''' else '''+@var5+''' end from Policy where TaskcontrolId = TC.TaskControlID and cancellationAmount =0)
+WHEN '''+@var3+'''THEN '''+@var8+'''
+END as Status, PS.Comments, CP.Comments CComments, L.Comment LComments
+            into ##fich
+			FROM Policy P 
+			inner join TaskControl TC 
+			on TC.TaskControlID = P.TaskControlID
+			left join Policies PS
+			on PS.TaskControlID = TC.TaskControlID
+			left join CorporatePolicy CP
+			on CP.TaskControlID = TC.TaskControlID
+			inner join customer C 
+			on C.customerNo = TC.customerNo
+			inner join PolicyClass PC
+			on PC.PolicyClassID = TC.PolicyClassID
+			left join LaboratoryPolicy L
+			on L.TaskControlID = TC.TaskControlID
+	WHERE P.policyNo LIKE '''+@policyNo+'''
+	AND P.policyType LIKE '''+@policyType+'''
+	And C.CustomerNo LIKE '''+@certificate+'''
+	AND P.sufijo LIKE '''+@sufijo+'''
+	AND P.loanNo LIKE '''+@loanNo+'''
+	AND TC.bank LIKE '''+@bank+''''
+
+IF @policyClass <>0
+     SET @sqlString = @sqlString+' AND TC.PolicyClassID= '+CONVERT(char (2), @policyClass)   
+--print @sqlString
+EXEC(@sqlString)
+	 
+----------------------------------------------------------------------------------------------------------------------
+--                                         Filtrar por grupo                                                --
+----------------------------------------------------------------------------------------------------------------------
+Declare @queryByGroup varchar(300),@sqlString5 varchar(1000)
+exec GetQueryByGroup @UserID,@CDString = @queryByGroup OUTPUT 
+if @queryByGroup <> ''
+   begin
+   Set @sqlString5 =   'Select * from ##fich where '+ @queryByGroup
+   end
+else
+   begin
+   Set @sqlString5 =   'Select * from ##fich'
+   end
+--exec(@sqlString5)
+------------------------------------
+Declare @queryByGroup2 varchar(2000),@sqlString6 varchar(3000)
+exec GetQueryByAgencyGroup @UserID,@CDString = @queryByGroup2 OUTPUT 
+if @queryByGroup2 <> ''
+   begin
+   Set @sqlString6 =   'Select * from ##fich where '+ @queryByGroup2
+   end
+else
+   begin
+   Set @sqlString6 =   'Select * from ##fich'
+   end
+   
+   if @queryByGroup <> ''
+   begin
+   Set @sqlString6 =   @sqlString6 + ' and '+ @queryByGroup
+   end
+   
+   Set @sqlString6 =   @sqlString6 + ' order by TaskControlID'
+exec(@sqlString6)
+RETURN

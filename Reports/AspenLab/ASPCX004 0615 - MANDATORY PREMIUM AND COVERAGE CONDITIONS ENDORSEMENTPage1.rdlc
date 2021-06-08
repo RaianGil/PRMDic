@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="PRMDICConnectionString">
+      <rd:DataSourceID>b510c144-ef0a-4201-8479-61a740c5a3d1</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <rd:ReportID>60b1c7e8-d612-4e9c-b7d7-9ecdc74e1881</rd:ReportID>
+  <DataSets>
+    <DataSet Name="GetReportLaboratoryPolicy_GetReportLaboratoryPolicy">
+      <Fields>
+        <Field Name="PolicyNo">
+          <DataField>PolicyNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyType">
+          <DataField>PolicyType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TaskControlID">
+          <DataField>TaskControlID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="InsuredName">
+          <DataField>InsuredName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address1">
+          <DataField>Address1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address2">
+          <DataField>Address2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ZipCode">
+          <DataField>ZipCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EffectiveDate">
+          <DataField>EffectiveDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ExpirationDate">
+          <DataField>ExpirationDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EntryDate">
+          <DataField>EntryDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Agency">
+          <DataField>Agency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Producer">
+          <DataField>Producer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Code">
+          <DataField>Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Coverage">
+          <DataField>Coverage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecialtyDesc">
+          <DataField>SpecialtyDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RetroDate">
+          <DataField>RetroDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Limit">
+          <DataField>Limit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinancialDesc">
+          <DataField>FinancialDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinancialDescPolicy">
+          <DataField>FinancialDescPolicy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GrossReceipts">
+          <DataField>GrossReceipts</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Factor">
+          <DataField>Factor</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TotalPremium">
+          <DataField>TotalPremium</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TotalPremium100300">
+          <DataField>TotalPremium100300</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TotalPremium250500">
+          <DataField>TotalPremium250500</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TotalPremium5001000">
+          <DataField>TotalPremium5001000</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TotalPremium10003000">
+          <DataField>TotalPremium10003000</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Charge">
+          <DataField>Charge</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Premium">
+          <DataField>Premium</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Commment">
+          <DataField>Commment</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Term">
+          <DataField>Term</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Anniversary">
+          <DataField>Anniversary</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicalLimit">
+          <DataField>MedicalLimit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AggregateLimit">
+          <DataField>AggregateLimit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Branch">
+          <DataField>Branch</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>PRMDICConnectionString</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.GetReportLaboratoryPolicy</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>GetReportLaboratoryPolicy</rd:DataSetName>
+        <rd:TableName>GetReportLaboratoryPolicy</rd:TableName>
+        <rd:TableAdapterName>GetReportLaboratoryPolicyTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>8.5in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.71875in</Top>
+        <Width>0.57292in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PolicyNo.Value, "GetReportLaboratoryPolicy_GetReportLaboratoryPolicy")</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>0.71875in</Top>
+        <Width>0.5in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.75in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PolicyType.Value, "GetReportLaboratoryPolicy_GetReportLaboratoryPolicy")</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <Top>1.03125in</Top>
+        <Width>2.10417in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.625in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!EntryDate.Value, "GetReportLaboratoryPolicy_GetReportLaboratoryPolicy")</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>9.375in</Top>
+        <Width>8.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.1875in</Left>
+        <Height>0.25in</Height>
+        <Value>ASPCX004 0615                      2015 © Aspen Insurance U.S. Services Inc. All rights reserved.                             Page 1 of 3</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Top>0.25in</Top>
+        <Width>7.625in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.4375in</Left>
+        <Height>8.75in</Height>
+        <Value>Aspen American Insurance Company
+
+
+Attached to Policy # ____________
+
+Issued on ______________________
+
+MANDATORY PREMIUM AND COVERAGE CONDITIONS
+
+ENDORSEMENT PUERTO RICO
+
+
+THIS ENDORSEMENT CHANGES THE POLICY - PLEASE READ IT CAREFULLY.
+
+
+It is hereby understood and agreed that pursuant to the regulations approved by the Commissioner of Insurance of Puerto Rico, this policy is amended according to the following conditions and stipulations:
+
+1.      Policy Premium Paid in Full by You: If the premium for this policy is to be paid by you in its entirely and is not subject to any form of financing as contemplated by this endorsement, insurance coverage will be afforded only if the total premium is paid in full to, and received by, us or our authorized representative on or before the effective date shown on the declarations of this policy. Otherwise, the policy will be effective on the date the total premium is paid in full to, and received by, us or our authorized representative, and we will proceed as indicated in Section 9 of this endorsement.
+
+2.      Policy Premium Subject to Our Deferred Payment Plan: If we have available a deferred payment plan duly approved by the Commissioner of Insurance of Puerto Rico under which the premium for this policy will be paid, insurance coverage will be afforded only if the initial or down payment under said payment plan is paid to, and received by, us or our authorized representative on or before the effective date shown on the declarations of this policy. Otherwise, this policy will be effective on the date the initial or down payment is paid in full to, and received by, us or our authorized representative, and we will proceed as indicated In Section 9 of this endorsement.
+
+3.      Policy Premium to be Financed as Part of a Financing or Leasing Transaction: If the premium for this policy is being financed in its entirety (and accordingly no initial or down payment is made by you) in connection with the financing or leasing of property, insurance coverage will be afforded as of the effective date shown on the declarations of this policy only if, within thirty (30) days following the end of the month in which the policy is to be effective, we receive from the bank or financing institution the corresponding total premium.
+
+In the event the payment from the bank or financing institution is not received by us or our authorized representative by the due date indicated above, no insurance coverage will be afforded under this policy and the same will be void as of the date on which it should have become effective.
+
+4.      Policy Premium to be Financed by a Financing Institution or by a Bank: If the premium for this policy is financed through a financing institution or by a bank in a situation not covered by the preceding Section 3, this policy will be effective on the date the down payment of at least 20% of the total annual premium to be paid by you, together with the corresponding premium finance contract duly executed, are received by us or our authorized representative. In the event the financing institution or the bank does not make the total corresponding payment and said payment is not received by us or our authorized representative within the thirty (30) days following the inception date of the policy, we will cancel the policy in accordance with the cancellation clause of this policy.
+
+5.      Policy Premium to be Paid Under an Escrow Account: If this policy is issued in connection with the financing or leasing of property and the premium for this policy is to be paid from fundsthe terms of this policy relating thereto.</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>10in</Height>
+  </Body>
+  <Language>en-US</Language>
+</Report>

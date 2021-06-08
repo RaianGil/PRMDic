@@ -1,0 +1,88 @@
+Time: 09/11/2020 10:24:02 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165609
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_dc5af4vt
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 10:54:45 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165643
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_tyylleu5
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 11:00:48 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165651
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_tyylleu5
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 11:14:21 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165655
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_tyylleu5
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 11:25:18 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165670
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_autos.aspx.cdcab7d2.4z-6wwe9
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 11:31:01 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165679
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_autos.aspx.cdcab7d2.4z-6wwe9
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 11:40:00 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165682
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_autos.aspx.cdcab7d2.4z-6wwe9
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+
+Time: 09/11/2020 11:44:30 AM
+Quote TaskControlID: 165522
+Policy TaskControlID: 165685
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at EPolicy.Autos.PolicyXML(Int32 TaskControlID) in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 22081
+   at EPolicy.Autos.IssuePolicy() in c:\inetpub\wwwroot\Guardian_ePMS\Autos.aspx.cs:line 8387
+Source: App_Web_3aqwr54h
+TargetSite: Void PolicyXML(Int32)
+-----------------------------------------------------------
+

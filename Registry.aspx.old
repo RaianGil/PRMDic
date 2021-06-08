@@ -1,0 +1,873 @@
+<%@ Register TagPrefix="MaskedInput" Namespace="MaskedInput" Assembly="MaskedInput" %>
+<%@ Page language="c#" Inherits="EPolicy.Registry" CodeFile="Registry.aspx.cs" %>
+<%@ Register assembly="System.Web.Entity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" namespace="System.Web.UI.WebControls" tagprefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+	<HEAD>
+		<title>ePMS | electronic Policy Manager Solution</title>
+		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css"/>
+		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script>
+		    $(function() {
+		        $('#<%= txtASSMCADate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+
+		        $('#<%= txtDEADate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+
+		        $('#<%= txtTribunalDate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+
+		        $('#<%= txtCDMDate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+
+		        $('#<%= txtGStandingDate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+
+		        $('#<%= txtLicenseExpDate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+		        $('#<%= txtPriPolEffecDate.ClientID %>').datepicker({
+		            changeMonth: true,
+		            changeYear: true
+		        });
+		    });
+
+		    function ShowDateTimePicker() {
+		        $('#<%= txtASSMCADate.ClientID %>').datepicker('show');
+		    }
+
+		    function ShowDateTimePicker2() {
+		        $('#<%= txtDEADate.ClientID %>').datepicker('show');
+		    }
+
+		    function ShowDateTimePicker3() {
+		        $('#<%= txtTribunalDate.ClientID %>').datepicker('show');
+		    }
+
+		    function ShowDateTimePicker4() {
+		        $('#<%= txtCDMDate.ClientID %>').datepicker('show');
+		    }
+
+		    function ShowDateTimePicker5() {
+		        $('#<%= txtGStandingDate.ClientID %>').datepicker('show');
+		    }
+
+		    function ShowDateTimePicker6() {
+		        $('#<%= txtLicenseExpDate.ClientID %>').datepicker('show');
+            }
+	        function ShowDateTimePicker7() {
+	            $('#<%= txtPriPolEffecDate.ClientID %>').datepicker('show');
+	        }
+		</script>
+	    <style type="text/css">
+            .headfield1
+            {
+                font-family: Tahoma;
+                margin-bottom: 0px;
+                text-align: left;
+            }
+            .headForm1
+            {
+                margin-left: 0px;
+                font-size: small;
+                margin-right: 15px;
+                text-align: left;
+            }
+            .style3
+            {
+                height: 4px;
+                width: 1485px;
+            }
+            .style22
+        {
+            height: 3px;
+            }
+	    .style6
+        {
+            width: 100px;
+        }
+        .style16
+        {
+                width: 161px;
+                text-align: left;
+            }
+            .style23
+            {
+                width: 100px;
+                height: 22px;
+            }
+            .style24
+            {
+                width: 593px;
+                height: 22px;
+            }
+            .style32
+            {
+                width: 111px;
+                height: 22px;
+                font-size: small;
+                text-align: left;
+            }
+            .style34
+            {
+                text-align: left;
+            }
+            .style37
+            {
+                text-align: left;
+            }
+            .style38
+            {
+                height: 11px;
+                text-align: left;
+            }
+            .style39
+            {
+                font-weight: bold;
+                text-align: left;
+            }
+            .style41
+            {
+                text-align: left;
+                height: 11px;
+                width: 161px;
+            }
+            .style43
+            {
+                text-align: left;
+                width: 161px;
+            }
+            .style47
+            {
+                height: 22px;
+                text-align: left;
+            }
+            .style49
+            {
+                text-align: left;
+                width: 100px;
+            }
+            .style50
+            {
+                width: 120px;
+            }
+            .style51
+            {
+                text-align: left;
+                width: 120px;
+            }
+            .style52
+            {
+                height: 11px;
+                text-align: left;
+                width: 120px;
+            }
+            .style53
+            {
+                text-align: left;
+            }
+            .style54
+            {
+                width: 89px;
+                text-align: center;
+            }
+            .style55
+            {
+                width: 89px;
+                text-align: left;
+                height: 22px;
+            }
+            .style57
+            {
+                text-align: left;
+                height: 11px;
+                width: 89px;
+            }
+            .style59
+            {
+                text-align: left;
+                width: 89px;
+            }
+            .style60
+            {
+                height: 22px;
+                text-align: left;
+            }
+            .style68
+            {
+                height: 16px;
+                text-align: left;
+            }
+            .style73
+            {
+                height: 11px;
+                font-size: small;
+                text-align: left;
+                }
+            .style74
+            {
+                width: 111px;
+            }
+            .style76
+            {
+                width: 111px;
+                text-align: left;
+                height: 16px;
+            }
+            .style77
+            {
+                text-align: left;
+                }
+            .style80
+            {
+                text-align: left;
+                width: 120px;
+            }
+            .style82
+            {
+                width: 89px;
+                text-align: left;
+                height: 6px;
+            }
+            .style83
+            {
+                text-align: left;
+                height: 6px;
+            }
+            .style85
+            {
+                width: 89px;
+                text-align: left;
+                height: 2px;
+            }
+            .style86
+            {
+                width: 161px;
+                text-align: left;
+                height: 2px;
+            }
+            .style87
+            {
+                height: 2px;
+                text-align: left;
+                width: 120px;
+            }
+            .style88
+            {
+                text-align: left;
+                height: 2px;
+            }
+            .style92
+            {
+                font-size: small;
+                text-align: left;
+            }
+            .style93
+            {
+                text-align: left;
+                width: 89px;
+                height: 16px;
+            }
+            .style94
+            {
+                text-align: left;
+                width: 161px;
+                height: 16px;
+            }
+            .style95
+            {
+                text-align: left;
+                width: 120px;
+                height: 16px;
+            }
+            </style>
+	</HEAD>
+	<body bottomMargin="0" leftMargin="0" background="Images2/SQUARE.GIF"
+		topMargin="19" rightMargin="0">
+		<form id="form1" runat="server">
+						<P align="center">
+							<TABLE id="Table9" style="WIDTH: 811px; HEIGHT: 369px" cellSpacing="0" cellPadding="0"
+								width="811" bgColor="white" border="0" align="center">
+								<TR>
+									<TD style="FONT-SIZE: 0pt; text-align: left;" align="center" class="style22" 
+                                        colspan="2">
+													<asp:placeholder id="Placeholder1" runat="server"></asp:placeholder>
+									            </TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; text-align: left;" align="center" 
+                                        colspan="2">
+													 </TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; text-align: left;" align="center" class="style22">
+													<asp:Label id="Label8" runat="server" Height="16px" Width="160px" 
+                                                        CssClass="headForm1 " ForeColor="Black"
+														Font-Names="Tahoma" Font-Size="11pt" Font-Bold="True">Documents Registry</asp:Label>
+																<asp:Label id="lblPolicyNo" runat="server" 
+                                            Font-Size="11pt" Width="235px" ForeColor="Red" Font-Names="Tahoma" 
+                                            style="text-align: left">Name:</asp:Label>
+									            </TD>
+									<TD style="FONT-SIZE: 0pt; text-align: right;" align="center" class="style22" 
+                                        valign="bottom">
+													<asp:button id="btnHistory" tabIndex="5" runat="server" Height="23px" 
+                                                        Width="64px" Text="History"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" onclick="btnHistory_Click" style="margin-bottom: 0px; margin-right: 1px;"></asp:button>
+													<asp:button id="btnPrint" tabIndex="5" runat="server" Height="23px" 
+                                                        Width="50px" Text="Print"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" onclick="btnPrint_Click" style="margin-bottom: 0px; margin-right: 1px;"></asp:button>
+													<asp:button id="btnEdit" tabIndex="5" runat="server" Height="23px" 
+                                                        Width="64px" Text="Edit"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" onclick="btnEdit_Click" style="margin-bottom: 0px; margin-right: 1px;"></asp:button>
+													<asp:button id="btnSave" tabIndex="5" runat="server" Height="23px" 
+                                                        Width="64px" Text="Save"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" onclick="btnSave_Click" style="margin-bottom: 0px; margin-right: 1px;"></asp:button>
+													<asp:button id="btnCancel" tabIndex="5" runat="server" Height="23px" 
+                                                        Width="64px" Text="Cancel"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" onclick="btnCancel_Click" style="margin-bottom: 0px; margin-right: 1px;"></asp:button>
+													<asp:button id="BtnExit" tabIndex="5" runat="server" Height="23px" 
+                                                        Width="64px" Text="Exit"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" onclick="BtnExit_Click" style="margin-bottom: 0px; margin-right: 1px;"></asp:button>
+									            </TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; HEIGHT: 5px; text-align: left;" colspan="2">
+										<TABLE id="Table11" style="WIDTH: 979px" borderColor="#4b0082" height="1" cellSpacing="0"
+											borderColorDark="#4b0082" cellPadding="0" bgColor="indigo" borderColorLight="#4b0082"
+											border="0">
+											<TR>
+												<TD background="Images2/Barra3.jpg" align="center" style="text-align: center"></TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD vAlign="middle" align="center" class="style3" colspan="2">
+										<TABLE id="Table1" style="WIDTH: 806px; HEIGHT: 66px" cellSpacing="0" 
+                                            cellPadding="0" width="806"
+											border="0">
+											<TR>
+												<TD style="FONT-SIZE: 1pt" align="center">
+													
+												    <asp:Panel ID="pnlIndividual" runat="server" Wrap="False">
+												    <TABLE id="Table5" style="WIDTH: 90%; HEIGHT: 85px; margin-left: 0px;" 
+                                                        cellSpacing="0" cellPadding="0"
+														border="0" align="center">
+														<TR>
+															<TD class="style54"> </TD>
+															<td class="style43">
+                                                            </td>
+															<TD class="style50">
+																</TD>
+															<TD class="style77">
+																 </TD>
+														</TR>
+														<TR>
+															<TD class="style55" >
+																 </TD>
+															<td class="style16">
+                                                                <asp:Label ID="LblDate" RUNAT="server" CSSCLASS="style39" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="22px" WIDTH="127px">Documents:</asp:Label>
+                                                            </td>
+															<TD class="style51">
+																<asp:Label ID="LblDate8" RUNAT="server" CssClass=" " Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="22px" style="font-weight: 700" WIDTH="110px">Expiration 
+                                                                Date:</asp:Label>
+                                                            </TD>
+															<TD class="style32">
+                                                                <asp:Label ID="LblDate13" RUNAT="server" CSSCLASS="style39" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" HEIGHT="22px" WIDTH="100px">Practice 
+                                                                Info:</asp:Label>
+                                                            </TD>
+															<TD class="style49">
+																 </TD>
+															<td class="style37" colspan="3">
+                                                                <asp:Label ID="LblDate23" RUNAT="server" CSSCLASS="style39" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="22px" WIDTH="150px">Medical Practice Type:</asp:Label>
+                                                            </td>
+														</TR>
+														<TR>
+															<TD class="style59">
+																 </TD>
+															<td class="style43">
+                                                                <asp:CheckBox ID="chkASSMCA" runat="server" CssClass=" " Text=" " 
+                                                                    AutoPostBack="True" oncheckedchanged="RevealControls" />
+                                                                <asp:Label ID="LblDate1" RUNAT="server" CSSCLASS=" " Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="16px" WIDTH="115px" style="text-align: left">ASSMCA:</asp:Label>
+                                                            </td>
+															<TD class="style51">
+                                                                <asp:TextBox ID="txtASSMCADate" runat="server" Columns="30" 
+                                                                    CssClass=" " Font-Names="Tahoma"
+                                                                    Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    onclick="ShowDateTimePicker();" TabIndex="44"
+                                                                    Width="79px"></asp:TextBox></TD>
+															<TD class="style77">
+                                                                <asp:CheckBox ID="chkMedicalSchool" runat="server" CssClass=" " Text=" " 
+                                                                    AutoPostBack="True" oncheckedchanged="RevealControls" />
+                                                                <asp:Label ID="LblDate9" RUNAT="server" CSSCLASS="headfield1" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" HEIGHT="16px" WIDTH="90px">Medical 
+                                                                School:</asp:Label>
+                                                            </TD>
+															<td class="style49">
+                                                                 </td>
+                                                            <td class="style37" colspan="2" rowspan="7">
+																<asp:RadioButtonList ID="rblMedicalPractice" runat="server" 
+                                                                    style="font-size: 10pt; font-family: Tahoma" Width="209px" 
+                                                                    AutoPostBack="True" onselectedindexchanged="RevealControls">
+                                                                    <asp:ListItem>Solo Physician</asp:ListItem>
+                                                                    <asp:ListItem>Employed Physician</asp:ListItem>
+                                                                    <asp:ListItem>Partnership</asp:ListItem>
+                                                                    <asp:ListItem>Group Member</asp:ListItem>
+                                                                    <asp:ListItem>Professional Association</asp:ListItem>
+                                                                    <asp:ListItem>Professional Corporation</asp:ListItem>
+                                                                    <asp:ListItem>Other</asp:ListItem>
+                                                                </asp:RadioButtonList>
+                                                            </td>
+														</TR>
+														<TR>
+															<TD class="style85">
+																</TD>
+															<td class="style86">
+                                                                <asp:CheckBox ID="chkDEA" runat="server" CssClass=" " Text=" " 
+                                                                    AutoPostBack="True" oncheckedchanged="RevealControls" />
+                                                                <asp:Label ID="LblDate5" RUNAT="server" CSSCLASS=" " Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="16px" WIDTH="114px">DEA:</asp:Label>
+                                                            </td>
+															<TD class="style87">
+                                                                <asp:TextBox ID="txtDEADate" runat="server" Columns="30" 
+                                                                    CssClass=" " Font-Names="Tahoma"
+                                                                    Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    onclick="ShowDateTimePicker2();" TabIndex="44"
+                                                                    Width="79px"></asp:TextBox></TD>
+															<TD class="style88" colspan="2">
+                                                                <asp:TextBox ID="txtMedicalSchool" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                     TabIndex="44" Width="205px"></asp:TextBox>
+                                                            </TD>
+														</TR>
+														<TR>
+															<TD class="style55">
+																 </TD>
+															<td class="style16" rowspan="2" valign="middle">
+                                                                <asp:CheckBox ID="chkTribunal" runat="server" CssClass=" " Text=" " 
+                                                                    AutoPostBack="True" oncheckedchanged="RevealControls" />
+                                                                <asp:Label ID="LblDate6" RUNAT="server" CSSCLASS=" " Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="27px" WIDTH="138px">TRIBUNAL EXAMINADOR DE MEDICOS 
+                                                                DE P.R. :</asp:Label>
+                                                            </td>
+															<TD class="style51" rowspan="2">
+																<asp:TextBox ID="txtTribunalDate" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    onclick="ShowDateTimePicker3();" TabIndex="44" Width="79px"></asp:TextBox>
+                                                            </TD>
+															<TD class="style77">
+                                                                <asp:CheckBox ID="chkInternship" runat="server" AutoPostBack="True" 
+                                                                    CssClass=" " oncheckedchanged="RevealControls" Text=" " />
+                                                                <asp:Label ID="LblDate10" RUNAT="server" CSSCLASS="headfield1" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" HEIGHT="16px" WIDTH="80px">Internship:</asp:Label>
+                                                            </TD>
+															<TD class="style49">
+																 </TD>
+														</TR>
+														<TR>
+															<TD class="style82">
+																</TD>
+															<TD class="style83" colspan="2">
+																<asp:TextBox ID="txtInternship" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    TabIndex="44" Width="205px"></asp:TextBox>
+																</TD>
+														</TR>
+														<tr>
+                                                            <td class="style55">
+                                                                 </td>
+                                                            <td class="style16">
+                                                                <asp:CheckBox ID="chkCDM" runat="server" AutoPostBack="True" CssClass=" " 
+                                                                    oncheckedchanged="RevealControls" Text=" " />
+                                                                <asp:Label ID="LblDate7" runat="server" CssClass=" " Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" Height="16px" style="font-size: 9pt" Width="132px">COLEGIO 
+                                                                DE MEDICOS:</asp:Label>
+                                                            </td>
+                                                            <td class="style51">
+                                                                <asp:TextBox ID="txtCDMDate" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    onclick="ShowDateTimePicker4();" TabIndex="44" Width="79px"></asp:TextBox>
+                                                            </td>
+                                                            <td class="style77">
+                                                                <asp:CheckBox ID="chkResidency" runat="server" AutoPostBack="True" CssClass=" " 
+                                                                    oncheckedchanged="RevealControls" Text=" " />
+                                                                <asp:Label ID="LblDate11" RUNAT="server" CSSCLASS="headfield1" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" HEIGHT="16px" WIDTH="80px">Residency:</asp:Label>
+                                                            </td>
+                                                            <td class="style49">
+                                                                 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style55">
+                                                                 </td>
+                                                            <td class="style16">
+                                                                <asp:CheckBox ID="chkGStanding" runat="server" AutoPostBack="True" CssClass=" " 
+                                                                    oncheckedchanged="RevealControls" Text=" " />
+                                                                <asp:Label ID="LblDate27" runat="server" CssClass=" " Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" Height="16px" style="font-size: 9pt" Width="132px">GOOD 
+                                                                STANDING:</asp:Label>
+                                                            </td>
+                                                            <td class="style51">
+                                                                <asp:TextBox ID="txtGStandingDate" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    onclick="ShowDateTimePicker5();" TabIndex="44" Width="79px"></asp:TextBox>
+                                                            </td>
+                                                            <td class="style77" colspan="2">
+                                                                <asp:TextBox ID="txtResidency" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                     TabIndex="44" Width="205px"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+														<TR>
+															<TD class="style55">
+																 </TD>
+															<td class="style16">
+                                                                 </td>
+															<TD class="style51">
+																 </TD>
+															<TD class="style77">
+																<asp:CheckBox ID="chkFellowship" runat="server" AutoPostBack="True" 
+                                                                    CssClass=" " oncheckedchanged="RevealControls" Text=" " />
+                                                                <asp:Label ID="LblDate12" RUNAT="server" CSSCLASS="headfield1" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" HEIGHT="16px" WIDTH="80px">Fellowship:</asp:Label>
+                                                            </TD>
+                                                            <td class="style77">
+                                                                 </td>
+														</TR>
+														<tr>
+                                                            <td class="style55">
+                                                                 </td>
+                                                            <td class="style16">
+                                                                 </td>
+                                                            <td class="style51">
+                                                                 </td>
+                                                            <td class="style77" colspan="2">
+                                                                <asp:TextBox ID="txtFellowship" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True"  
+                                                                    TabIndex="44" Width="205px"></asp:TextBox>
+                                                            </td>
+                                                            <td class="style37" colspan="2">
+                                                                <asp:TextBox ID="txtOther" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" TabIndex="44" 
+                                                                    Width="205px"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style59">
+                                                                </td>
+                                                            <td class="style16">
+                                                                </td>
+                                                            <td class="style51">
+                                                                </td>
+                                                            <td class="style92">
+                                                                </td>
+                                                            <td class="style92">
+                                                                </td>
+                                                            <td class="style34" colspan="2">
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style57">
+                                                                 </td>
+                                                            <td class="style41">
+                                                                <asp:CheckBox ID="chkShareHolder" runat="server" AutoPostBack="True" 
+                                                                    CssClass=" " oncheckedchanged="chkShareHolder_CheckedChanged" Text=" " />
+                                                                <asp:Label ID="Label9" runat="server" CssClass=" " Height="16px" 
+                                                                    style="font-family: Tahoma; text-align: left; font-weight: 700; font-size: 9pt; margin-top: 0px;" 
+                                                                    Text="Shareholder:" Width="115px"></asp:Label>
+                                                            </td>
+                                                            <td class="style52">
+                                                                <MaskedInput:MaskedTextBox ID="txtShareholder" RUNAT="server" CSSCLASS=" " 
+                                                                    Enabled="False" Font-Names="Tahoma" Font-Size="9pt" HEIGHT="16px" 
+                                                                    ISDATE="False" Mask="9999" MaxLength="4" 
+                                                                    style="font-size: small; margin-left: 0px;" tabIndex="1" Visible="True" 
+                                                                    WIDTH="60px"></MaskedInput:MaskedTextBox>
+                                                            </td>
+                                                            <td class="style73">
+                                                                <asp:Label ID="LblDate26" RUNAT="server" CSSCLASS="style39" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="16px" WIDTH="114px">License Exp. Date:</asp:Label>
+                                                            </td>
+                                                            <td class="style73">
+                                                                <asp:TextBox ID="txtLicenseExpDate" runat="server" Columns="30" CssClass=" " 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" IsDate="True" 
+                                                                    onclick="ShowDateTimePicker6();" TabIndex="44" Width="79px"></asp:TextBox>
+                                                            </td>
+                                                            <td class="style38" colspan="2">
+                                                                <asp:CheckBox ID="chkCV" runat="server" AutoPostBack="True" CssClass=" " 
+                                                                    Text=" " />
+                                                                <asp:Label ID="LblDate28" RUNAT="server" CSSCLASS="style39" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" HEIGHT="16px" WIDTH="105px">Curriculum Vitae</asp:Label>
+                                                            </td>
+                                                        </tr>
+														<TR>
+															<TD class="style59">
+																</TD>
+															<td class="style43" rowspan="2">
+                                                                <asp:Label ID="LblDate24" RUNAT="server" Font-Bold="True" Font-Names="Tahoma" 
+                                                                    Font-Size="7pt" HEIGHT="16px" style="font-size: 9pt; text-align: left;" 
+                                                                    WIDTH="126px">Previous claims?</asp:Label>
+                                                            </td>
+															<TD class="style80" rowspan="2">
+                                                                <asp:RadioButtonList ID="rblPreviousClaims" runat="server" AutoPostBack="True" 
+                                                                    Height="16px" RepeatDirection="Horizontal" style="font-size: 9pt; " 
+                                                                    Width="51px" 
+                                                                    onselectedindexchanged="rblPreviousClaims_SelectedIndexChanged">
+                                                                    <asp:ListItem Value="NO" Selected="True">No</asp:ListItem>
+                                                                    <asp:ListItem Value="YES">Yes</asp:ListItem>
+                                                                </asp:RadioButtonList>
+                                                            </TD>
+															<TD align="center" class="style74" style="text-align: left" rowspan="2">
+																<asp:Label ID="LblDate15" RUNAT="server" Font-Names="Tahoma" Font-Size="9pt" 
+                                                                    HEIGHT="16px" style="text-align: left; font-weight: 700" WIDTH="100px">Board 
+                                                                Certified:</asp:Label>
+                                                            </TD>
+                                                            <td align="center" rowspan="2">
+                                                                <asp:RadioButtonList ID="rblBoardCertified" runat="server" Font-Bold="False" 
+                                                                    Height="16px" RepeatDirection="Horizontal" 
+                                                                    style="font-size: 9pt; text-align: left;" Width="50px">
+                                                                    <asp:ListItem Value="NO" Selected="True">No</asp:ListItem>
+                                                                    <asp:ListItem Value="YES">Yes</asp:ListItem>
+                                                                </asp:RadioButtonList>
+                                                            </td>
+														</TR>
+														<tr>
+                                                            <td class="style57">
+                                                                </td>
+                                                            <td class="style38" colspan="2">
+                                                                 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style59">
+                                                                 </td>
+                                                            <td class="style43">
+                                                                <asp:Label ID="lblCarrier" runat="server" CssClass="headfield1" 
+                                                                    EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt" Height="18px" 
+                                                                    Width="110px" Visible="False">Carrier Name:</asp:Label>
+                                                            </td>
+                                                            <td class="style53" colspan="2">
+                                                                <asp:TextBox ID="txtPriCarierName" runat="server" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" Height="18px" MaxLength="75" style="margin-right: 10px" 
+                                                                    TabIndex="24" Width="190px"></asp:TextBox>
+                                                            </td>
+                                                            <td class="style47" colspan="2">
+                                                                <asp:Label ID="Label25" runat="server" CssClass="headfield1" 
+                                                                    EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt" Height="16px" 
+                                                                    Width="70px" Visible="False">Eff. Date:</asp:Label>
+                                                            </td>
+                                                            <td class="style47">
+                                                                <asp:TextBox ID="txtPriPolEffecDate" runat="server" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" Height="18px" onclick="ShowDateTimePicker7();" TabIndex="44" 
+                                                                    Width="79px" Columns="30" CssClass=" " IsDate="True"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style59">
+                                                                 </td>
+                                                            <td class="style43">
+                                                                <asp:Label ID="Label30" runat="server" EnableViewState="False" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" style="margin-right: 7px" 
+                                                                    Width="79px" Visible="False">Policy No.:</asp:Label>
+                                                            </td>
+                                                            <td class="style80">
+                                                                <asp:TextBox ID="txtPriClaims" runat="server" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" Height="18px" MaxLength="50" TabIndex="27" Width="80px"></asp:TextBox>
+                                                            </td>
+                                                            <td class="style77">
+                                                                 </td>
+                                                            <td class="style60" colspan="2">
+                                                                <asp:Label ID="Label24" runat="server" EnableViewState="False" 
+                                                                    Font-Names="Tahoma" Font-Size="9pt" Height="18px" style="text-align: left" 
+                                                                    Width="87px" Visible="False">Policy Limits:</asp:Label>
+                                                            </td>
+                                                            <td class="style60">
+                                                                <asp:TextBox ID="txtPriPolLimits" runat="server" Font-Names="Tahoma" 
+                                                                    Font-Size="9pt" Height="18px" MaxLength="50" TabIndex="26" Width="145px"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style93">
+                                                                </td>
+                                                            <td class="style94">
+                                                                </td>
+                                                            <td class="style95">
+                                                                </td>
+                                                            <td class="style76">
+                                                                </td>
+                                                            <td class="style68">
+                                                                </td>
+                                                            <td class="style68" colspan="2">
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="style59">
+                                                                 </td>
+                                                            <td class="style43" valign="top">
+                                                                <asp:Label ID="LblDate25" RUNAT="server" Font-Names="Tahoma" Font-Size="9pt" 
+                                                                    HEIGHT="16px" style="text-align: left; font-weight: 700" WIDTH="105px">Comments:</asp:Label>
+                                                            </td>
+                                                            <td class="style34" colspan="3">
+                                                                <asp:TextBox ID="txtComment" runat="server" Height="70px" TextMode="MultiLine" 
+                                                                    Width="326px"></asp:TextBox>
+                                                                  </td>
+                                                            <td class="style37" colspan="2">
+                                                                 </td>
+                                                        </tr>
+														<tr>
+                                                            <td class="style59">
+                                                                 </td>
+                                                            <td class="style43">
+                                                                 </td>
+                                                            <td class="style34" colspan="3">
+                                                                 </td>
+                                                            <td colspan="2">
+                                                                 </td>
+                                                            <td class="style37">
+                                                                <br />
+                                                                <br />
+                                                                <br />
+                                                                <br />
+                                                            </td>
+                                                        </tr>
+														</TABLE>
+                                                    </asp:Panel>
+													
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 35px; HEIGHT: 3px" colspan="2">
+										<TABLE id="Table2" 
+                                            style="WIDTH: 979px; height: 7px; margin-top: 0px; margin-bottom: 0px;" 
+                                            borderColor="#4b0082" cellSpacing="0"
+											borderColorDark="#4b0082" cellPadding="0" bgColor="indigo" borderColorLight="#4b0082"
+											border="0">
+											<TR>
+												<TD style="height: 19px; width: 100%" background="Images2/Barra3.jpg" 
+                                                    align="center"></TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+								<tr>
+									<TD vAlign="middle" align="center" class="style3" colspan="2">
+										<TABLE id="Table12" style="WIDTH: 806px; HEIGHT: 66px" cellSpacing="0" 
+                                            cellPadding="0" width="806"
+											border="0">
+											<TR>
+												<TD style="FONT-SIZE: 1pt" align="center">
+													
+												    <asp:Panel ID="pnlPrivileges" runat="server">
+												    <TABLE id="Table13" style="WIDTH: 302px; HEIGHT: 74px; margin-left: 0px;" 
+                                                        cellSpacing="0" cellPadding="0"
+														border="0">
+														<TR>
+															<TD class="style23">
+																<asp:label id="LblDate0" RUNAT="server" HEIGHT="16px" WIDTH="120px"
+																	Font-Names="Tahoma" Font-Size="9pt" style="font-weight: 700">Privileges:</asp:label>\\</TD>
+															<TD class="style24" align="right">
+																<maskedinput:maskedtextbox id="txtGridCount" tabIndex="1" RUNAT="server" 
+                                                                    ISDATE="False" HEIGHT="19px" CSSCLASS="TextBoxStyle"
+																	WIDTH="50px" Font-Names="Tahoma" Font-Size="9pt" Mask="9999" MaxLength="4"></maskedinput:maskedtextbox></TD>
+															<TD class="style23" align="right">
+													<asp:button id="btnUpdate" tabIndex="6" runat="server" Height="23px" 
+                                                        Width="74px" Text="Add"
+														ForeColor="White" BorderWidth="0px" BorderColor="#400000" Font-Names="Tahoma" Font-Size="9pt"
+														BackColor="#400000" style="margin-left: 0px" onclick="btnUpdate_Click"></asp:button>
+													        </TD>
+														</TR>
+														<TR>
+															<TD class="style6" colspan="3">
+																	<asp:datagrid id="dtGridCertificateLocations" 
+                                            tabIndex="4" Height="145px" 
+                                                        RUNAT="server" WIDTH="338px" PageSize="8"
+																		ITEMSTYLE-CSSCLASS="HeadForm3" HEADERSTYLE-BACKCOLOR="#5C8BAE" HEADERSTYLE-CSSCLASS="HeadForm2"
+																		ALTERNATINGITEMSTYLE-BACKCOLOR="#FEFBF6" ALTERNATINGITEMSTYLE-CSSCLASS="HeadForm3" CELLPADDING="0"
+																		FONT-NAMES="Tahoma" FONT-SIZE="9pt" AUTOGENERATECOLUMNS="False" BACKCOLOR="White"
+																		HEADERSTYLE-HORIZONTALALIGN="Center" ITEMSTYLE-HORIZONTALALIGN="center" BORDERCOLOR="#D6E3EA"
+																		BORDERWIDTH="1px" BORDERSTYLE="Solid" Font-Italic="False" style="text-align: center; font-size: 8pt;" 
+                                                                        onitemcommand="dtGridCertificateLocations_ItemCommand" 
+                                                                        ondeletecommand="DeletePrivilege" 
+																		<FooterStyle ForeColor="#003399" BackColor="Navy"></FooterStyle>
+																		<SelectedItemStyle HorizontalAlign="Center" BackColor="White"></SelectedItemStyle>
+																		<EditItemStyle HorizontalAlign="Center" BackColor="White"></EditItemStyle>
+																		<AlternatingItemStyle HorizontalAlign="Center" CssClass="HeadForm3" 
+                                                                            BackColor="White" Wrap="False"></AlternatingItemStyle>
+																		<ItemStyle HorizontalAlign="Center" CssClass="HeadForm3" BackColor="White"></ItemStyle>
+																		<HeaderStyle Font-Names="tahoma" HorizontalAlign="Center" Height="10px" ForeColor="White" CssClass="HeadForm2"
+																			BackColor="#400000" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></HeaderStyle>
+																		<Columns>
+																			<asp:TemplateColumn HeaderText="Hospital">
+                                                                                <ItemTemplate>
+                                                                                    <asp:DropDownList ID="ddlCertificateLocation" runat="server" Width="425px" 
+                                                                                        DataSourceID="SqlDataSource2" DataTextField="HospitalDesc" 
+                                                                                        DataValueField="HospitalID">
+                                                                                    </asp:DropDownList>
+                                                                                </ItemTemplate>
+                                                                            </asp:TemplateColumn>
+																		    <asp:ButtonColumn ButtonType="PushButton" HeaderText="Delete" 
+                                                                                CommandName="Delete">
+                                                                            </asp:ButtonColumn>
+																		</Columns>
+																		<PagerStyle Font-Names="Tahoma" HorizontalAlign="Left" ForeColor="Blue" BackColor="White" PageButtonCount="20"
+																			CssClass="Numbers" Mode="NumericPages"></PagerStyle>
+																	</asp:datagrid>
+										                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                                                        ConnectionString="<%$ ConnectionStrings:PRMDICConnectionString %>" 
+                                                                        SelectCommand="GetHospital" SelectCommandType="StoredProcedure" 
+                                                                        ProviderName="System.Data.SqlClient">
+                                                                    </asp:SqlDataSource>
+										                    </TD>
+														</TR>
+														</TABLE>
+                                                    </asp:Panel>
+													
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</tr>
+								<TR>
+									<TD style="FONT-SIZE: 0pt; WIDTH: 35px; HEIGHT: 36px" colspan="2">
+										<P align="center"> </P>
+										<P align="center"> </P>
+									</TD>
+								</TR>
+							</TABLE>
+						</P>
+						<P>
+			<maskedinput:maskedtextheader id="MaskedTextHeader1" RUNAT="server"></maskedinput:maskedtextheader>
+			<asp:literal id="litPopUp" runat="server" Visible="False"></asp:literal>
+		                </P>
+					</form>
+	</body>
+</HTML>

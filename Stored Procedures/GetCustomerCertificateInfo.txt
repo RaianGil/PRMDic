@@ -1,0 +1,105 @@
+USE [prmdicTestBK]
+GO
+/****** Object:  StoredProcedure [dbo].[GetCustomerCertificateInfo]    Script Date: 8/12/2015 12:41:13 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ 
+
+-- GetCustomerCertificateInfo 1162
+
+ 
+
+ALTER PROCEDURE [dbo].[GetCustomerCertificateInfo]
+
+@TaskControlID int
+
+AS
+
+---------------------------------------------------
+
+--Para eliminar tabla temporera. --
+
+IF EXISTS (Select * From tempdb.dbo.sysobjects Where ID = object_id(N'[tempdb].[dbo].[##fich212]')) --and OBJECTPROPERTY(ID, N'IsTable') = 1)
+
+   drop table  ##fich212
+
+---------------------------------------------------
+
+--IF @Agency  IS  NOT NULL
+
+--     BEGIN
+
+--           SET @whereClause = @whereClause +' TC.Agency = '''+@Agency+''' And '
+
+--     END
+
+ 
+
+--if @PolicyType IS  NOT NULL
+
+--Begin
+
+       --SET @whereClause = @whereClause +' P.PolicyType = '''+@PolicyType+''' And '
+
+--End
+
+--SET @whereClause = @whereClause + ' (90 >= DATEDIFF(day,getdate(), P.ExpirationDate) and P.ExpirationDate >= getdate()) and
+
+--CancellationEntryDate is null
+
+--order by CD.AgencyDesc,P.PolicyNo'
+
+ 
+
+SET CONCAT_NULL_YIELDS_NULL off
+
+      
+
+--IF EXISTS (Select * From tempdb.dbo.sysobjects Where ID = object_id(N'[tempdb].[dbo].[##fich212]')) --and OBJECTPROPERTY(ID, N'IsTable') = 1)
+
+--   drop table  ##fich212
+
+  
+
+SELECT TC.TaskControlID,convert(varchar(20),P.RetroactiveDate,101) as RetroactiveDate
+
+       ,convert(varchar(20),P.EffectiveDate,101) as EffectiveDate,convert(varchar(20),P.ExpirationDate,101) as ExpirationDate
+
+       ,(SELECT rtrim(C.firstna)+' '+rtrim(C.lastna1)+' '+rtrim(C.lastna2) as NameCust FROM Customer C where
+
+       C.CustomerNo = TC.CustomerNo) as CustomerName, rtrim(P.PolicyType) as PolicyType,rtrim(P.PolicyNo) as PolicyNo,
+
+       AG.AgentDesc,CD.AgencyDesc,TC.City, LEFT(LP.LimitDesc, CHARINDEX('/', LP.LimitDesc + ' ') -1) as Limit1,
+
+       STUFF(LP.LimitDesc, 1, Len(LP.LimitDesc) +1- CHARINDEX('/',Reverse(LP.LimitDesc)), '') as Limit2      
+
+       --INTO ##fich212
+
+       FROM TaskControl TC
+
+       inner join Policy P
+
+       on TC.TaskControlID = P.TaskControlID
+
+       inner join Agent AG
+
+       on AG.AgentID = TC.Agent
+
+       inner join Agency CD
+
+       on TC.Agency = CD.AgencyID
+
+	   left join LaboratoryPolicy LP
+
+	   on LP.TaskControlID = TC.TaskControlID
+
+       Where TC.TaskControlID = @TaskControlID
+
+      
+
+--select *
+
+--from ##fich212

@@ -1,0 +1,199 @@
+.passwd {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #7f2100}
+.newsHead { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #7f2100 ; text-decoration: underline}
+.news { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #004f7f; text-align: left}
+.paragph { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: 7f2100; text-align: justify ; text-decoration: none}
+.tableHeads { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: 004f7f; text-align: justify ; text-decoration: underline}
+.tableBody { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: 004f7f; text-align: justify ; text-decoration: none}
+.menuOptions {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: D9E6EE; text-decoration: none}
+:HOVER.menuOptions {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: 023453; text-decoration: none}
+.selectedMenuOption {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: 023453; text-decoration: none}
+.menuOptionsHead { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #003366; text-decoration: none }
+.text {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none}
+.headForm1
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #3f7b9f;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+
+	text-decoration: none;
+}
+.headLabel
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #3f7b9f;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #3f7b9f;
+	text-decoration: none;
+}
+	
+.HeadField1 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none;
+    margin-bottom: 0px;
+}
+.ReadOnlyField { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; background-color:#e0e0e0; display:block; visibility:visible;  text-decoration: none }
+.headForm2 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #ffffff; text-decoration: none }
+.headForm3 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #004f7f; text-decoration: none }
+.headForm4 { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal; color: #004f7f; text-decoration: none }
+.numbers { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #ffffff; text-decoration: none }
+.head1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none; color: #3f7b9f}
+.headSAMS
+{
+	font-weight: bold;
+	font-size: 24px;
+	color: #3f7b9f;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+.dtNormal
+{
+	font-size: smaller;
+	color: #003399;
+	font-family: Tahoma;
+	background-color: white;
+}
+.dtSelected
+{
+	font-weight: bold;
+	font-size: smaller;
+	color: #3300ff;
+	font-family: Tahoma;
+	background-color: #0099cc;
+}
+.dtFooter
+{
+	font-size: smaller;
+	color: #003399;
+	font-family: Tahoma;
+	background-color: #99cccc;
+}
+.dtHeader
+{
+	font-weight: bold;
+	font-size: smaller;
+	color: #ccccff;
+	font-family: Tahoma;
+	background-color: #003399;
+}
+
+.textfield
+{
+	font-size: smaller;
+	color: #000000;
+	font-family: Tahoma;
+}
+
+
+.textfieldRead
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	font-size: smaller;
+	border-left: 1px solid;
+	color: #000000;
+	border-bottom: 1px solid;
+	font-family: Tahoma;
+}
+
+.panel
+{
+	border-right: #8080FF thin solid;
+	border-top: #8080FF thin solid;
+	border-left: #8080FF thin solid;
+	border-bottom: #8080FF thin solid;
+	background-color: white;
+}
+
+.labelfieldpanel
+{
+	border-right: #3399cc thin solid;
+	border-top: #3399cc thin solid;
+	font-size: smaller;
+	border-left: #3399cc thin solid;
+	color: #000000;
+	border-bottom: #3399cc thin solid;
+	font-family: Tahoma;
+	background-color: white;
+}
+
+.labelfield
+{
+	font-size: smaller;
+	color: #000000;
+	font-family: Tahoma;
+}
+.labelmessage
+{
+	font-weight: bold;
+	font-size: smaller;
+	color: red;
+	font-family: Tahoma;
+}
+.ButtonCmd
+{
+	font-size: smaller;
+	color: black;
+	font-family: Tahoma;
+}
+div.hideSkiplink
+{
+    background-color: #0A8998;
+    width:100%;
+    height:2.35em;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: #BB1509;
+    background-color: #BB1509;
+    color: #E4E4E4;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space:nowrap;
+}
+
+div.menu ul li a:hover
+{
+    font-weight:600;
+    background-color:#BB1509;
+    color: White;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{    
+    background-color:  #BB1509; /*#036893*/;
+    color: White;
+    text-decoration: none;
+}
+.tableMain
+{
+    background: white;
+  width:100%;
+  max-width: 100%;   
+  font-size: 13.5px;
+    height: 18px;
+}
+
+

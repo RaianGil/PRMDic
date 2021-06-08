@@ -1,0 +1,133 @@
+.pane
+{
+color:#FF6600;
+font-size: 14px;
+font-family:Tahoma;
+text-align: justify;
+border-radius: 25px;
+}
+
+.tdTopMenu1
+{
+background-color:#F4F4F4;
+text-align:left;
+}
+
+.tdTopMenu2
+{
+background-color:#F4F4F4;
+text-align:right;
+}
+
+.tdRight
+{
+text-align:right;
+height:25px;
+width:200px;
+}
+
+.tdLeft
+{
+text-align:left;
+height:25px;
+width:200px;
+}
+
+.tdCenter
+{
+text-align:center;
+height:25px;
+width:200px;
+}
+
+.checkBox{
+    margin-left: 400px;
+}
+
+.menuButtons
+{
+background-color:#004C97;
+border-color:White;
+border-width:1px;
+font-family:Tahoma;
+Color:White;
+Height:23px;
+Width:95px;
+border-style:Solid;
+font-size:9pt;
+}
+
+.label1
+{
+font-family: Tahoma;
+font-size: 12px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+width:150px;
+display:inline-block;
+}
+
+.textBox1MultiLineMedium
+{
+font-family: Tahoma;
+font-size: 12px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+width:440px;
+height:84px;
+display:inline-block;
+}
+
+.textBox1Medium
+{
+font-family: Tahoma;
+font-size: 12px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+width:150px;
+height:16px;
+display:inline-block;
+}
+
+.textBox1Small
+{
+font-family: Tahoma;
+font-size: 12px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+width:50px;
+height:16px;
+display:inline-block;
+}
+
+.dropDownList1
+{
+font-family: Tahoma;
+font-size: 12px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+width:200px;
+display:inline-block;
+}
+
+.dropDownList1Medium
+{
+font-family: Tahoma;
+font-size: 12px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+width:100px;
+display:inline-block;
+}

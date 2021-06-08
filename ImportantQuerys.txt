@@ -1,0 +1,13 @@
+
+--------------------------------------------------Polizas Corporativas con menos de 5 empleados-------------------------------------------------------------------------------------------
+select P.TaskControlID as ControlNumber,P.PolicyType,PolicyNo,(RTRIM(LTRIM(P.PolicyType)) + P.PolicyNo) as PolicyNumber,P.Sufijo,P.Anniversary, RTRIM(LTRIM(P.Status)) as status,C.Firstna + ' ' + C.Lastna1 + '' + C.Lastna2 as Customer,C.CustomerNo,
+(select count(TaskcontrolID) from CorporatePolicyDetail cpd where cpd.TaskControlID = cp.TaskcontrolID) as EmployeesQuantity
+from Policy p
+left join  CorporatePolicy cp on p.TaskControlID = cp.TaskControlID
+left join TaskControl t on t.TaskControlID = p.TaskControlID
+left join Customer c on t.CustomerNo = c.CustomerNo
+where P.Status = 'Inforce'
+ and (PolicyType = 'CP' or PolicyType = 'APC' or PolicyType = 'CPA' or PolicyType = 'CLP' or PolicyType = 'CLE')
+ and ((select count(TaskcontrolID) from CorporatePolicyDetail cpd where cpd.TaskControlID = cp.TaskcontrolID) <= 5)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
