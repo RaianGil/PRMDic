@@ -1,4 +1,5 @@
 <%@ Control Language="c#" Inherits="EPolicy.TopBanner2" CodeFile="TopBanner1.ascx.cs" %>
+<% %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
