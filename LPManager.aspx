@@ -44,13 +44,13 @@
                                     <asp:Label ID="Label46" runat="server">Payment File Import:</asp:Label>
                                 </div>
                                 <div class="col-md-6 f-right">
-                                    <asp:button id="btnImportPayment" runat="server" Text="Import Payments" onclick="btnImportPayment_Click" Visible="False"></asp:button>
-                                    <asp:Button ID="Button2" runat="server" onclick="Button2_Click1" Text="Select All" />
-                                    <asp:Button ID="Button1" runat="server" onclick="Button1_Click1" Text="Deselect All" />
-                                    <asp:button id="btnReapply" runat="server" Text="Re-Apply" onclick="btnReapply_Click" onclientclick="return confirm('Are you sure you want to re-apply the selected payments?')"></asp:button>
-                                    <asp:Button ID="btnDelete" runat="server" onclick="btnDelete_Click" onclientclick="return confirm('Areyou sure you want to delete the selected payments?')" Text="Delete" Visible="False" />
-                                    <asp:Button ID="btnPrint" runat="server" onclick="btnPrint_Click" Text="Print" Visible="False" />
-                                    <asp:button id="BtnExit" runat="server" Text="Exit" onclick="BtnExit_Click"></asp:button>
+                                    <asp:button id="btnImportPayment" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Import Payments" onclick="btnImportPayment_Click" Visible="False"></asp:button>
+                                    <asp:Button ID="Button2" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" onclick="Button2_Click1" Text="Select All" />
+                                    <asp:Button ID="Button1" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" onclick="Button1_Click1" Text="Deselect All" />
+                                    <asp:button id="btnReapply" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Re-Apply" onclick="btnReapply_Click" onclientclick="return confirm('Are you sure you want to re-apply the selected payments?')"></asp:button>
+                                    <asp:Button ID="btnDelete" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" onclick="btnDelete_Click" onclientclick="return confirm('Areyou sure you want to delete the selected payments?')" Text="Delete" Visible="False" />
+                                    <asp:Button ID="btnPrint" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" onclick="btnPrint_Click" Text="Print" Visible="False" />
+                                    <asp:button id="BtnExit" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Exit" onclick="BtnExit_Click"></asp:button>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -89,11 +89,11 @@
                                                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Names="Tahoma" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Left" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="PolicyNo" HeaderText="Policy No.">
-                                                <HeaderStyle Width="75px" />
+                                                <HeaderStyle Width="100px" />
                                                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Left" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="EffectiveYear" HeaderText="Effec. Year">
-                                                <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" Width="40px" />
+                                                <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" Width="90px" />
                                                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="UserDesc" HeaderText="Entered by">
@@ -101,7 +101,7 @@
                                                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Left" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="EntryDate" HeaderText="Entry Date">
-                                                <HeaderStyle Width="50px" />
+                                                <HeaderStyle />
                                                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Left" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="PaymentImportID" HeaderText="PaymentImportID">

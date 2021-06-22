@@ -7,21 +7,21 @@
             <html>
 
             <head>
-                 <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
-			    <link rel="icon" type="image/x-icon" href="images2/favicon.ico" />
+                <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
+                <link rel="icon" type="image/x-icon" href="images2/favicon.ico" />
                 <meta name="GENERATOR" content="Microsoft Visual Studio 7.0">
                 <meta name="CODE_LANGUAGE" content="C#">
                 <meta name="vs_defaultClientScript" content="JavaScript">
                 <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 
 
-				 <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+                <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
                 <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
                 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
                 <script src="js/load.js" type="text/javascript"></script>
-				
-				
-              
+
+
+
                 <style type="text/css">
                     .modalBackground {
                         background-color: Gray;
@@ -49,8 +49,8 @@
                                         <asp:Label ID="Label2" runat="server" Font-Names="Tahoma" Font-Bold="True" ForeColor="#3B3B3B" CssClass="headForm1 " Height="9px" Width="45px" Font-Size="18pt">Search</asp:Label>
                                     </div>
                                     <div class="col-md-12 f-center">
-                                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" class="btn-bg-theme2 btn" />
-                                        <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Refresh" class="btn-bg-theme2 btn" />
+                                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" class="btn-h-30 btn-bg-theme2 btn-r-4" />
+                                        <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Refresh" class="btn-h-30 btn-bg-theme2 btn-r-4" />
 
                                         <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1" DisplayAfter="10">
                                             <ProgressTemplate>
@@ -98,106 +98,105 @@
                                         <asp:Label ID="LblTotalCases" Font-Names="Tahoma" CssClass="headForm1" runat="server" ForeColor="Black" Height="12px" Font-Size="11pt">Total Cases:</asp:Label>
                                         <hr />
                                     </div>
-                                    <div class="col-md-12">     
-                                                <table id="Table31" style="width: 100%; height: 0px" cellspacing="0" cellpadding="0" bgcolor="white" border="0">
-                                                    <table id="Table1" style="z-index: 119; left: 17px; width: 100%; position: static;
+                                    <div class="col-md-12">
+                                        <table id="Table31" style="width: 100%; height: 0px" cellspacing="0" cellpadding="0" bgcolor="white" border="0">
+                                            <table id="Table1" style="z-index: 119; left: 17px; width: 100%; position: static;
 														top: 105px; height: 359px" cellspacing="0" cellpadding="0" width="914" align="center" bgcolor="white" datapagesize="25" border="0">
-                                                        <tr>
-                                                            <td style="width: 809px; height: 0px" valign="middle" align="center">
+                                                <tr>
+                                                    <td style="width: 809px; height: 0px" valign="middle" align="center">
 
-                                                                <table id="Table61" style="width: 806px; height: 0px" cellspacing="0" cellpadding="0" width="806" border="0">
-                                                                    <tr>
-                                                                        <td align="left">
-                                                                            <table id="Table71" style="width: 736px; height: 0px" cellspacing="0" cellpadding="0" border="0" align="left">                                                                            
-                                                                                <tr>
-                                                                                    <td style="width: 161px; height: 0px">
-                                                                                    </td>
-                                                                                    <td style="width: 240px; height: 0px" colspan="2" align="right">
+                                                        <table id="Table61" style="width: 806px; height: 0px" cellspacing="0" cellpadding="0" width="806" border="0">
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <table id="Table71" style="width: 736px; height: 0px" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                        <tr>
+                                                                            <td style="width: 161px; height: 0px">
+                                                                            </td>
+                                                                            <td style="width: 240px; height: 0px" colspan="2" align="right">
 
-                                                                                        <asp:Label ID="lblTypeAddress11" Font-Names="Tahoma" Width="61px" runat="server" Height="14px" ForeColor="Black" Font-Size="9pt" Visible="False">Search By:</asp:Label>
-                                                                                        <asp:RadioButton class="headform1 " ID="RdbTaskControlID1" TabIndex="11" runat="server" Font-Names="Tahoma" Width="93px" Height="2px" ForeColor="Black" BackColor="Transparent" Text="Control No." AutoPostBack="True" GroupName="SearchBy" Checked="True"
-                                                                                            Font-Size="9pt" OnCheckedChanged="RdbBusiness_CheckedChanged" Visible="False">
-                                                                                        </asp:RadioButton>
-                                                                                        <asp:RadioButton class="headform1 " ID="RdbFilterGroup1" TabIndex="10" runat="server" Font-Names="Tahoma" Width="53px" Height="5px" ForeColor="Black" BackColor="Transparent" Text="Filter" AutoPostBack="True" GroupName="SearchBy" Font-Size="9pt" OnCheckedChanged="RdbIndividual_CheckedChanged" Visible="False"></asp:RadioButton>
-                                                                                    </td>
-                                                                                    <td style="height: 10px" width="250">
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>     
-                                                        <tr>
-                                                            <td style="width: 100%; height: 0px" align="center">
-                                                                <asp:Label ID="LblError" runat="server" Font-Names="Tahoma" Visible="False" ForeColor="Red" Width="694px" Font-Size="10pt">Label</asp:Label>
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="width: 100%;text-align:center;">
-                                                            <td style="font-size: 10pt; width: 100%; height: 239px; text-align:center;">
-                                                                <asp:DataGrid ID="searchIndividual" Width="100%" runat="server" Height="118px" CellPadding="0" 
-																class="table table-bordered" AutoGenerateColumns="False"  Font-Size="10pt"
-																OnItemCommand="searchIndividual_ItemCommand1" OnItemDataBound="searchIndividual_ItemDataBound1">
-                                                                    <Columns>
-                                                                        <asp:ButtonColumn ButtonType="PushButton" HeaderStyle-CssClass="bi bi-check2 f-center" Text="..." CommandName="Select">
-                                                                            <HeaderStyle Width="10%"></HeaderStyle>
-                                                                            <ItemStyle HorizontalAlign="Center"/>
-                                                                        </asp:ButtonColumn>
-                                                                        <asp:BoundColumn DataField="TaskControlID" HeaderText="Control No.">
-                                                                            <ItemStyle Font-Names="tahoma" HorizontalAlign="Left"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="TaskControlTypeDesc" HeaderText="Control Type" DataFormatString="{0:d}">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="TaskStatusDesc" HeaderText="Status">
-                                                                            <ItemStyle Font-Names="tahoma" HorizontalAlign="Left"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Aging" HeaderText="Aging">
-                                                                            <ItemStyle Font-Names="tahoma" HorizontalAlign="Left"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Agent" HeaderText="Agent">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn Visible="False" DataField="InsuranceCompany" HeaderText="Ins. Co.">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Bank" HeaderText="Bank">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="EntryDate" HeaderText="Entry Dt." DataFormatString="{0:d}">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CloseDate" HeaderText="Close Dt." DataFormatString="{0:d}">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CustomerNo" HeaderText="Customer No.">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
-                                                                            <ItemStyle Font-Names="tahoma"></ItemStyle>
-                                                                        </asp:BoundColumn>
-                                                                    </Columns>
-                                                                    <PagerStyle Font-Names="Tahoma" HorizontalAlign="Left" ForeColor="Blue" BackColor="White" PageButtonCount="20" CssClass="Numbers" Mode="NumericPages"></PagerStyle>
-                                                                    <FooterStyle BackColor="#BB1509" Font-Bold="True" ForeColor="White" />
-                                                                    <HeaderStyle BackColor="#BB1509" Font-Bold="True" ForeColor="White" />
-                                                                    <PagerStyle BackColor="#BB1509" ForeColor="White" HorizontalAlign="Left" />
-                                                                </asp:DataGrid>
+                                                                                <asp:Label ID="lblTypeAddress11" Font-Names="Tahoma" Width="61px" runat="server" Height="14px" ForeColor="Black" Font-Size="9pt" Visible="False">Search By:</asp:Label>
+                                                                                <asp:RadioButton class="headform1 " ID="RdbTaskControlID1" TabIndex="11" runat="server" Font-Names="Tahoma" Width="93px" Height="2px" ForeColor="Black" BackColor="Transparent" Text="Control No." AutoPostBack="True" GroupName="SearchBy" Checked="True"
+                                                                                    Font-Size="9pt" OnCheckedChanged="RdbBusiness_CheckedChanged" Visible="False">
+                                                                                </asp:RadioButton>
+                                                                                <asp:RadioButton class="headform1 " ID="RdbFilterGroup1" TabIndex="10" runat="server" Font-Names="Tahoma" Width="53px" Height="5px" ForeColor="Black" BackColor="Transparent" Text="Filter" AutoPostBack="True" GroupName="SearchBy" Font-Size="9pt" OnCheckedChanged="RdbIndividual_CheckedChanged"
+                                                                                    Visible="False"></asp:RadioButton>
+                                                                            </td>
+                                                                            <td style="height: 10px" width="250">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 100%; height: 0px" align="center">
+                                                        <asp:Label ID="LblError" runat="server" Font-Names="Tahoma" Visible="False" ForeColor="Red" Width="694px" Font-Size="10pt">Label</asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr style="width: 100%;text-align:center;">
+                                                    <td style="font-size: 10pt; width: 100%; height: 239px; text-align:center;">
+                                                        <asp:DataGrid ID="searchIndividual" Width="100%" runat="server" Height="118px" CellPadding="0" class="table table-bordered" AutoGenerateColumns="False" Font-Size="10pt" OnItemCommand="searchIndividual_ItemCommand1" OnItemDataBound="searchIndividual_ItemDataBound1">
+                                                            <Columns>
+                                                                <asp:ButtonColumn ButtonType="PushButton" HeaderStyle-CssClass="bi bi-check2 f-center" Text="..." CommandName="Select">
+                                                                    <HeaderStyle Width="10%"></HeaderStyle>
+                                                                    <ItemStyle HorizontalAlign="Center" />
+                                                                </asp:ButtonColumn>
+                                                                <asp:BoundColumn DataField="TaskControlID" HeaderText="Control No.">
+                                                                    <ItemStyle Font-Names="tahoma" HorizontalAlign="Left"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="TaskControlTypeDesc" HeaderText="Control Type" DataFormatString="{0:d}">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="TaskStatusDesc" HeaderText="Status">
+                                                                    <ItemStyle Font-Names="tahoma" HorizontalAlign="Left"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="Aging" HeaderText="Aging">
+                                                                    <ItemStyle Font-Names="tahoma" HorizontalAlign="Left"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="Agent" HeaderText="Agent">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn Visible="False" DataField="InsuranceCompany" HeaderText="Ins. Co.">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="Bank" HeaderText="Bank">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="EntryDate" HeaderText="Entry Dt." DataFormatString="{0:d}">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="CloseDate" HeaderText="Close Dt." DataFormatString="{0:d}">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="CustomerNo" HeaderText="Customer No.">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="Name" HeaderText="Name">
+                                                                    <ItemStyle Font-Names="tahoma"></ItemStyle>
+                                                                </asp:BoundColumn>
+                                                            </Columns>
+                                                            <PagerStyle Font-Names="Tahoma" HorizontalAlign="Left" ForeColor="Blue" BackColor="White" PageButtonCount="20" CssClass="Numbers" Mode="NumericPages"></PagerStyle>
+                                                            <FooterStyle BackColor="#BB1509" Font-Bold="True" ForeColor="White" />
+                                                            <HeaderStyle BackColor="#BB1509" Font-Bold="True" ForeColor="White" />
+                                                            <PagerStyle BackColor="#BB1509" ForeColor="White" HorizontalAlign="Left" />
+                                                        </asp:DataGrid>
 
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                            
-                                            <p align="center">
-                                            </p>                                           
+                                                    </td>
+                                                </tr>
+                                            </table>
+
                                             <p align="center">
                                             </p>
                                             <p align="center">
                                             </p>
-                                      
+                                            <p align="center">
+                                            </p>
+
                                     </div>
-                                   <%-- <MaskedInput:MaskedTextHeader ID="MaskedTextHeader1" runat="server"></MaskedInput:MaskedTextHeader>--%>
-                                    <asp:Literal ID="litPopUp" runat="server" Visible="False"></asp:Literal>
+                                    <%-- <MaskedInput:MaskedTextHeader ID="MaskedTextHeader1" runat="server"></MaskedInput:MaskedTextHeader>--%>
+                                        <asp:Literal ID="litPopUp" runat="server" Visible="False"></asp:Literal>
                                 </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>

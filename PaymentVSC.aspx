@@ -7,11 +7,16 @@
             <html xmlns="http://www.w3.org/1999/xhtml">
 
             <head runat="server">
-                 <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
-			    <link rel="icon" type="image/x-icon" href="images2/favicon.ico" />
+                <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
+                <link rel="icon" type="image/x-icon" href="images2/favicon.ico" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
                 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+                <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+                <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+                <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+                <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+                <script src="js/load.js" type="text/javascript"></script>
                 <script type="text/javascript">
                     $(document).ready(function() {
                         $('#gdVscQuote').dataTable({
@@ -55,6 +60,21 @@
                     }
                 </style>
             </head>
+            <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    $('#<%= TxtPaymentDate.ClientID %>').datepicker({
+                        changeMonth: true,
+                        changeYear: true
+                    });
+
+                    $('#<%= txtDepositDate.ClientID %>').datepicker({
+                        changeMonth: true,
+                        changeYear: true
+                    });
+                });
+            </script>
 
             <body>
                 <form id="form1" method="post" runat="server">
@@ -106,9 +126,7 @@
                                     </div>
                                     <div class="col">
                                         <asp:Label ID="LblPaymentDate" runat="server" CssClass="txt-xl" EnableViewState="False">Payment Date</asp:Label>
-                                        <asp:TextBox ID="TxtPaymentDate" runat="server" CssClass="form-control txt-xl" IsDate="True" TabIndex="3"></asp:TextBox>
-                                        <Toolkit:CalendarExtender ID="CalendarExtender1" PopupButtonID="TxtPaymentDate" runat="server" TargetControlID="TxtPaymentDate" CssClass="RedCalendar" Format="MM/dd/yyyy">
-                                        </Toolkit:CalendarExtender>
+                                        <asp:TextBox ID="TxtPaymentDate" runat="server" CssClass="form-control txt-xl fechaFormat" IsDate="True" TabIndex="3"></asp:TextBox>
                                     </div>
                                     <div class="col">
                                         <asp:Label ID="Label17" runat="server" CssClass="txt-xl" EnableViewState="False">Payment Check</asp:Label>
@@ -121,9 +139,7 @@
                                     </div>
                                     <div class="col">
                                         <asp:Label ID="Label20" runat="server" CssClass="txt-xl" EnableViewState="False"> Deposit Date</asp:Label>
-                                        <asp:TextBox ID="txtDepositDate" runat="server" CssClass="form-control txt-xl" IsDate="True" TabIndex="7"></asp:TextBox>
-                                        <Toolkit:CalendarExtender ID="Calendar1" PopupButtonID="txtDepositDate" runat="server" TargetControlID="txtDepositDate" CssClass="RedCalendar" Format="MM/dd/yyyy">
-                                        </Toolkit:CalendarExtender>
+                                        <asp:TextBox ID="txtDepositDate" runat="server" CssClass="form-control txt-xl fechaFormat" IsDate="True" TabIndex="7"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-md-12 f-op-10">

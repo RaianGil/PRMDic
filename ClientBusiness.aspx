@@ -276,7 +276,7 @@
                                     <asp:label id="lblHomePhone" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Cellular</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <maskedinput:maskedtextbox id="txtCellular" RUNAT="server" class="form-control fs-txt-s mb-1" MAXLENGTH="20" MASK="(999) 999-9999" ISDATE="False"></maskedinput:maskedtextbox>
+                                    <maskedinput:maskedtextbox id="txtCellular" RUNAT="server" class="form-control fs-txt-s mb-1 telefoneFormat" MAXLENGTH="20" MASK="(999) 999-9999" ISDATE="False"></maskedinput:maskedtextbox>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +301,7 @@
                                     <asp:label id="lblWorkPhone" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Work Phone</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <maskedinput:maskedtextbox id="TxtWorkPhone" RUNAT="server" class="form-control fs-txt-s mb-1" MAXLENGTH="20" MASK="(999) 999-9999" ISDATE="False"></maskedinput:maskedtextbox>
+                                    <maskedinput:maskedtextbox id="TxtWorkPhone" RUNAT="server" class="form-control fs-txt-s mb-1 telefoneFormat" MAXLENGTH="20" MASK="(999) 999-9999" ISDATE="False"></maskedinput:maskedtextbox>
                                 </div>
                             </div>
                         </div>

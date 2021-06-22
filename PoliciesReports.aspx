@@ -193,9 +193,9 @@
                                                 <asp:label id="Label1" runat="server" CssClass="col-md-4 fs-lbl-s label-vertical-align mb-3">Date From</asp:label>
                                                 <div class="col-md-8">
                                                     <div class="input-group">
-                                                        <asp:TextBox id="txtBegDate" onclick="ShowDateTimePicker();" RUNAT="server" CSSCLASS="form-control fs-txt-s" style="height: 29.2px;"></asp:TextBox>
+                                                        <asp:TextBox id="txtBegDate" onclick="ShowDateTimePicker();" RUNAT="server" CSSCLASS="form-control fs-txt-s fechaFormat" style="height: 29.2px;"></asp:TextBox>
                                                         <asp:label id="Label2" runat="server" CssClass="col-form-labe input-group-text label-vertical-align" style="height: 29.2px;">To</asp:label>
-                                                        <asp:TextBox ID="TxtEndDate" runat="server" onclick="ShowDateTimePicker2();" CSSCLASS="form-control fs-txt-s" style="height: 29.2px;"></asp:TextBox>
+                                                        <asp:TextBox ID="TxtEndDate" runat="server" onclick="ShowDateTimePicker2();" CSSCLASS="form-control fs-txt-s fechaFormat" style="height: 29.2px;"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>

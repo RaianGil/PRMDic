@@ -6,8 +6,8 @@
             <HTML>
 
             <HEAD>
-                            <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
-			<link rel="icon" type="image/x-icon" href="images2/favicon.ico" />
+                <title>PRMD | PUERTO RICO INSURANCE COMPANY</title>
+                <link rel="icon" type="image/x-icon" href="images2/favicon.ico" />
                 <meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
                 <meta content="C#" name="CODE_LANGUAGE">
                 <meta content="JavaScript" name="vs_defaultClientScript">
@@ -155,11 +155,11 @@
                                 <p>
                                     <div class="row">
                                         <div class="col-md-2 f-center">
-                                            <maskedinput:maskedtextbox id="TxtPhone" RUNAT="server" class="form-control" placeholder="Phone" MASK="(999) 999-9999" ISDATE="False" ENABLEVIEWSTATE="False"></maskedinput:maskedtextbox>
+                                            <maskedinput:maskedtextbox id="TxtPhone" RUNAT="server" class="form-control telefoneFormat" placeholder="Phone" MASK="(999) 999-9999" ISDATE="False" ENABLEVIEWSTATE="False"></maskedinput:maskedtextbox>
                                         </div>
 
                                         <div class="col-md-2 f-center">
-                                            <asp:textbox id="txtFax" RUNAT="server" class="form-control" placeholder="Fax" />
+                                            <asp:textbox id="txtFax" RUNAT="server" class="form-control telefoneFormat" placeholder="Fax" />
                                         </div>
 
                                         <div class="col-md-2 f-center">
@@ -244,15 +244,14 @@
                                 <asp:Label id="LblError" runat="server" Font-Names="Tahoma" Font-Size="11pt" ForeColor="Red" Visible="False" Width="100%">Label</asp:Label>
 
                                 <TR>
-                                    <TD style="FONT-SIZE: 0pt; align="center">
+                                    <TD style="FONT-SIZE: 0pt;" align="center">
                                         <P align="center">
-                                            <asp:datagrid id="searchIndividual" Height="188px" RUNAT="server" 
-                                            class="table table-bordered table-condensed table-hover " Width="100%" AutoGenerateColumns="False" Font-Size="10pt"
-                                            CellPadding="4" ForeColor="#333333" AlternatingRowStyle-BackColor="White" Visible="False" ALLOWPAGING="True" PageSize="9">
+                                            <asp:datagrid id="searchIndividual" Height="188px" RUNAT="server" class="table table-bordered table-condensed table-hover " Width="100%" AutoGenerateColumns="False" Font-Size="10pt" CellPadding="4" ForeColor="#333333" AlternatingRowStyle-BackColor="White"
+                                                Visible="False" ALLOWPAGING="True" PageSize="9">
                                                 <Columns>
                                                     <asp:ButtonColumn HeaderStyle-CssClass="bi bi-check2 f-center" Text="..." ButtonType="PushButton" CommandName="Select">
                                                         <HeaderStyle Width="10%"></HeaderStyle>
-                                                        <ItemStyle HorizontalAlign="Center"/>
+                                                        <ItemStyle HorizontalAlign="Center" />
                                                     </asp:ButtonColumn>
                                                     <asp:BoundColumn DataField="prospectID" HeaderText="Prospect ID">
                                                         <ItemStyle Font-Names="Tahoma" HorizontalAlign="Left"></ItemStyle>

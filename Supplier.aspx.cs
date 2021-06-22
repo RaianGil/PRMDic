@@ -127,15 +127,15 @@ namespace EPolicy
 			base.OnInit(e);
 
 			Control Banner = new Control();
-			Banner = LoadControl(@"TopBanner.ascx");
+			Banner = LoadControl(@"TopBanner1.ascx");
 			this.Placeholder1.Controls.Add(Banner);
 
 			//Setup Left-side Banner
 			
-			LeftMenu = new Control();
+			/*LeftMenu = new Control();
 			LeftMenu = LoadControl(@"LeftMenu.ascx");
 			//((Baldrich.Components.MenuTaskControl)LeftMenu).Height = "534px";
-			phTopBanner1.Controls.Add(LeftMenu);
+			phTopBanner1.Controls.Add(LeftMenu);*/
 
             DataTable dtSupplier = LookupTables.LookupTables.GetTable("Supplier");
 

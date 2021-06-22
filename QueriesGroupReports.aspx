@@ -9,7 +9,31 @@
             <meta name="CODE_LANGUAGE" Content="C#">
             <meta name="vs_defaultClientScript" content="JavaScript">
             <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+            <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+            <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+            <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
         </HEAD>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#<%= txtBegDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+                $('#<%= TxtEndDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+                $('#<%= txtOutstandingDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+            });
+        </script>
 
         <body>
             <form id="Form1" method="post" runat="server">
@@ -75,10 +99,7 @@
                                 <asp:label id="lblOutstanding" RUNAT="server" class="fs-lbl-s">Policy Outstanding as of:</asp:label>
                             </div>
                             <div class="col-md-8">
-                                <div class="input-group input-append date" data-date-format="mm-dd-yyyy">
-                                    <maskedinput:maskedtextbox id="txtOutstandingDate" class="form-control fs-txt-s" tabIndex="5" RUNAT="server" ISDATE="True"></maskedinput:maskedtextbox>
-                                    <span runat="server" id="btnCalendar31" class="add-on input-group-text datepicker-p1" style="height:29px;"><i class="bi bi-grid-3x3-gap-fill "></i></span>
-                                </div>
+                                <maskedinput:maskedtextbox id="txtOutstandingDate" class="form-control fs-txt-s fechaFormat" tabIndex="5" RUNAT="server" ISDATE="True"></maskedinput:maskedtextbox>
                             </div>
                         </div>
 
@@ -98,22 +119,10 @@
                                 <asp:label id="Label1" runat="server" class="fs-lbl-s">Date From</asp:label>
                             </div>
                             <div class="col-md-8">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="input-group input-append date" data-date-format="mm-dd-yyyy">
-                                            <maskedinput:maskedtextbox id="txtBegDate" RUNAT="server" class="form-control fs-txt-s" ISDATE="True"></maskedinput:maskedtextbox>
-                                            <span runat="server" id="btnCalendar01" class="add-on input-group-text datepicker-p1" style="height:29px;"><i class="bi bi-grid-3x3-gap-fill "></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <asp:label id="Label2" runat="server" class="fs-lbl-s">To</asp:label>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="input-group input-append date" data-date-format="mm-dd-yyyy">
-                                            <maskedinput:maskedtextbox id="TxtEndDate" tabIndex="5" RUNAT="server" class="form-control fs-txt-s" ISDATE="True"></maskedinput:maskedtextbox>
-                                            <span runat="server" id="btnCalendar21" class="add-on input-group-text datepicker-p1" style="height:29px;"><i class="bi bi-grid-3x3-gap-fill "></i></span>
-                                        </div>
-                                    </div>
+                                <div class="input-group">
+                                    <maskedinput:maskedtextbox id="txtBegDate" RUNAT="server" class="form-control fs-txt-s fechaFormat" ISDATE="True"></maskedinput:maskedtextbox>
+                                    <asp:label id="Label2" runat="server" class="fs-txt-s input-group-text">To</asp:label>
+                                    <maskedinput:maskedtextbox id="TxtEndDate" tabIndex="5" RUNAT="server" class="form-control fs-txt-s fechaFormat" ISDATE="True"></maskedinput:maskedtextbox>
                                 </div>
                             </div>
                         </div>

@@ -201,7 +201,7 @@
                                     <asp:label id="Label32" runat="server">Second Zip Code </asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="txtzip2" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control"></asp:textbox>
+                                    <asp:textbox id="txtzip2" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control telefoneFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -209,7 +209,7 @@
                                     <asp:label id="Label13" runat="server">Office Phone 1 </asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="txtoffice1" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control"></asp:textbox>
+                                    <asp:textbox id="txtoffice1" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control telefoneFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -217,7 +217,7 @@
                                     <asp:label id="Label14" runat="server">Office Phone 2 </asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="txtoffice2" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control"></asp:textbox>
+                                    <asp:textbox id="txtoffice2" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control telefoneFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -225,7 +225,7 @@
                                     <asp:label id="lblPhone" runat="server">Home Phone 1</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="txtPhone" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control"></asp:textbox>
+                                    <asp:textbox id="txtPhone" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control telefoneFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -233,7 +233,7 @@
                                     <asp:label id="Label15" runat="server">Home Phone 2 </asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="txtphone2" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control"></asp:textbox>
+                                    <asp:textbox id="txtphone2" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control telefoneFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -241,7 +241,7 @@
                                     <asp:label id="Label16" runat="server">Office Fax </asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="txtfax" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control"></asp:textbox>
+                                    <asp:textbox id="txtfax" runat="server" MAXLENGTH="20" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" class="form-control telefoneFormat telefoneFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -249,7 +249,7 @@
                                     <asp:label id="lblEntryDate" runat="server">Entry Date</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <maskedinput:maskedtextbox id="txtEntryDate" runat="server" class="form-control" ISDATE="True" Enabled="False"></maskedinput:maskedtextbox>
+                                    <maskedinput:maskedtextbox id="txtEntryDate" runat="server" class="form-control fechaFormat" ISDATE="True" Enabled="False"></maskedinput:maskedtextbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -371,7 +371,7 @@
                                     <asp:label id="Label18" runat="server">License Exp. Date</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:TextBox ID="txtlicexp" runat="server" Columns="30" class="form-control" onIsDate="True"></asp:TextBox>
+                                    <asp:TextBox ID="txtlicexp" runat="server" Columns="30" class="form-control fechaFormat" onIsDate="True"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="row mb-1">

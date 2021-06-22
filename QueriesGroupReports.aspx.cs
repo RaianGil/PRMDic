@@ -215,15 +215,15 @@ namespace EPolicy
 					Label2.Visible		       = true;
 					LblDataType.Visible		   = true;
 					ddlDateType.Visible		   = true;
-					btnCalendar01.Visible        = true;
-					btnCalendar21.Visible       = true;
+					// btnCalendar01.Visible        = true;
+					// btnCalendar21.Visible       = true;
 					ChkSummary.Visible		   = true;
 					btnPrint.Visible           = true;
 					//					BtnDownload.Visible		   = false;
 
 					lblOutstanding.Visible     = false;
 					txtOutstandingDate.Visible = false;
-					btnCalendar31.Visible       = false;
+					// btnCalendar31.Visible       = false;
 					break;  
 			}
 		}

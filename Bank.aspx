@@ -95,7 +95,7 @@
                             <asp:label id="lblPhone" RUNAT="server" class="fs-lbl-s">Phone </asp:label>
                         </div>
                         <div class="col-md-8">
-                            <maskedinput:maskedtextbox id="txtPhone" runat="server" class="form-control fs-txt-s mb-1" Mask="(999) 999-9999" Columns="34"></maskedinput:maskedtextbox>
+                            <maskedinput:maskedtextbox id="txtPhone" runat="server" class="form-control fs-txt-s mb-1 telefoneFormat" Mask="(999) 999-9999" Columns="34"></maskedinput:maskedtextbox>
                         </div>
                     </div>
                     <div class="row">
@@ -103,7 +103,7 @@
                             <asp:label id="lblEntryDate" RUNAT="server" class="fs-lbl-s">Entry Date</asp:label>
                         </div>
                         <div class="col-md-8">
-                            <maskedinput:maskedtextbox id="txtEntryDate" RUNAT="server" class="form-control fs-txt-s mb-1" ISDATE="True"></maskedinput:maskedtextbox>
+                            <maskedinput:maskedtextbox id="txtEntryDate" RUNAT="server" class="form-control fs-txt-s mb-1 fechaFormat" ISDATE="True"></maskedinput:maskedtextbox>
                         </div>
                     </div>
                     <div class="row">

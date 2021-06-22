@@ -366,7 +366,7 @@
                                     <div class="mb-3 row">
                                         <asp:Label ID="lblMaritalStatus" runat="server" EnableViewState="False" CssClass="col-md-3 col-form-labe fs-lbl-s label-vertical-align">Date of Birth:</asp:Label>
                                         <div class="col-md-9">
-                                            <MaskedInput:MaskedTextBox ID="txtDateBirth" runat="server" onclick="ShowDateTimePicker7();" CSSCLASS="form-control fs-txt-s" IsDate="True"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="txtDateBirth" runat="server" onclick="ShowDateTimePicker7();" CSSCLASS="form-control fs-txt-s fechaFormat" IsDate="True"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                             <asp:Label ID="Label59" runat="server" EnableViewState="False" CssClass="col-form-labe fs-lbl-s label-vertical-align" ForeColor="Red">*</asp:Label>
                                         </div>
                                         <div class="col-md-9">
-                                            <MaskedInput:MaskedTextBox ID="txtWorkPhone" runat="server" IsCurrency="False" IsDate="False" CSSCLASS="form-control fs-txt-s" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="txtWorkPhone" runat="server" IsCurrency="False" IsDate="False" CSSCLASS="form-control fs-txt-s telefoneFormat" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -471,7 +471,7 @@
                                             <asp:Label ID="Label61" runat="server" EnableViewState="False" ForeColor="Red" CSSCLASS="col-form-labe fs-lbl-s label-vertical-align">*</asp:Label>
                                         </div>
                                         <div class="col-md-9">
-                                            <MaskedInput:MaskedTextBox ID="txtHomePhone" runat="server" IsCurrency="False" IsDate="False" CSSCLASS="form-control fs-txt-s" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="txtHomePhone" runat="server" IsCurrency="False" IsDate="False" CSSCLASS="form-control fs-txt-s telefoneFormat" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
 
@@ -491,7 +491,7 @@
                                     <div class="mb-3 row">
                                         <asp:Label ID="lblLastName1" runat="server" EnableViewState="False" CssClass="col-md-3 col-form-labe fs-lbl-s label-vertical-align">Office Fax:</asp:Label>
                                         <div class="col-md-9">
-                                            <MaskedInput:MaskedTextBox ID="TxtCellular" runat="server" IsCurrency="False" CSSCLASS="form-control fs-txt-s" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="TxtCellular" runat="server" IsCurrency="False" CSSCLASS="form-control fs-txt-s telefoneFormat" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
 
@@ -526,17 +526,17 @@
                                     <asp:Label ID="Label14" runat="server" EnableViewState="False" CSSCLASS="col-form-labe fs-lbl-s label-vertical-align">Policy Effective Dates</asp:Label>
                                     <div class="mb-3 row">
                                         <div class="col-md-12">
-                                            <asp:TextBox ID="txtPriPolEffecDate1" runat="server" onclick="ShowDateTimePicker();" CSSCLASS="form-control fs-txt-s"></asp:TextBox>
+                                            <asp:TextBox ID="txtPriPolEffecDate1" runat="server" onclick="ShowDateTimePicker();" CSSCLASS="form-control fs-txt-s fechaFormat"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <div class="col-md-12">
-                                            <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate2" runat="server" onclick="ShowDateTimePicker2();" IsDate="True" CSSCLASS="form-control fs-txt-s"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate2" runat="server" onclick="ShowDateTimePicker2();" IsDate="True" CSSCLASS="form-control fs-txt-s fechaFormat"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <div class="col-md-12">
-                                            <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate3" runat="server" onclick="ShowDateTimePicker3();" IsDate="True" CSSCLASS="form-control fs-txt-s"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate3" runat="server" onclick="ShowDateTimePicker3();" IsDate="True" CSSCLASS="form-control fs-txt-s fechaFormat"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -1008,4 +1008,5 @@
             </form>
 
         </body>
+
         </html>

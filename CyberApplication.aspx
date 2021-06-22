@@ -5,9 +5,6 @@
         <%@ Register TagPrefix="MaskedInput" Namespace="MaskedInput" Assembly="MaskedInput" %>
             <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
-
-
-
                 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
                 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -268,10 +265,6 @@
                         }
                     </style>
 
-                    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
-
-                    <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
-
                     <script type="text/javascript">
                         $("#effect").hide();
                         $(function() {
@@ -323,6 +316,18 @@
                                 changeMonth: true,
                                 changeYear: true
                             });
+                            $('#<%= txtExpDt.ClientID %>').datepicker({
+                                changeMonth: true,
+                                changeYear: true
+                            });
+                            $('#<%= txtEntryDate.ClientID %>').datepicker({
+                                changeMonth: true,
+                                changeYear: true
+                            });
+                            $('#<%= txtDatePrepared.ClientID %>').datepicker({
+                                changeMonth: true,
+                                changeYear: true
+                            });
                             $('#<%= txtRetroEffDate.ClientID %>').datepicker({
                                 changeMonth: true,
                                 changeYear: true
@@ -371,6 +376,17 @@
 
                         function ShowDateTimePicker12() {
                             $('#<%= txtGapEndDate3.ClientID %>').datepicker('show');
+                        }
+
+                        function ShowDateTimePicker13() {
+                            $('#<%= txtExpDt.ClientID %>').datepicker('show');
+                        }
+
+                        function ShowDateTimePicker14() {
+                            $('#<%= txtEntryDate.ClientID %>').datepicker('show');
+                        }
+                        function ShowDateTimePicker15() {
+                            $('#<%= txtDatePrepared.ClientID %>').datepicker('show');
                         }
 
                         function ShowDateTimePickerEndoRetroDate() {
@@ -431,11 +447,9 @@
 
                     <form id="PolCyber" method="post" runat="server">
                         <asp:scriptmanager id="Script" runat="server" AsyncPostBackTimeout="0"></asp:scriptmanager>
-
                         <p>
                             <asp:placeholder id="Placeholder1" runat="server"></asp:placeholder>
                         </p>
-
                         <div class="container-xl mb-4" style="padding-left:18px; padding-right:18px;">
                             <div class="row">
                                 <div class="col-md-4" style="align-self:center;">
@@ -507,22 +521,21 @@
                                                 <div class="col-md-8" style="height:29.2px;">
                                                     <div class="input-group mb-3">
                                                         <asp:TextBox ID="TxtState" runat="server" MaxLength="2" Width="30%" CSSCLASS="form-control fs-txt-s" style="float:left"></asp:TextBox>
-                                                        <MaskedInput:MaskedTextBox ID="TxtZip" runat="server" Width="70%" CSSCLASS="form-control fs-txt-s" IsDate="False" IsZipCode="true" Mask="CCCCCC" MaxLength="10"></MaskedInput:MaskedTextBox>
+                                                        <MaskedInput:MaskedTextBox ID="TxtZip" runat="server" Width="70%" CSSCLASS="form-control fs-txt-s" IsDate="False" IsZipCode="true" MaxLength="10"></MaskedInput:MaskedTextBox>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblMobilePhone" runat="server" EnableViewState="False" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align">Mobile Phone:</asp:Label>
                                                 <div class="col-md-8">
-                                                    <MaskedInput:MaskedTextBox ID="TxtCellular" runat="server" CSSCLASS="form-control fs-txt-s" IsDate="False" Mask="(999) 999-9999" MaxLength="20">
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <MaskedInput:MaskedTextBox ID="TxtCellular" runat="server" CSSCLASS="form-control fs-txt-s telefoneFormat" IsDate="False" MaxLength="20">
                                                     </MaskedInput:MaskedTextBox>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblOfficePhone" runat="server" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align" EnableViewState="False">Office Phone:</asp:Label>
                                                 <div class="col-md-8">
-                                                    <MaskedInput:MaskedTextBox ID="txtWorkPhone" runat="server" CSSCLASS="form-control fs-txt-s" IsDate="False" Mask="(999) 999-9999" MaxLength="20"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <MaskedInput:MaskedTextBox ID="txtWorkPhone" runat="server" CSSCLASS="form-control fs-txt-s telefoneFormat" IsDate="False" MaxLength="20">
                                                     </MaskedInput:MaskedTextBox>
                                                 </div>
                                             </div>
@@ -563,7 +576,7 @@
                                                 <div class="col-md-8" style="height:29.2px;">
                                                     <div class="input-group mb-3">
                                                         <asp:TextBox ID="TxtPolicyType" runat="server" CSSCLASS="form-control fs-txt-s" style="height:29.2px;" MaxLength="4"></asp:TextBox>
-                                                        <asp:Label ID="lblSufijo" runat="server" class="input-group-text fs-lbl-s label-vertical-align" style="height:29.2px;">Suffix</asp:Label>
+                                                        <asp:Label ID="lblSufijo" runat="server" CSSCLASS="input-group-text fs-lbl-s label-vertical-align" style="height:29.2px;">Suffix</asp:Label>
                                                         <asp:TextBox ID="TxtSufijo" runat="server" CSSCLASS="form-control fs-txt-s" style="height:29.2px;" MaxLength="2"></asp:TextBox>
                                                     </div>
                                                 </div>
@@ -583,25 +596,25 @@
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblRetro" runat="server" EnableViewState="False" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align">Retro. Date</asp:Label>
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="TxtRetroactiveDate" runat="server" Columns="30" onclick="ShowDateTimePicker2();" CSSCLASS="form-control fs-txt-s"></asp:TextBox>
+                                                    <asp:TextBox ID="TxtRetroactiveDate" runat="server" Columns="30" onclick="ShowDateTimePicker2();" CSSCLASS="form-control fs-txt-s fechaFormat"></asp:TextBox>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblEffDate" runat="server" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align">Effective Date</asp:Label>
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtEffDt" runat="server" Columns="30" onclick="ShowDateTimePicker();" CSSCLASS="form-control fs-txt-s"></asp:TextBox>
+                                                    <asp:TextBox ID="txtEffDt" runat="server" Columns="30" onclick="ShowDateTimePicker();" CSSCLASS="form-control fs-txt-s fechaFormat"></asp:TextBox>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblExpDate" runat="server" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align">Exp. Date</asp:Label>
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtExpDt" runat="server" CSSCLASS="form-control fs-txt-s" Enabled="False"></asp:TextBox>
+                                                    <asp:TextBox ID="txtExpDt" runat="server" onclick="ShowDateTimePicker13();" CSSCLASS="form-control fs-txt-s fechaFormat" Enabled="False"></asp:TextBox>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblEntryDate" runat="server" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align">Entry Date</asp:Label>
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtEntryDate" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" IsDate="True"></asp:TextBox>
+                                                    <asp:TextBox ID="txtEntryDate" runat="server" onclick="ShowDateTimePicker14();" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" IsDate="True"></asp:TextBox>
                                                 </div>
                                             </div>
 
@@ -689,7 +702,7 @@
                                             <div class="mb-3 row">
                                                 <asp:Label ID="labelAlternateEmail" runat="server" CSSCLASS="col-md-4 col-form-labe fs-lbl-s label-vertical-align" EnableViewState="False">Alternate Email:</asp:Label>
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtAlternateEmail" runat="server" CSSCLASS="form-select fs-txt-s" MaxLength="50" Visible="True"></asp:TextBox>
+                                                    <asp:TextBox ID="txtAlternateEmail" runat="server" CSSCLASS="form-control fs-txt-s" MaxLength="50" Visible="True"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
@@ -711,33 +724,33 @@
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblRetro0" runat="server" CssClass="col-md-1 col-form-labe label-vertical-align" EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt">From:</asp:Label>
                                                 <div class="col-md-5">
-                                                    <asp:TextBox ID="txtGapBegDate" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker7();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtGapBegDate" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker7();"></asp:TextBox>
                                                 </div>
                                                 <asp:Label ID="lblRetro4" runat="server" CssClass="col-md-1 col-form-labe label-vertical-align" EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt">To:</asp:Label>
                                                 <div class="col-md-5">
-                                                    <asp:TextBox ID="txtGapEndDate" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker8();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtGapEndDate" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker8();"></asp:TextBox>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblRetro1" runat="server" CssClass="col-md-1 col-form-labe label-vertical-align" EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt" Height="16px">From:</asp:Label>
                                                 <div class="col-md-5">
-                                                    <asp:TextBox ID="txtGapBegDate2" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker9();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtGapBegDate2" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker9();"></asp:TextBox>
                                                 </div>
 
                                                 <asp:Label ID="lblRetro5" runat="server" CssClass="col-md-1 col-form-labe label-vertical-align" EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt" Height="16px">To:</asp:Label>
                                                 <div class="col-md-5">
-                                                    <asp:TextBox ID="txtGapEndDate2" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker10();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtGapEndDate2" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker10();"></asp:TextBox>
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
                                                 <asp:Label ID="lblRetro2" runat="server" CssClass="col-md-1 col-form-labe label-vertical-align" EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt" Height="16px">From:</asp:Label>
                                                 <div class="col-md-5">
-                                                    <asp:TextBox ID="txtGapBegDate3" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker11();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtGapBegDate3" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker11();"></asp:TextBox>
                                                 </div>
 
                                                 <asp:Label ID="lblRetro6" runat="server" CssClass="col-md-1 col-form-labe label-vertical-align" EnableViewState="False" Font-Names="Tahoma" Font-Size="9pt" Height="16px">To:</asp:Label>
                                                 <div class="col-md-5">
-                                                    <asp:TextBox ID="txtGapEndDate3" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker12();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtGapEndDate3" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker12();"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
@@ -855,7 +868,7 @@
                                                 <asp:Label ID="lblPolicyEfDates" runat="server" CssClass="col-form-labe fs-lbl-s label-vertical-align" EnableViewState="False">Policy Effective Date:</asp:Label>
 
                                                 <div class="col-md-12">
-                                                    <asp:TextBox ID="txtEffectiveDates" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" onclick="ShowDateTimePicker6();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtEffectiveDates" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" Columns="30" onclick="ShowDateTimePicker6();"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
@@ -1112,7 +1125,7 @@
                                                 <asp:Label ID="lblDatePrepared" runat="server" CssClass="col-md-4 col-form-labe fs-lbl-s label-vertical-align" EnableViewState="False">Date Prepared:</asp:Label>
 
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtDatePrepared" runat="server" CSSCLASS="form-control fs-txt-s" Columns="30" IsDate="True"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDatePrepared" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" onclick="ShowDateTimePicker15();" Columns="30" IsDate="True"></asp:TextBox>
 
                                                 </div>
                                             </div>
@@ -1122,7 +1135,7 @@
                                                 <asp:Label ID="lblEndoEffDate" runat="server" CssClass="col-md-4 col-form-labe fs-lbl-s label-vertical-align" EnableViewState="False">Endo. Eff. Date:</asp:Label>
 
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtEndoEffDate" runat="server" CSSCLASS="form-control fs-txt-s" onclick="ShowDateTimePicker5();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtEndoEffDate" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" onclick="ShowDateTimePicker5();"></asp:TextBox>
 
                                                 </div>
                                             </div>
@@ -1132,7 +1145,7 @@
                                                 <asp:Label ID="lblEndoRetroDate" runat="server" CssClass="col-md-4 col-form-labe fs-lbl-s label-vertical-align" EnableViewState="False">Endo. Retro. Date:</asp:Label>
 
                                                 <div class="col-md-8">
-                                                    <asp:TextBox ID="txtRetroEffDate" runat="server" CSSCLASS="form-control fs-txt-s" onclick="ShowDateTimePickerEndoRetroDate();"></asp:TextBox>
+                                                    <asp:TextBox ID="txtRetroEffDate" runat="server" CSSCLASS="form-control fs-txt-s fechaFormat" onclick="ShowDateTimePickerEndoRetroDate();"></asp:TextBox>
 
                                                 </div>
                                             </div>
@@ -1393,7 +1406,7 @@
 
                                     <asp:TextBox ID="txtPriCarierName1" runat="server" MaxLength="75" Enabled="False" Visible="False"></asp:TextBox>
 
-                                    <asp:TextBox ID="txtPriPolEffecDate1" runat="server" onclick="ShowDateTimePicker3();" Enabled="False" Visible="False"></asp:TextBox>
+                                    <asp:TextBox ID="txtPriPolEffecDate1" runat="server" CssClass="fechaFormat" onclick="ShowDateTimePicker3();" Enabled="False" Visible="False"></asp:TextBox>
 
                                     <asp:TextBox ID="txtPriPolLimits1" runat="server" MaxLength="50" Enabled="False" Visible="False"></asp:TextBox>
 

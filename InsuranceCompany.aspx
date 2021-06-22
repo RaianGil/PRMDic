@@ -10,7 +10,27 @@
             <meta content="JavaScript" name="vs_defaultClientScript">
             <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
             <LINK href="baldrich.css" type="text/css" rel="stylesheet">
+            <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+            <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+            <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+            <script src="js/load.js" type="text/javascript"></script>
         </HEAD>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript">
+            function dpShowEntryDate() {
+                $('#<%= txtEntryDate.ClientID %>').datepicker('show');
+            }
+
+            $(function() {
+                $('#<%= txtEntryDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+            });
+        </script>
 
         <body>
             <form method="post" runat="server">
@@ -104,7 +124,7 @@
                                         <asp:label id="lblPhone" RUNAT="server">Phone </asp:label>
                                     </div>
                                     <div class="col-md-9">
-                                        <maskedinput:maskedtextbox id="txtPhone" runat="server" Mask="(999) 999-9999" Columns="34" class="form-control"></maskedinput:maskedtextbox>
+                                        <maskedinput:maskedtextbox id="txtPhone" runat="server" Mask="(999) 999-9999" Columns="34" class="form-control telefoneFormat"></maskedinput:maskedtextbox>
                                     </div>
                                 </div>
                                 <div class="row mb-1">
@@ -112,10 +132,8 @@
                                         <asp:label id="lblEntryDate" RUNAT="server">Entry Date</asp:label>
                                     </div>
                                     <div class="col-md-9">
-                                        <div class="input-group">
-                                            <maskedinput:maskedtextbox id="txtEntryDate" RUNAT="server" ISDATE="True" class="form-control"></maskedinput:maskedtextbox>
-                                            <INPUT id="btnCalendar" onclick="javascript:calendar_window=window.open('selectDate.aspx?formname=Agency.txtEntryDate','calendar_window','width=250,height=250');calendar_window.focus()" type="button" value="..." name="btnCalendar" RUNAT="server" class="input-group-text">
-                                        </div>
+                                        <maskedinput:maskedtextbox id="txtEntryDate" RUNAT="server" onclick="dpShowEntryDate();" ISDATE="True" class="form-control fechaFormat"></maskedinput:maskedtextbox>
+                                        <INPUT id="btnCalendar" onclick="javascript:calendar_window=window.open('selectDate.aspx?formname=Agency.txtEntryDate','calendar_window','width=250,height=250');calendar_window.focus()" type="button" value="..." name="btnCalendar" RUNAT="server" class="input-group-text d-none">
                                     </div>
                                 </div>
                                 <div class="row mb-1">

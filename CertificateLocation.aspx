@@ -83,7 +83,7 @@
                                 <maskedinput:maskedtextbox id="txtZipCode" RUNAT="server" class="form-control" ISDATE="False" MASK="99999Z9999" MAXLENGTH="10"></maskedinput:maskedtextbox>
 
                                 <asp:label id="lblPhone" RUNAT="server">Phone </asp:label>
-                                <maskedinput:MaskedTextBox id="txtPhone" runat="server" class="form-control" Mask="(999) 999-9999" Columns="34"></maskedinput:MaskedTextBox>
+                                <maskedinput:MaskedTextBox id="txtPhone" runat="server" class="form-control telefoneFormat" Mask="(999) 999-9999" Columns="34"></maskedinput:MaskedTextBox>
 
                                 <asp:label id="lblEmail" RUNAT="server">Email 1</asp:label>
                                 <asp:textbox id="txtEmail" RUNAT="server" class="form-control" MAXLENGTH="50"></asp:textbox>

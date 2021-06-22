@@ -9,7 +9,34 @@
             <meta name="CODE_LANGUAGE" Content="C#">
             <meta name="vs_defaultClientScript" content="JavaScript">
             <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+            <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+            <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+            <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+            <script src="js/load.js" type="text/javascript"></script>
         </HEAD>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript">
+            function dpShowDateFrom() {
+                $('#<%= txtBegDate.ClientID %>').datepicker('show');
+            }
+
+            function dpShowDateTo() {
+                $('#<%= TxtEndDate.ClientID %>').datepicker('show');
+            }
+            $(function() {
+                $('#<%= txtBegDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+                $('#<%= TxtEndDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+            });
+        </script>
 
         <body>
             <form id="Form1" method="post" runat="server">
@@ -64,21 +91,17 @@
                             <div class="col-md-4">
                                 <div class="row">
                                     <div class="col-md">
-                                        <div class="d-inline-flex">
-                                            <maskedinput:maskedtextbox id="txtBegDate" class="form-control" RUNAT="server" ISDATE="True"></maskedinput:maskedtextbox>
-                                            <INPUT id="btnCalendar2" onclick="javascript:calendar_window=window.open('selectDate.aspx?formname=document.Form1.txtBegDate','calendar_window','width=250,height=250');calendar_window.focus()" type="button" class="input-group-text" value="..." name="btnCalendar"
-                                                RUNAT="server">
-                                        </div>
+                                        <maskedinput:maskedtextbox id="txtBegDate" class="form-control fechaFormat" RUNAT="server" onclick="dpShowDateFrom();" ISDATE="True"></maskedinput:maskedtextbox>
+                                        <INPUT id="btnCalendar2" onclick="javascript:calendar_window=window.open('selectDate.aspx?formname=document.Form1.txtBegDate','calendar_window','width=250,height=250');calendar_window.focus()" type="button" class="input-group-text d-none" value="..."
+                                            name="btnCalendar" RUNAT="server">
                                     </div>
                                     <div class="col-md-1">
                                         <asp:label id="Label2" runat="server">To</asp:label>
                                     </div>
                                     <div class="col-md">
-                                        <div class="d-inline-flex">
-                                            <maskedinput:maskedtextbox id="TxtEndDate" class="form-control" RUNAT="server" ISDATE="True"></maskedinput:maskedtextbox>
-                                            <INPUT id="btnCalendar" onclick="javascript:calendar_window=window.open('selectDate.aspx?formname=document.Form1.TxtEndDate','calendar_window','width=250,height=250');calendar_window.focus()" type="button" class="input-group-text" value="..." name="btnCalendar"
-                                                RUNAT="server">
-                                        </div>
+                                        <maskedinput:maskedtextbox id="TxtEndDate" class="form-control fechaFormat" RUNAT="server" onclick="dpShowDateTo();" ISDATE="True"></maskedinput:maskedtextbox>
+                                        <INPUT id="btnCalendar" onclick="javascript:calendar_window=window.open('selectDate.aspx?formname=document.Form1.TxtEndDate','calendar_window','width=250,height=250');calendar_window.focus()" type="button" class="input-group-text d-none" value="..." name="btnCalendar"
+                                            RUNAT="server">
                                     </div>
                                 </div>
                             </div>

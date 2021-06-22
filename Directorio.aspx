@@ -8,6 +8,15 @@
                     <html xmlns="http://www.w3.org/1999/xhtml">
 
                     <head id="Head1" runat="server">
+                        <meta name="GENERATOR" Content="Microsoft Visual Studio 7.0" />
+                        <meta name="CODE_LANGUAGE" Content="C#" />
+                        <meta name="vs_defaultClientScript" content="JavaScript" />
+                        <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+                        <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+                        <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+                        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+                        <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+                        <script src="js/load.js" type="text/javascript"></script>
                         <title>ePMS | electronic Policy Manager Solution</title>
                         <style type="text/css">
                             .headfield1 {
@@ -81,6 +90,28 @@
                             }
                         </style>
                     </head>
+                    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+                    <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+                    <script type="text/javascript">
+                        function dpShowDateFrom() {
+                            $('#<%= txtDateFrom.ClientID %>').datepicker('show');
+                        }
+
+                        function dpShowDateTo() {
+                            $('#<%= txtDateTo.ClientID %>').datepicker('show');
+                        }
+                        $(function() {
+                            $('#<%= txtDateFrom.ClientID %>').datepicker({
+                                changeMonth: true,
+                                changeYear: true
+                            });
+
+                            $('#<%= txtDateTo.ClientID %>').datepicker({
+                                changeMonth: true,
+                                changeYear: true
+                            });
+                        });
+                    </script>
 
                     <body>
                         <form id="form1" runat="server">
@@ -384,10 +415,10 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <asp:Button ID="btnClear" runat="server" class="mb-1 w-auto1" OnClick="btnClear_Click" Text="Clear" />
+                                                    <asp:Button ID="btnClear" runat="server" class="mb-1 w-auto1 btn-h-30 btn-bg-theme2 btn-r-4" OnClick="btnClear_Click" Text="Clear" />
                                                 </div>
                                                 <div class="col">
-                                                    <asp:Button ID="btnSearch" runat="server" class="mb-1 w-auto1" Text="Search" Width="76px" Visible="False" />
+                                                    <asp:Button ID="btnSearch" runat="server" class="mb-1 w-auto1 btn-h-30 btn-bg-theme2 btn-r-4" Text="Search" Width="76px" Visible="False" />
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -403,9 +434,9 @@
                                             <div class="col">
                                                 <div class="input-group mb-1">
                                                     <asp:Label ID="lblDateFrom" runat="server" class="input-group-text" Visible="True">From:</asp:Label>
-                                                    <asp:TextBox ID="txtDateFrom" runat="server" class="form-control" MaxLength="50" Visible="True"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDateFrom" runat="server" class="form-control fechaFormat" onclick="dpShowDateFrom();" MaxLength="50" Visible="True"></asp:TextBox>
                                                     <asp:Label ID="lblDateTo" runat="server" class="input-group-text" Visible="True">To:</asp:Label>
-                                                    <asp:TextBox ID="txtDateTo" runat="server" class="form-control" Visible="True"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDateTo" runat="server" class="form-control fechaFormat" onclick="dpShowDateTo();" Visible="True"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>

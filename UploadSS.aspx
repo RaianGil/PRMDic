@@ -92,15 +92,15 @@
                                         </asp:UpdateProgress>--%>
 
                                 <div class="input-group mb-1">
-                                    <asp:FileUpload ID="FileUpload1" class="form-control" runat="server" Visible="true" Enabled="false" />
+                                    <asp:FileUpload ID="FileUpload1" cssclass="form-control" runat="server" Visible="true" Enabled="false" />
 
-                                    <asp:Button id="BtnUpload" runat="server" class="input-group-text" Text="Upload" onclick="BtnUpload_Click" Enabled="false"></asp:Button>
+                                    <asp:Button id="BtnUpload" runat="server" cssclass="input-group-text" Text="Upload" onclick="BtnUpload_Click" Enabled="false"></asp:Button>
                                 </div>
 
-                                <asp:Button id="BtnDownloadCustomer840Info" runat="server" Text="Download Customer Info" Visible="true" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Enabled="false" onclick="BtnDownloadCustomer840Info_Click"></asp:Button>
+                                <asp:Button id="BtnDownloadCustomer840Info" runat="server" Text="Download Customer Info" Visible="true" cssclass="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Enabled="false" onclick="BtnDownloadCustomer840Info_Click"></asp:Button>
 
 
-                                <asp:Button id="BtnDownloadCustomer840Info2020" runat="server" Text="Download 480 2020 Info" Visible="true" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Enabled="false" onclick="BtnDownloadCustomer840Info2020_Click"></asp:Button>
+                                <asp:Button id="BtnDownloadCustomer840Info2020" runat="server" Text="Download 480 2020 Info" Visible="true" cssclass="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Enabled="false" onclick="BtnDownloadCustomer840Info2020_Click"></asp:Button>
 
                                 <div class="col-md-12">
                                     <div class="input-group">

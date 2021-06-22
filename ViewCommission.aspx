@@ -159,13 +159,13 @@
                     <div class="col-md-12">
                         <div class="col-md">
                         </div>
-                        <div class="row">
+                        <div class="row mb-2">
                             <div class="col-md">
                                 <div class="col-md">
                                     <asp:label id="lblAgent" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False" Visible="True">Agent:</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:DropDownList ID="ddlAgent" runat="server" class="form-select mb-1" AutoPostBack="True" onselectedindexchanged="ddlAgent_SelectedIndexChanged">
+                                    <asp:DropDownList ID="ddlAgent" runat="server" cssclass="form-select mb-1" AutoPostBack="True" onselectedindexchanged="ddlAgent_SelectedIndexChanged">
                                     </asp:DropDownList>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                                     <asp:Label id="LblAgentPercent" runat="server" class="fs-lbl-s">Agent Com. Percent</asp:Label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox id="TxtCommPercent" runat="server" class="form-select fs-txt-s" Enabled="False"></asp:TextBox>
+                                    <asp:TextBox id="TxtCommPercent" runat="server" cssclass="form-select fs-txt-s" Enabled="False"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -190,7 +190,7 @@
                                     <asp:Label id="LblAgentComm" runat="server" class="fs-lbl-s">Agent Com. Amount</asp:Label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox id="TxtCommAmt" runat="server" class="form-select fs-txt-s" Enabled="False"></asp:TextBox>
+                                    <asp:TextBox id="TxtCommAmt" runat="server" cssclass="form-select fs-txt-s" Enabled="False"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -198,7 +198,7 @@
                                     <asp:Label id="LblCheckAmount" runat="server" class="fs-lbl-s">Comission Amount Paid</asp:Label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox id="txtCheckAmount" runat="server" class="form-select fs-txt-s" Enabled="False" ReadOnly="True"></asp:TextBox>
+                                    <asp:TextBox id="txtCheckAmount" runat="server" cssclass="form-select fs-txt-s" Enabled="False" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -206,7 +206,7 @@
                                     <asp:Label id="LblBalance" runat="server" class="fs-lbl-s">Balance</asp:Label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox id="txtBalance" runat="server" class="form-select fs-txt-s" Enabled="False" ReadOnly="True"></asp:TextBox>
+                                    <asp:TextBox id="txtBalance" runat="server" cssclass="form-select fs-txt-s" Enabled="False" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -225,7 +225,7 @@
                                     <asp:label id="LblPaymentDate" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Payment Date</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox ID="txtPaymentDate" runat="server" Columns="30" class="form-control fs-txt-s" IsDate="True" onclick="ShowDateTimePicker();"></asp:TextBox>
+                                    <asp:TextBox ID="txtPaymentDate" runat="server" Columns="30" cssclass="form-control fs-txt-s fechaFormat" IsDate="True" onclick="ShowDateTimePicker();"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -233,7 +233,7 @@
                                     <asp:label id="Label17" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Payment Check</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox ID="TxtPaymentCheck" RUNAT="server" class="form-control fs-txt-s" MAXLENGTH="50"></asp:TextBox>
+                                    <asp:TextBox ID="TxtPaymentCheck" RUNAT="server" cssclass="form-control fs-txt-s" MAXLENGTH="50"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -241,7 +241,7 @@
                                     <asp:label id="Label18" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Payment Amount</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <MaskedInput:MaskedTextBox ID="TxtPaymentAmount" runat="server" class="form-control fs-txt-s" IsCurrency="True"></MaskedInput:MaskedTextBox>
+                                    <MaskedInput:MaskedTextBox ID="TxtPaymentAmount" runat="server" cssclass="form-control fs-txt-s" IsCurrency="True"></MaskedInput:MaskedTextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -249,7 +249,7 @@
                                     <asp:label id="Label14" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Agent Name</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox ID="TxtNamePayee" runat="server" class="form-control fs-txt-s"></asp:TextBox>
+                                    <asp:TextBox ID="TxtNamePayee" runat="server" cssclass="form-control fs-txt-s"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -257,7 +257,7 @@
                                     <asp:label id="Label19" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Debit / Credit</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:DropDownList ID="ddlCreditDebit" class="form-select fs-txt-s" RUNAT="server">
+                                    <asp:DropDownList ID="ddlCreditDebit" cssclass="form-select fs-txt-s" RUNAT="server">
                                     </asp:DropDownList>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
                                     <asp:label id="Label20" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False"> Deposit Date</asp:label>
                                 </div>
                                 <div class="col-md">
-                                    <asp:TextBox ID="txtDepositDate" runat="server" Columns="30" class="form-control fs-txt-s" IsDate="True" onclick="ShowDateTimePicker2();"></asp:TextBox>
+                                    <asp:TextBox ID="txtDepositDate" runat="server" Columns="30" cssclass="form-control fs-txt-s fechaFormat" IsDate="True" onclick="ShowDateTimePicker2();"></asp:TextBox>
                                 </div>
                             </div>
                         </div>

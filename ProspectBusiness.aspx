@@ -84,7 +84,7 @@
                                     <div class="mb-3 row">
                                         <asp:label id="lblPhone" for="txtPhone" RUNAT="server" CSSCLASS="col-md-3 col-form-labe" ForeColor="Black" HEIGHT="34px" Font-Size="9pt">Phone</asp:label>
                                         <div class="col-md-9">
-                                            <maskedinput:maskedtextbox id="txtPhone" tabIndex="2" RUNAT="server" CSSCLASS="form-control" HEIGHT="34px" MAXLENGTH="20" MASK="(999) 999-9999" Font-Size="9pt"></maskedinput:maskedtextbox>
+                                            <maskedinput:maskedtextbox id="txtPhone" tabIndex="2" RUNAT="server" CSSCLASS="form-control telefoneFormat" HEIGHT="34px" MAXLENGTH="20" MASK="(999) 999-9999" Font-Size="9pt"></maskedinput:maskedtextbox>
                                         </div>
                                     </div>
                                 </div>

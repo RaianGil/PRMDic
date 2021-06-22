@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 <script src="js/bootstrap.bundle.min.js"></script>
 
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput-1.2.2.js"></script>
+
 <style>
     .btn-bg-theme1 {
     background: #BB1509;
@@ -211,9 +215,18 @@
   {
     font-weight:bold;
   }
-  
+  ppr-1 
+  {
+      padding-right: 4px;
+  }
   
 </style>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $(".telefoneFormat").mask("(999) 999-9999");
+            $(".fechaFormat").mask("99/99/9999");
+        });
+    </script>
 <script type="text/javascript">
     javascript: window.history.forward(1);  
 </script>
@@ -333,7 +346,7 @@
     </div>
   </nav>--%>
 
- <div class="container-xl">
+ <div class="container-xl" style=" position: relative; z-index: 101;">
 <table class="tableMain" style="width:100%;">
 <%--    <tr style="height: 120px;">
         <td align="left">
@@ -346,7 +359,7 @@
            <div class="hideSkiplink">
                 <div style="height:50px; width: 100%; background:#BB1509; ">
                     <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="False"
-                        IncludeStyleBlock="False" Orientation="Horizontal" RenderingMode="List" Font-Names="Tahoma"
+                        IncludeStyleBlock="False" Orientation="Horizontal" Font-Names="Tahoma"
                         Font-Size="15pt" ForeColor="Blue" OnMenuItemClick="NavigationMenu_MenuItemClick">
                         <Items >
                             <asp:MenuItem Text="Main Menu" Value="Main Menu"></asp:MenuItem>

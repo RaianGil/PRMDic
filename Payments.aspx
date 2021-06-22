@@ -10,10 +10,40 @@
             <meta content="JavaScript" name="vs_defaultClientScript">
             <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
             <LINK href="epolicy.css" type="text/css" rel="stylesheet">
+            <link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" />
+            <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+            <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+            <script src="js/load.js" type="text/javascript"></script>
             <style type="text/css">
 
             </style>
         </HEAD>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#<%= TxtEntryDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+                $('#<%= TxtCloseDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+                $('#<%= TxtPaymentDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+
+                $('#<%= txtDepositDate.ClientID %>').datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+            });
+        </script>
 
         <body>
             <form id="Paym" method="post" runat="server">
@@ -166,7 +196,7 @@
                                     <asp:label id="Label3" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Entry Date</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="TxtEntryDate" RUNAT="server" Class="form-control fs-txt-s"></asp:textbox>
+                                    <asp:textbox id="TxtEntryDate" RUNAT="server" Class="form-control fs-txt-s fechaFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -174,7 +204,7 @@
                                     <asp:label id="Label9" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Close Date</asp:label>
                                 </div>
                                 <div class="col-md-8">
-                                    <asp:textbox id="TxtCloseDate" RUNAT="server" Class="form-control fs-txt-s"></asp:textbox>
+                                    <asp:textbox id="TxtCloseDate" RUNAT="server" Class="form-control fs-txt-s fechaFormat"></asp:textbox>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -259,10 +289,7 @@
                         </div>
                         <div class="col-md-auto">
                             <asp:label id="LblPaymentDate" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Payment Date</asp:label>
-                            <div class="input-group input-append date datepicker-p1" data-date-format="mm-dd-yyyy">
-                                <maskedinput:maskedtextbox id="TxtPaymentDate" RUNAT="server" ISDATE="True" CssClass="form-control fs-txt-s"></maskedinput:maskedtextbox>
-                                <span class="add-on input-group-text" style="height:29px;"><i class="bi bi-grid-3x3-gap-fill"></i></span>
-                            </div>
+                            <maskedinput:maskedtextbox id="TxtPaymentDate" RUNAT="server" ISDATE="True" CssClass="form-control fs-txt-s fechaFormat"></maskedinput:maskedtextbox>
                         </div>
                         <div class="col-md-auto">
                             <asp:label id="Label17" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False">Payment Check</asp:label>
@@ -282,10 +309,7 @@
                         </div>
                         <div class="col-md-auto">
                             <asp:label id="Label20" RUNAT="server" class="fs-lbl-s" ENABLEVIEWSTATE="False"> Deposit Date</asp:label>
-                            <div class="input-group input-append date datepicker-p1" data-date-format="mm-dd-yyyy">
-                                <maskedinput:maskedtextbox id="txtDepositDate" RUNAT="server" ISDATE="True" CssClass="form-control fs-txt-s"></maskedinput:maskedtextbox>
-                                <span class="add-on input-group-text" style="height:29px;"><i class="bi bi-grid-3x3-gap-fill"></i></span>
-                            </div>
+                            <maskedinput:maskedtextbox id="txtDepositDate" RUNAT="server" ISDATE="True" CssClass="form-control fs-txt-s fechaFormat"></maskedinput:maskedtextbox>
                         </div>
                         <div class="col-md-auto"></div>
                     </div>

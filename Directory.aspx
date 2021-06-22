@@ -92,7 +92,7 @@
                                             <asp:Label ID="Label9" runat="server">Phone 1:</asp:Label>
                                         </div>
                                         <div class="col-md-9">
-                                            <MaskedInput:MaskedTextBox ID="TxtPhone1" runat="server" class="form-control" IsDate="False" Mask="(999) 999-9999"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="TxtPhone1" runat="server" class="form-control telefoneFormat" IsDate="False" Mask="(999) 999-9999"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
 
@@ -110,7 +110,7 @@
                                             <asp:Label ID="Label10" runat="server">Phone 2:</asp:Label>
                                         </div>
                                         <div class="col-md-9">
-                                            <MaskedInput:MaskedTextBox ID="txtPhone2" runat="server" class="form-control" IsDate="False" Mask="(999) 999-9999" MaxLength="20"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="txtPhone2" runat="server" class="form-control telefoneFormat" IsDate="False" Mask="(999) 999-9999" MaxLength="20"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
                                     <div class="row mb-1">

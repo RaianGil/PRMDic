@@ -126,7 +126,13 @@
         </head>
         <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.maskedinput-1.2.2.js"></script>
         <script type="text/javascript">
+            jQuery(function($) {
+                $(".telefoneFormat").mask("(999) 999-9999");
+                $(".fechaFormat").mask("99/99/9999");
+                $(".zipFormat").mask("99999Z9999");
+            });
             $(function() {
                 $('#<%= txtPriPolEffecDate1.ClientID %>').datepicker({
                     changeMonth: true,
@@ -285,222 +291,264 @@
                                 <asp:Label ID="lblTaskControlID" runat="server"></asp:Label>
                             </div>
                             <div class="col-md-6 f-right">
-                                <asp:Button ID="btnConvert" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Convert Excess" OnClick="btnConvert_Click" Visible="True" />
-                                <asp:Button ID="btnPrint" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Print Quote" OnClick="btnPrint_Click" Visible="True" />
-                                <asp:Button ID="btnConvertPrimary" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Convert Policy" OnClick="btnConvertPrimary_Click" />
-                                <asp:Button ID="btnRate" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Rate" />
-                                <asp:Button ID="BtnSave" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" OnClick="BtnSave_Click" Text="Save" />
-                                <asp:Button ID="btnEdit" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Modify" OnClick="btnEdit_Click" />
-                                <asp:Button ID="btnDelete" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Delete" OnClick="btnDelete_Click" />
-                                <asp:Button ID="btnCancel" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Cancel" OnClick="btnCancel_Click" />
-                                <asp:Button ID="BtnExit" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Exit" OnClick="BtnExit_Click" />
+                                <asp:Button ID="btnConvert" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Convert Excess" OnClick="btnConvert_Click" Visible="True" />
+                                <asp:Button ID="btnPrint" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Print Quote" OnClick="btnPrint_Click" Visible="True" />
+                                <asp:Button ID="btnConvertPrimary" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Convert Policy" OnClick="btnConvertPrimary_Click" />
+                                <asp:Button ID="btnRate" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Rate" />
+                                <asp:Button ID="BtnSave" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" OnClick="BtnSave_Click" Text="Save" />
+                                <asp:Button ID="btnEdit" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Modify" OnClick="btnEdit_Click" />
+                                <asp:Button ID="btnDelete" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Delete" OnClick="btnDelete_Click" />
+                                <asp:Button ID="btnCancel" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Cancel" OnClick="btnCancel_Click" />
+                                <asp:Button ID="BtnExit" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Exit" OnClick="BtnExit_Click" />
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <hr>
-                        </div>
-                        <div class="toggler">
-                            <div id="effect" class="ui-widget-header ui-corner-all" style="display:none">
+                        <div id="effect" class="col-md-4 ui-widget-header ui-corner-all f-center" aling="right" style="background:BB1509;width: 375px; height:auto;">
+                            <div class="col-md-4 mb-1">
+                                <asp:Label ID="Label49" runat="server" class="fs-14 fw-bold" Text="Select Rate"></asp:Label>
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <asp:RadioButton ID="RadioButton1" runat="server" Text="Primary" AutoPostBack="True" />
+                                <asp:RadioButton ID="RadioButton2" runat="server" Text="Excess" AutoPostBack="True" />
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <asp:Label ID="Label51" runat="server" class="fs-lbl-s" Text="Primary Retro Date:"></asp:Label>
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <MaskedInput:MaskedTextBox ID="txtPrimaryRetroDate" class="form-control fs-txt-s fechaFormat" runat="server" AutoPostBack="True"></MaskedInput:MaskedTextBox>
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <asp:Label ID="Label56" runat="server" class="fs-lbl-s" Text="Excess Retro Date:"></asp:Label>
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <MaskedInput:MaskedTextBox ID="txtExcessRetroDate" class="form-control fs-txt-s fechaFormat" runat="server" IsDate="True" AutoPostBack="True"></MaskedInput:MaskedTextBox>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label42" runat="server" class="fs-lbl-s" Text="Rate 1"></asp:Label>
 
-                                <asp:Panel ID="Panel1" runat="server">
-                                    <div class="col-md-12 f-center">
-                                        <asp:Label ID="Label49" runat="server" class="d-block" Text="Select Rate"></asp:Label>
-                                        <asp:RadioButton ID="RadioButton1" runat="server" Text="Rate" AutoPostBack="True" OnCheckedChanged="RadioButton1_CheckedChanged" />
-                                        <asp:RadioButton ID="RadioButton2" runat="server" Text="Excess" AutoPostBack="True" Visible="True" OnCheckedChanged="RadioButton2_CheckedChanged" />
-                                        <asp:Label ID="Label51" runat="server" class="d-block" Text="Retro Date:"></asp:Label>
-                                        <MaskedInput:MaskedTextBox ID="txtPrimaryRetroDate" runat="server" class="form-control mb-1 fs-txt-s w-25" IsDate="True" onclick="ShowDateTimePicker8();" AutoPostBack="True" OnTextChanged="txtPrimaryRetroDate_TextChanged"></MaskedInput:MaskedTextBox>
-                                        <asp:Label ID="Label56" runat="server" Text="Excess Retro Date:"></asp:Label>
-                                        <MaskedInput:MaskedTextBox ID="txtExcessRetroDate" runat="server" class="form-control mb-1 fs-txt-s w-25" IsDate="True" onclick="ShowDateTimePicker9();" AutoPostBack="True" OnTextChanged="txtExcessRetroDate_TextChanged"></MaskedInput:MaskedTextBox>
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label43" runat="server" class="fs-lbl-s" Text="Rate 2"></asp:Label>
 
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:Label ID="Label63" runat="server" class="fs-lbl-s" Text="Rate"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label65" runat="server" class="fs-lbl-s" Text="Rate 1"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label66" runat="server" class="fs-lbl-s" Text="Rate 2"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label67" runat="server" class="fs-lbl-s" Text="Rate 3"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label68" runat="server" class="fs-lbl-s" Text="MCM Rate "></asp:Label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlPrimaryLimits1" runat="server" class="form-select mb-1 fs-txt-s" AutoPostBack="True" OnSelectedIndexChanged="ddlPrimaryLimits1_SelectedIndexChanged" ForeColor="Black">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtPRate1" runat="server" Font-Names="Tahoma" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtPRate2" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtPRate3" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtPRate4" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:Label ID="Label64" runat="server" class="fs-lbl-s" Text="Excess Rate"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label42" runat="server" class="fs-lbl-s" Text="Rate 1"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label43" runat="server" class="fs-lbl-s" Text="Rate 2"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label45" runat="server" class="fs-lbl-s" Text="Rate 3"></asp:Label>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Label ID="Label44" runat="server" class="fs-lbl-s" Text="MCM Rate "></asp:Label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlLimits" runat="server" class="form-select mb-1 fs-txt-s" AutoPostBack="True" OnSelectedIndexChanged="ddlLimits_SelectedIndexChanged">
-                                            </asp:DropDownList>
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label45" runat="server" class="fs-lbl-s" Text="Rate 3"></asp:Label>
 
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate1" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:Label ID="Label44" runat="server" class="fs-lbl-s" Text="MCM Rate "></asp:Label>
 
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate2" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate3" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate4" runat="server" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <asp:Label ID="Label62" runat="server" Text="Others Excess Rates:"></asp:Label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlLimits2" runat="server" class="form-select mb-1 fs-txt-s" AutoPostBack="True" OnSelectedIndexChanged="ddlLimits_SelectedIndexChanged">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate12" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate22" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate32" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate42" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlLimits3" runat="server" class="form-select mb-1 fs-txt-s" AutoPostBack="True">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate13" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate23" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate33" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate43" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlLimits4" runat="server" class="form-select mb-1 fs-txt-s" AutoPostBack="True" OnSelectedIndexChanged="ddlLimits4_SelectedIndexChanged">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate14" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate24" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate34" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate44" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlLimits5" runat="server" class="form-select mb-1 fs-txt-s" AutoPostBack="True">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate15" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate25" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate35" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate45" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <asp:DropDownList ID="ddlLimits6" runat="server" class="form-select mb-1 fs-txt-s" utoPostBack="True">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate16" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate26" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate36" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:TextBox ID="txtRate46" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <asp:Label ID="Label57" runat="server" class="fs-lbl-s" Text="Select Specialty:"></asp:Label>
-                                            <asp:DropDownList ID="ddPrimarylPolicyClass" class="form-select mb-1 fs-txt-s" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlPolicyClass_SelectedIndexChanged1" Visible="True">
-                                            </asp:DropDownList>
+                                </div>
+                            </div>
 
-                                            <asp:Label ID="Label41" runat="server" class="fs-lbl-s" Text="Select Specialty:"></asp:Label>
-                                            <asp:DropDownList ID="ddlPolicyClass" class="form-select mb-1 fs-txt-s" runat="server" OnSelectedIndexChanged="ddlPolicyClass_SelectedIndexChanged1" Visible="True" AutoPostBack="True">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <asp:Label ID="Label46" runat="server" class="fs-lbl-s" Text="Iso Code:"></asp:Label>
-                                            <asp:TextBox ID="txtIsoCode" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:Label ID="Label63" runat="server" class="fs-lbl-s" Text="Primary  Rate"></asp:Label>
+                                </div>
 
-                                            <asp:Label ID="Label47" runat="server" class="fs-lbl-s" Text="Class:"></asp:Label>
-                                            <asp:TextBox ID="txtClass" runat="server" ReadOnly="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <asp:Button ID="btnCloseEffect" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4" Text="Close" />
-                                    </div>
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlPrimaryLimits1" runat="server" class="form-select fs-txt-s" OnSelectedIndexChanged="ddlPrimaryLimits1_SelectedIndexChanged" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtPRate1" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtPRate2" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtPRate3" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtPRate4" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:Label ID="Label64" runat="server" class="fs-lbl-s" Text="Excess Rate"></asp:Label>
+                                </div>
+
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlLimits" runat="server" class="form-select fs-txt-s" OnSelectedIndexChanged="ddlLimits_SelectedIndexChanged" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate1" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate2" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate3" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate4" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:Label ID="Label62" runat="server" class="fs-lbl-s" Text="Others Excess Rates:"></asp:Label>
+                                </div>
+
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlLimits2" runat="server" class="form-select fs-txt-s" OnSelectedIndexChanged="ddlLimits_SelectedIndexChanged" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate12" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate22" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate32" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate42" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlLimits3" runat="server" class="form-select fs-txt-s" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate13" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate23" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate33" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate43" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlLimits4" runat="server" class="form-select fs-txt-s" OnSelectedIndexChanged="ddlLimits4_SelectedIndexChanged" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate14" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate24" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate34" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate44" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlLimits5" runat="server" class="form-select fs-txt-s" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate15" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate25" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate35" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate45" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-1">
+                                <div class="col-md-12 mb-1">
+                                    <asp:DropDownList ID="ddlLimits6" runat="server" class="form-select fs-txt-s" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate16" runat="server" placeholder="Rate 1" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate26" runat="server" placeholder="Rate 2" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate36" runat="server" placeholder="Rate 3" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <asp:TextBox ID="txtRate46" runat="server" placeholder="MCM Rate" class="form-control fs-txt-s" TabIndex="8"></asp:TextBox>
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <asp:Label ID="Label41" runat="server" class="fs-lbl-s" Text="Select Specialty:"></asp:Label>
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <asp:DropDownList ID="ddlPolicyClass" runat="server" class="form-select fs-txt-s" OnSelectedIndexChanged="ddlPolicyClass_SelectedIndexChanged1" AutoPostBack="True">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="col-md-12 mb-1">
+                                <asp:DropDownList ID="ddPrimarylPolicyClass" runat="server" class="form-select fs-txt-s" AutoPostBack="True" OnSelectedIndexChanged="ddPrimarylPolicyClass_SelectedIndexChanged" Visible="False">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="col-md-12">
+                                <asp:Label ID="Label46" runat="server" class="fs-lbl-s" Text="Iso Code:"></asp:Label>
+                            </div>
+                            <div class="col-md-12">
+                                <asp:TextBox ID="txtIsoCode" runat="server" class="form-control fs-txt-s" ReadOnly="True"></asp:TextBox>
+                            </div>
+                            <div class="col-md-12">
+                                <asp:Label ID="Label47" runat="server" class="fs-lbl-s" Text="Class:"></asp:Label>
+                            </div>
+                            <div class="col-md-12">
+                                <asp:TextBox ID="txtClass" runat="server" class="form-control fs-txt-s" ReadOnly="True"></asp:TextBox>
+                            </div>
+                            <div class="col-md-12 f-center">
+                                <asp:Button ID="btnCloseEffect" runat="server" CssClass="btn-bg-theme2 btn-h-30 btn-r-4 m-1" Text="Close" />
                             </div>
                         </div>
+
+
                         <div class="col-md-12">
                             <hr>
                         </div>
@@ -550,7 +598,7 @@
                                         <asp:Label ID="lblMaritalStatus" class="fs-lbl-s" runat="server" EnableViewState="False">Date of Birth:</asp:Label>
                                     </div>
                                     <div class="col-md-8">
-                                        <MaskedInput:MaskedTextBox ID="txtDateBirth" runat="server" class="form-control mb-1 fs-txt-s" onclick="ShowDateTimePicker7();" IsDate="True"></MaskedInput:MaskedTextBox>
+                                        <MaskedInput:MaskedTextBox ID="txtDateBirth" runat="server" class="form-control mb-1 fs-txt-s fechaFormat" IsDate="True"></MaskedInput:MaskedTextBox>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -648,7 +696,7 @@
                                         <div class="input-group mb-1">
                                             <asp:TextBox ID="TxtCity" runat="server" class="form-control fs-txt-s"></asp:TextBox>
                                             <asp:TextBox ID="TxtState" runat="server" class="form-control fs-txt-s"></asp:TextBox>
-                                            <MaskedInput:MaskedTextBox ID="TxtZip" runat="server" class="form-control fs-txt-s" IsDate="False" Mask="99999Z9999" MaxLength="10"></MaskedInput:MaskedTextBox>
+                                            <MaskedInput:MaskedTextBox ID="TxtZip" runat="server" class="form-control fs-txt-s zipFormat" IsDate="False" Mask="99999Z9999" MaxLength="10"></MaskedInput:MaskedTextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -659,7 +707,7 @@
                                         <asp:Label ID="Label3" runat="server" class="fs-lbl-s" EnableViewState="False">Office Phone:</asp:Label>
                                     </div>
                                     <div class="col-md-8">
-                                        <MaskedInput:MaskedTextBox ID="txtWorkPhone" class="form-control mb-1 fs-txt-s" runat="server" IsCurrency="False" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
+                                        <MaskedInput:MaskedTextBox ID="txtWorkPhone" class="form-control mb-1 fs-txt-s telefoneFormat" runat="server" IsCurrency="False" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
                                     </div>
                                 </div>
 
@@ -668,7 +716,7 @@
                                         <asp:Label ID="lblLastName1" runat="server" class="fs-lbl-s" EnableViewState="False">Office Fax:</asp:Label>
                                     </div>
                                     <div class="col-md-8">
-                                        <MaskedInput:MaskedTextBox ID="TxtCellular" runat="server" class="form-control mb-1 fs-txt-s" IsCurrency="False" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
+                                        <MaskedInput:MaskedTextBox ID="TxtCellular" runat="server" class="form-control mb-1 fs-txt-s telefoneFormat" IsCurrency="False" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -687,7 +735,7 @@
                                         <asp:Label ID="Label8" runat="server" class="fs-lbl-s" EnableViewState="False">Cell Phone:</asp:Label>
                                     </div>
                                     <div class="col-md-8">
-                                        <MaskedInput:MaskedTextBox ID="txtHomePhone" runat="server" class="form-control mb-1 fs-txt-s" IsCurrency="False" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
+                                        <MaskedInput:MaskedTextBox ID="txtHomePhone" runat="server" class="form-control mb-1 fs-txt-s telefoneFormat" IsCurrency="False" IsDate="False" IsZipCode="False" Mask="(999) 999-9999" MaxLength="14"></MaskedInput:MaskedTextBox>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -735,7 +783,7 @@
                                 <asp:TextBox ID="txtPriCarierName1" runat="server" MaxLength="75" class="form-control mb-1 fs-txt-s"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <asp:TextBox ID="txtPriPolEffecDate1" runat="server" onclick="ShowDateTimePicker();" class="form-control mb-1 fs-txt-s"></asp:TextBox>
+                                <asp:TextBox ID="txtPriPolEffecDate1" runat="server" onclick="ShowDateTimePicker();" class="form-control mb-1 fs-txt-s fechaFormat"></asp:TextBox>
 
                             </div>
                             <div class="col-md-3">
@@ -752,7 +800,7 @@
                                 <asp:TextBox ID="txtPriCarierName2" runat="server" MaxLength="75" class="form-control mb-1 fs-txt-s"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate2" runat="server" class="form-control mb-1 fs-txt-s" onclick="ShowDateTimePicker2();" IsDate="True"></MaskedInput:MaskedTextBox>
+                                <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate2" runat="server" class="form-control mb-1 fs-txt-s fechaFormat" onclick="ShowDateTimePicker2();" IsDate="True"></MaskedInput:MaskedTextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:TextBox ID="txtPriPolLimits2" runat="server" MaxLength="50" class="form-control mb-1 fs-txt-s"></asp:TextBox>
@@ -767,7 +815,7 @@
                                 <asp:TextBox ID="txtPriCarierName3" runat="server" MaxLength="75" class="form-control mb-1 fs-txt-s"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate3" runat="server" class="form-control mb-1 fs-txt-s" onclick="ShowDateTimePicker3();" IsDate="True"></MaskedInput:MaskedTextBox>
+                                <MaskedInput:MaskedTextBox ID="txtPriPolEffecDate3" runat="server" class="form-control mb-1 fs-txt-s fechaFormat" onclick="ShowDateTimePicker3();" IsDate="True"></MaskedInput:MaskedTextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:TextBox ID="txtPriPolLimits3" runat="server" MaxLength="50" class="form-control mb-1 fs-txt-s"></asp:TextBox>
@@ -798,7 +846,7 @@
                                 <asp:TextBox ID="txtExcCarierName1" runat="server" Visible="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <MaskedInput:MaskedTextBox ID="txtExcPolEffecDate1" runat="server" class="form-control mb-1 fs-txt-s" onclick="ShowDateTimePicker4();" Visible="True"></MaskedInput:MaskedTextBox>
+                                <MaskedInput:MaskedTextBox ID="txtExcPolEffecDate1" runat="server" class="form-control mb-1 fs-txt-s fechaFormat" onclick="ShowDateTimePicker4();" Visible="True"></MaskedInput:MaskedTextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:TextBox ID="txtExcPolLimits1" runat="server" Visible="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
@@ -812,7 +860,7 @@
                                 <asp:TextBox ID="txtExcCarierName2" runat="server" Visible="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <MaskedInput:MaskedTextBox ID="txtExcPolEffecDate2" runat="server" class="form-control mb-1 fs-txt-s" onclick="ShowDateTimePicker5();" IsDate="True" Visible="True"></MaskedInput:MaskedTextBox>
+                                <MaskedInput:MaskedTextBox ID="txtExcPolEffecDate2" runat="server" class="form-control mb-1 fs-txt-s fechaFormat" onclick="ShowDateTimePicker5();" IsDate="True" Visible="True"></MaskedInput:MaskedTextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:TextBox ID="txtExcPolLimits2" runat="server" Visible="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
@@ -826,7 +874,7 @@
                                 <asp:TextBox ID="txtExcCarierName3" runat="server" isible="False" class="form-control mb-1 fs-txt-s"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <MaskedInput:MaskedTextBox ID="txtExcPolEffecDate3" runat="server" class="form-control mb-1 fs-txt-s" onclick="ShowDateTimePicker6();" IsDate="True" Visible="True"></MaskedInput:MaskedTextBox>
+                                <MaskedInput:MaskedTextBox ID="txtExcPolEffecDate3" runat="server" class="form-control mb-1 fs-txt-s fechaFormat" onclick="ShowDateTimePicker6();" IsDate="True" Visible="True"></MaskedInput:MaskedTextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:TextBox ID="txtExcPolLimits3" runat="server" Visible="True" class="form-control mb-1 fs-txt-s"></asp:TextBox>
