@@ -39,7 +39,7 @@
                                         <div class="col-md-12 mb-1 fs-14 fw-bold">
                                             <asp:Label id="Label1" runat="server">Back Up Files from the Server</asp:Label>
                                         </div>
-                                        <div class="col-md-12 mb-1">
+                                        <div class="col-md-12 mb-4">
                                             <asp:Button id="BtBackUp" runat="server" class="btn-h-30 btn-bg-theme2 btn-r-4 mb-1" Text="Transfer Files" onclick="BtBackUp_Click" onclientclick="return confirm('Are you certain you want to start the process?');"></asp:Button>
                                         </div>
                                         <div class="col-md-8 mb-1">
