@@ -31,7 +31,7 @@
                 
                 #effect {
                     width: 455px;
-                    height: 480px;
+                    height: fit-content;
                     padding: 0.4em;
                     position: relative;
                 }

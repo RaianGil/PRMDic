@@ -81,13 +81,13 @@ namespace EPolicy
 			base.OnInit(e);
 
             System.Web.UI.Control Banner = new System.Web.UI.Control();
-			Banner = LoadControl(@"TopBanner.ascx");
+			Banner = LoadControl(@"TopBanner1.ascx");
 			this.Placeholder1.Controls.Add(Banner);
 
-			//Setup Left-side Banner
+			/*//Setup Left-side Banner
             System.Web.UI.Control LeftMenu = new System.Web.UI.Control();
 			LeftMenu = LoadControl(@"LeftMenu.ascx");
-			this.phTopBanner1.Controls.Add(LeftMenu);
+			this.phTopBanner1.Controls.Add(LeftMenu);*/
 		}
 		
 		/// <summary>
@@ -1697,7 +1697,7 @@ namespace EPolicy
 
         private void VerifyLabelAgent(int level, int CurrentLevel, bool firstTime)
         {
-            // Se le Añade uno para visualizar el próximo nivel a seleccionarse ó
+            // Se le Aï¿½ade uno para visualizar el prï¿½ximo nivel a seleccionarse ï¿½
             // Posiciona el nivel dependiendo el orden de los agentes seleccionados.
 
             if (CurrentLevel != 0)

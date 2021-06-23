@@ -82,13 +82,13 @@ namespace EPolicy
 			base.OnInit(e);
 
             System.Web.UI.Control Banner = new System.Web.UI.Control();
-			Banner = LoadControl(@"TopBanner.ascx");
+			Banner = LoadControl(@"TopBanner1.ascx");
 			this.Placeholder1.Controls.Add(Banner);
 
-			//Setup Left-side Banner
+			/*//Setup Left-side Banner
             System.Web.UI.Control LeftMenu = new System.Web.UI.Control();
 			LeftMenu = LoadControl(@"LeftMenu.ascx");
-			this.phTopBanner1.Controls.Add(LeftMenu);
+			this.phTopBanner1.Controls.Add(LeftMenu);*/
 		}
 		
 		/// <summary>
